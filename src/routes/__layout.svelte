@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Header from '$lib/header/Header.svelte';
+	import '../styles/fonts.css';
 	import '../app.css';
 </script>
 
@@ -14,6 +15,10 @@
 </footer>
 
 <style>
+	:global(body > #svelte) {
+		font-family: 'Poppins', sans-serif;
+	}
+
 	main {
 		flex: 1;
 		display: flex;
