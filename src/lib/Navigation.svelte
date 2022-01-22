@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	let y: number;
 </script>
 
-<nav>
+<svelte:window bind:scrollY={y} />
+
+<nav class={y > 1 ? 'shadowed' : ''}>
 	<div class="logo">
 		<a href="/">
 			<p>Victoria Trinita</p>
@@ -23,13 +26,17 @@
 	nav {
 		padding: 0.5em 1em;
 		height: 2.5em;
-		background-color: #fafafa;
+		background-color: #ffff;
 		display: flex;
 		justify-content: space-between;
-		filter: drop-shadow(0px 4px 8px rgba(142, 142, 142, 0.15));
 		position: sticky;
 		top: 0;
 		z-index: 1;
+	}
+
+	.shadowed {
+		filter: drop-shadow(0px 4px 8px rgba(142, 142, 142, 0.15));
+		transition: 500ms linear;
 	}
 
 	.logo {
