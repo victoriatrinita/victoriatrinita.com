@@ -2,15 +2,26 @@
 	export const prerender = true;
 </script>
 
+<script>
+	$: innerWidth = 0;
+</script>
+
 <svelte:head>
 	<title>Home | Victoria T P</title>
 </svelte:head>
+
+<svelte:window bind:innerWidth />
 
 <div class="wrapper">
 	<header>
 		<img src="header/ori.svg" alt="Girl working on laptop illustration" />
 		<div>
-			<h1>A collection of favourites and thoughts</h1>
+			{#if innerWidth > 600}
+				<h1>A collection of favourites and thoughts</h1>
+			{:else}
+				<h1>A collection of favourites</h1>
+				<h1>and thoughts</h1>
+			{/if}
 		</div>
 	</header>
 
@@ -49,6 +60,12 @@
 		justify-content: center;
 		align-items: center;
 		display: flex;
+		flex-direction: column;
+	}
+
+	header div {
+		display: flex;
+		align-items: center;
 		flex-direction: column;
 	}
 
