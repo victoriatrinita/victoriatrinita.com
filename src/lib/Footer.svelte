@@ -35,5 +35,6 @@
 	}
 	section:nth-of-type(2) {
 		margin-bottom: 1.5em;
+		text-align: center;
 	}
 </style>
