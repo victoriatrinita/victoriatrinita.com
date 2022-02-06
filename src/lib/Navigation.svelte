@@ -15,9 +15,9 @@
 
 	<div class="links">
 		<ul>
-			<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
-			<li class:active={$page.path === '/posts'}><a sveltekit:prefetch href="/posts">Posts</a></li>
+			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
+			<li class:active={$page.url.pathname === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
+			<li class:active={$page.url.pathname === '/posts'}><a sveltekit:prefetch href="/posts">Posts</a></li>
 		</ul>
 	</div>
 </nav>
