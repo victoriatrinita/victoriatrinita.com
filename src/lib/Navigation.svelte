@@ -1,9 +1,14 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { navigating, page } from '$app/stores';
+	import { MenuIcon, XIcon } from 'svelte-feather-icons';
+	import { slide } from 'svelte/transition';
 	let y: number;
+	$: innerWidth = 0;
+	let opened = false;
+	$: opened = $navigating ? false : opened;
 </script>
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={y} bind:innerWidth />
 
 <nav class={y > 1 ? 'shadowed' : ''}>
 	<div class="logo">
@@ -13,16 +18,35 @@
 		</a>
 	</div>
 
-	<div class="links">
-		<ul>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.url.pathname === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
-			<li class:active={$page.url.pathname === '/posts'}><a sveltekit:prefetch href="/posts">Posts</a></li>
-		</ul>
-	</div>
+	{#if innerWidth < 600}
+		<span on:click={() => (opened = !opened)}>
+			{#if opened}
+				<XIcon size="24" />
+			{:else}
+				<MenuIcon size="24" />
+			{/if}
+		</span>
+	{/if}
+
+	{#if innerWidth > 600 || opened}
+		<div class="links" transition:slide={{ duration: 100 }}>
+			<a class:active={$page.url.pathname === '/'} sveltekit:prefetch href="/">Home</a>
+			<a class:active={$page.url.pathname === '/about'} sveltekit:prefetch href="/about">About</a>
+			<a class:active={$page.url.pathname === '/posts'} sveltekit:prefetch href="/posts">Posts</a>
+		</div>
+	{/if}
 </nav>
 
 <style>
+	.links a {
+		text-align: center;
+		position: relative;
+		height: 100%;
+		color: var(--heading-color);
+		font-weight: 500;
+		font-size: 1rem;
+	}
+
 	nav {
 		padding: 0.5em 1em;
 		height: 2.5em;
@@ -32,6 +56,12 @@
 		position: sticky;
 		top: 0;
 		z-index: 1;
+	}
+
+	nav > span {
+		cursor: pointer;
+		display: flex;
+		color: var(--heading-color);
 	}
 
 	.shadowed {
@@ -81,33 +111,52 @@
 		transition: color 0.2s linear;
 	}
 
-	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-	}
-
-	li.active::after {
+	.links a.active::after {
 		position: absolute;
 		content: '';
 		height: 0.5em;
-		bottom: 14px;
+		bottom: 10px;
 		z-index: -1;
 		left: 0;
 		right: 0;
 		margin: 0 1em;
 		background: #f0c2c2;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.logo p {
+			font-size: 0.6rem;
+		}
+
+		nav {
+			position: fixed;
+			box-sizing: border-box;
+			top: unset;
+			bottom: 0;
+			height: unset;
+			width: 100%;
+			align-items: center;
+			z-index: 3;
+			box-shadow: 0px -4px 8px rgba(152, 152, 152, 0.12);
+		}
+
+		.links a.active::after {
+			bottom: 2px;
+		}
+
+		.links {
+			box-sizing: border-box;
+			padding: 1em;
+			justify-content: center;
+			width: 100%;
+			position: absolute;
+			top: 1px;
+			left: 0;
+			display: grid;
+			gap: 1em;
+			box-shadow: 0px -4px 8px rgba(152, 152, 152, 0.12);
+			transform: translateY(-100%);
+			background: #fff;
+		}
 	}
 </style>
