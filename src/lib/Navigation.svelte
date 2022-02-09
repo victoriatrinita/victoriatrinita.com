@@ -31,7 +31,7 @@
 	{/if}
 
 	{#if innerWidth > 600 || opened}
-		<div class="links" transition:slide={{ duration: opened ? 100 : 0 }}>
+		<div class="menu" transition:slide={{ duration: opened ? 100 : 0 }}>
 			{#each Object.entries(menu) as [title, link]}
 				<a class:active={$page.url.pathname === `/${link}`} sveltekit:prefetch href="/{link}"
 					>{capitalize(title)}</a
@@ -87,14 +87,14 @@
 		background: #fff8ba;
 	}
 
-	.links {
+	.menu {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		z-index: 1;
 	}
 
-	.links a {
+	.menu a {
 		display: flex;
 		position: relative;
 		height: 100%;
@@ -107,7 +107,7 @@
 		transition: color 0.2s linear;
 	}
 
-	.links a.active::after {
+	.menu a.active::after {
 		position: absolute;
 		content: '';
 		height: 0.5em;
@@ -136,11 +136,11 @@
 			box-shadow: 0px -4px 8px rgba(152, 152, 152, 0.12);
 		}
 
-		.links a.active::after {
+		.menu a.active::after {
 			bottom: 2px;
 		}
 
-		.links {
+		.menu {
 			display: flex;
 			flex-direction: column;
 			box-sizing: border-box;
