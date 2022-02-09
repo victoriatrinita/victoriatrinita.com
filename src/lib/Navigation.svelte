@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { navigating, page } from '$app/stores';
+	import { capitalize } from '../utils/utils';
 	import { MenuIcon, XIcon } from 'svelte-feather-icons';
 	import { slide } from 'svelte/transition';
 	let y: number;
 	$: innerWidth = 0;
 	let opened = false;
 	$: opened = $navigating ? false : opened;
+	const menu = { home: '', about: 'about', posts: 'posts' };
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerWidth />
@@ -29,10 +31,12 @@
 	{/if}
 
 	{#if innerWidth > 600 || opened}
-		<div class="links" transition:slide={{ duration: 100 }}>
-			<a class:active={$page.url.pathname === '/'} sveltekit:prefetch href="/">Home</a>
-			<a class:active={$page.url.pathname === '/about'} sveltekit:prefetch href="/about">About</a>
-			<a class:active={$page.url.pathname === '/posts'} sveltekit:prefetch href="/posts">Posts</a>
+		<div class="links" transition:slide={{ duration: opened ? 100 : 0 }}>
+			{#each Object.entries(menu) as [title, link]}
+				<a class:active={$page.url.pathname === `/${link}`} sveltekit:prefetch href="/{link}"
+					>{capitalize(title)}</a
+				>
+			{/each}
 		</div>
 	{/if}
 </nav>
