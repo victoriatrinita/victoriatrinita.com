@@ -42,15 +42,6 @@
 </nav>
 
 <style>
-	.links a {
-		text-align: center;
-		position: relative;
-		height: 100%;
-		color: var(--heading-color);
-		font-weight: 500;
-		font-size: 1rem;
-	}
-
 	nav {
 		padding: 0.5em 1em;
 		height: 2.5em;
@@ -105,6 +96,7 @@
 
 	.links a {
 		display: flex;
+		position: relative;
 		height: 100%;
 		align-items: center;
 		padding: 0 1em;
@@ -149,6 +141,8 @@
 		}
 
 		.links {
+			display: flex;
+			flex-direction: column;
 			box-sizing: border-box;
 			padding: 1em;
 			justify-content: center;
@@ -156,7 +150,6 @@
 			position: absolute;
 			top: 1px;
 			left: 0;
-			display: grid;
 			gap: 1em;
 			box-shadow: 0px -4px 8px rgba(152, 152, 152, 0.12);
 			transform: translateY(-100%);
