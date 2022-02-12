@@ -9,7 +9,7 @@
 		display: grid;
 		padding: clamp(2em, 3vw, 4em) 1em;
 		margin: auto;
-		max-width: 80ch;
+		max-width: 84ch;
 	}
 	article :global(section) {
 		margin-top: 2em;

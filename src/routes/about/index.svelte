@@ -24,7 +24,7 @@
 
 <style>
 	img {
-		height: clamp(200px, 25vw, 300px);
+		height: clamp(215px, 25vw, 330px);
 		padding-bottom: clamp(1em, 3vw, 2em);
 	}
 </style>

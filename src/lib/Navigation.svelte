@@ -44,7 +44,7 @@
 <style>
 	nav {
 		padding: 0.5em 1em;
-		height: 2.5em;
+		height: 3.5em;
 		background-color: #ffff;
 		display: flex;
 		justify-content: space-between;
@@ -126,7 +126,6 @@
 
 		nav {
 			position: fixed;
-			box-sizing: border-box;
 			top: unset;
 			bottom: 0;
 			height: unset;
@@ -143,7 +142,6 @@
 		.menu {
 			display: flex;
 			flex-direction: column;
-			box-sizing: border-box;
 			padding: 1em;
 			justify-content: center;
 			width: 100%;

@@ -53,7 +53,7 @@
 		display: grid;
 		padding: clamp(2em, 3vw, 4em) 1em;
 		margin: auto;
-		max-width: 80ch;
+		max-width: 84ch;
 	}
 
 	header {
@@ -74,7 +74,7 @@
 	}
 
 	img {
-		height: clamp(220px, 25vw, 328px);
+		height: clamp(240px, 25vw, 375px);
 		padding-bottom: clamp(1em, 3vw, 2em);
 	}
 
