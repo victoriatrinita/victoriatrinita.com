@@ -14,6 +14,11 @@
 	import Article from '../../pages/Article.svelte';
 </script>
 
+<svelte:head>
+	<title>About | Victoria T P</title>
+</svelte:head>
+
+
 <Article>
 	<img src="about/ori.jpg" alt="Self Portrait" />
 

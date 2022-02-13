@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Posts | Victoria T P</title>
 </svelte:head>
 
 <section><h1>All Posts</h1></section>
