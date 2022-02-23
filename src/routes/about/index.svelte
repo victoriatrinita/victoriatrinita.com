@@ -11,6 +11,7 @@
 
 <script>
 	export let post;
+	import TapedPolaroid from '$lib/TapedPolaroid.svelte';
 	import Article from '../../pages/Article.svelte';
 </script>
 
@@ -18,18 +19,10 @@
 	<title>About | Victoria T P</title>
 </svelte:head>
 
-
 <Article>
-	<img src="about/ori.jpg" alt="Self Portrait" />
+	<TapedPolaroid src="about/ori.jpg" alt="Self portrait" />
 
 	<section>
 		{@html post.content}
 	</section>
 </Article>
-
-<style>
-	img {
-		height: clamp(215px, 25vw, 330px);
-		padding-bottom: clamp(1em, 3vw, 2em);
-	}
-</style>
