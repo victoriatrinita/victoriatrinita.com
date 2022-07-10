@@ -56,7 +56,7 @@
 	nav > span {
 		cursor: pointer;
 		display: flex;
-		color: var(--heading-color);
+		color: var(--martinique);
 	}
 
 	.shadowed {
@@ -71,7 +71,7 @@
 	.logo p {
 		font-size: 0.75rem;
 		font-weight: 500;
-		color: var(--heading-color);
+		color: var(--martinique);
 		width: fit-content;
 		position: relative;
 	}
@@ -100,7 +100,7 @@
 		height: 100%;
 		align-items: center;
 		padding: 0 1em;
-		color: var(--heading-color);
+		color: var(--martinique);
 		font-weight: 500;
 		font-size: 1rem;
 		text-decoration: none;

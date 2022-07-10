@@ -4,14 +4,17 @@
 	font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
-	--pure-white: #ffffff;
-	--primary-color: #b9c6d2;
-	--secondary-color: #d0dde9;
-	--tertiary-color: #edf0f8;
-	--accent-color: #5f497a;
-	--heading-color: #3e3355;
-	--text-color: #444444;
+	
+	/* Chir.ag’s Name that Color utility http://chir.ag/projects/name-that-color/ */
+	--white: #ffffff;
+	--heather: #b9c6d2;
+	--botticelli: #d0dde9;
+	--white-lilac: #edf0f8;
+	--mulled-wine: #5f497a;
+	--martinique: #3e3355;
+	--tundora: #444444;
 	--background-without-opacity: rgba(255, 255, 255, 0.7);
+	
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 }
@@ -33,12 +36,12 @@ html {
 body {
 	min-height: 100vh;
 	margin: 0;
-	/* background-color: var(--primary-color); */
+	/* background-color: var(--heather); */
 	/* background: linear-gradient(
 		180deg,
-		var(--primary-color) 0%,
-		var(--secondary-color) 10.45%,
-		var(--tertiary-color) 41.35%
+		var(--heather) 0%,
+		var(--botticelli) 10.45%,
+		var(--white-lilac) 41.35%
 	); */
 }
 
@@ -52,7 +55,7 @@ body::before {
 	z-index: -1;
 	background: radial-gradient(
 		50% 50% at 50% 50%,
-		var(--pure-white) 0%,
+		var(--white) 0%,
 		rgba(255, 255, 255, 0) 100%
 	);
 	opacity: 0.05;
@@ -105,7 +108,7 @@ h1,
 h2,
 p {
 	font-weight: 400;
-	color: var(--heading-color);
+	color: var(--martinique);
 }
 
 p {
@@ -114,7 +117,7 @@ p {
 
 a,
 a:visited {
-	color: var(--accent-color);
+	color: var(--mulled-wine);
 	text-decoration: none;
 	background-color: transparent;
 }
@@ -136,7 +139,7 @@ pre {
 	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
 	padding: 0.5em;
 	overflow-x: auto;
-	color: var(--text-color);
+	color: var(--tundora);
 }
 
 input,
