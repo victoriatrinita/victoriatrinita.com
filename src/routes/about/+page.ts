@@ -4,3 +4,5 @@ export async function load({ fetch }) {
 		post: articles.index
 	};
 }
+
+export const prerender = true;
