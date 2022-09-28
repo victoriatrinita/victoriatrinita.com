@@ -1,6 +1,4 @@
 import { json } from '@sveltejs/kit';
-
-// @migration task: Check imports
 import { parseDir } from '../../utils/parser';
 
 export async function GET(_: Request, res: Response) {
@@ -13,12 +11,7 @@ export async function GET(_: Request, res: Response) {
 	}, {});
 
 	if (articles) {
-		throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
-		// Suggestion (check for correctness before using):
-		// return json(articles);
-		return {
-			body: articles
-		};
+		return json(articles);
 	}
 
 	return new Response(undefined, { status: 404 });
