@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	$: innerWidth = 0;
 </script>
 

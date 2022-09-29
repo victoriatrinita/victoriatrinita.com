@@ -1,5 +1,5 @@
-<script>
-	export let data;
+<script lang="ts">
+	export let data: import('./$types').PageData;
 	import TapedPolaroid from '$lib/TapedPolaroid.svelte';
 	import Article from '../../pages/Article.svelte';
 </script>
