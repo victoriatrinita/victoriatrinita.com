@@ -1,6 +1,8 @@
+import { json } from '@sveltejs/kit';
 import { parseDir } from '../../utils/parser';
+import type { RequestHandler } from '@sveltejs/kit';
 
-export async function get(_: Request, res: Response) {
+export const GET: RequestHandler = async () => {
 	const articles = parseDir('content/about', (data: any, content: string, filename: string) => {
 		const [slug] = filename.split('.');
 		return { slug, ...data, content };
@@ -10,12 +12,8 @@ export async function get(_: Request, res: Response) {
 	}, {});
 
 	if (articles) {
-		return {
-			body: articles
-		};
+		return json(articles);
 	}
 
-	return {
-		status: 404
-	};
-}
+	return new Response(undefined, { status: 404 });
+};

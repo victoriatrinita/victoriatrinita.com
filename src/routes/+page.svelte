@@ -1,8 +1,4 @@
-<script context="module" lang="ts">
-	export const prerender = true;
-</script>
-
-<script>
+<script lang="ts">
 	$: innerWidth = 0;
 </script>
 

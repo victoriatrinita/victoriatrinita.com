@@ -1,16 +1,5 @@
-<script context="module">
-	export async function load({ fetch }) {
-		const articles = await fetch('/about.json').then((r) => r.json());
-		return {
-			props: {
-				post: articles.index
-			}
-		};
-	}
-</script>
-
-<script>
-	export let post;
+<script lang="ts">
+	export let data: import('./$types').PageData;
 	import TapedPolaroid from '$lib/TapedPolaroid.svelte';
 	import Article from '../../pages/Article.svelte';
 </script>
@@ -23,6 +12,6 @@
 	<TapedPolaroid src="about/ori.jpg" alt="Self portrait" />
 
 	<section>
-		{@html post.content}
+		{@html data.post.content}
 	</section>
 </Article>

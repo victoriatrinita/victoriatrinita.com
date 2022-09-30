@@ -1,7 +1,7 @@
 <footer>
 	<section>
-		<a sveltekit:prefetch href="https://github.com/victoriatrinita">github</a>
-		<a sveltekit:prefetch href="https://www.linkedin.com/in/victoria-trinita/">linkedin</a>
+		<a data-sveltekit-prefetch href="https://github.com/victoriatrinita">github</a>
+		<a data-sveltekit-prefetch href="https://www.linkedin.com/in/victoria-trinita/">linkedin</a>
 	</section>
 
 	<section>
