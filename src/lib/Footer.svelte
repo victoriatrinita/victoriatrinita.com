@@ -1,7 +1,15 @@
+<script lang="ts">
+	import { GithubIcon, LinkedinIcon } from 'svelte-feather-icons';
+</script>
+
 <footer>
 	<section>
-		<a data-sveltekit-prefetch href="https://github.com/victoriatrinita">github</a>
-		<a data-sveltekit-prefetch href="https://www.linkedin.com/in/victoria-trinita/">linkedin</a>
+		<a data-sveltekit-prefetch href="https://github.com/victoriatrinita">
+			<GithubIcon />
+		</a>
+		<a data-sveltekit-prefetch href="https://www.linkedin.com/in/victoria-trinita/">
+			<LinkedinIcon />
+		</a>
 	</section>
 
 	<section>
@@ -14,7 +22,7 @@
 		display: grid;
 		gap: 1.5em;
 		background: #ffffff;
-		color: #333333;
+		color: var(--mine-shaft);
 		font-size: clamp(0.875em, 2vw, 1em);
 		margin: auto auto 2em;
 	}
@@ -36,5 +44,9 @@
 	section:nth-of-type(2) {
 		margin-bottom: 1.5em;
 		text-align: center;
+	}
+
+	a {
+		color: var(--mine-shaft);
 	}
 </style>
