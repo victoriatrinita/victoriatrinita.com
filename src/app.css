@@ -38,13 +38,6 @@ html {
 body {
 	min-height: 100vh;
 	margin: 0;
-	/* background-color: var(--heather); */
-	/* background: linear-gradient(
-		180deg,
-		var(--heather) 0%,
-		var(--botticelli) 10.45%,
-		var(--white-lilac) 41.35%
-	); */
 }
 
 body::before {
