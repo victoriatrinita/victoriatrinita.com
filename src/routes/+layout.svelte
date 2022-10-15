@@ -7,9 +7,7 @@
 
 <Navigation />
 
-<main>
 	<slot />
-</main>
 
 <Footer />
 
