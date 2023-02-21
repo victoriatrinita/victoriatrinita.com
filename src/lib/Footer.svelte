@@ -4,10 +4,10 @@
 
 <footer>
 	<section>
-		<a data-sveltekit-prefetch href="https://github.com/victoriatrinita">
+		<a data-sveltekit-preload-data href="https://github.com/victoriatrinita">
 			<GithubIcon />
 		</a>
-		<a data-sveltekit-prefetch href="https://www.linkedin.com/in/victoria-trinita/">
+		<a data-sveltekit-preload-data href="https://www.linkedin.com/in/victoria-trinita/">
 			<LinkedinIcon />
 		</a>
 	</section>
