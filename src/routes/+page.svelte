@@ -10,7 +10,7 @@
 
 <div class="wrapper">
 	<header>
-		<img src="header/ori.svg" alt="Girl working on laptop illustration" />
+		<img src="assets/profile/ori.svg" alt="Girl working on laptop illustration" />
 		<div>
 			{#if innerWidth > 600}
 				<h1>A collection of favourites and thoughts</h1>

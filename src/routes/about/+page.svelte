@@ -9,7 +9,7 @@
 </svelte:head>
 
 <Article>
-	<TapedPolaroid src="about/ori.jpg" alt="Self portrait" />
+	<TapedPolaroid src="assets/profile/ori.jpg" alt="Self portrait" />
 
 	<section>
 		{@html data.post.content}

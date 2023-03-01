@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/victoriatrinita/victoriatrinita.com/master/static/header/ori.svg" width="200" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/victoriatrinita/victoriatrinita.com/master/static/assets/profile/ori.svg" width="200" />
 </div>
 
 <h1 align="center">
