@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let data: import('./$types').PageData;
-	import TapedPolaroid from '$lib/TapedPolaroid.svelte';
-	import Article from '../../pages/Article.svelte';
+	import TapedPolaroid from '$lib/components/TapedPolaroid.svelte';
+	import Article from '$lib/pages/Article.svelte';
 </script>
 
 <svelte:head>

@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
-import { parseDir } from '../../utils/parser';
 import type { RequestHandler } from '@sveltejs/kit';
+import { parseDir } from '$lib/utils/parser';
 
 export const GET: RequestHandler = async () => {
 	const articles = parseDir('content/about', (data: any, content: string, filename: string) => {

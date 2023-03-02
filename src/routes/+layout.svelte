@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Navigation from '$lib/Navigation.svelte';
-	import Footer from '$lib/Footer.svelte';
-	import '../styles/fonts.css';
-	import '../app.css';
+	import Navigation from '$lib/components/Navigation.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import '$lib/styles/fonts.css';
+	import '$lib/styles/app.css';
 </script>
 
 <Navigation />

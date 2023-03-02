@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { navigating, page } from '$app/stores';
-	import { capitalize } from '../utils/utils';
+	import { capitalize } from '$lib/utils/utils';
 	import { MenuIcon, XIcon } from 'svelte-feather-icons';
 	import { slide } from 'svelte/transition';
 	let y: number;
