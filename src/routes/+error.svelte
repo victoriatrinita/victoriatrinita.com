@@ -21,7 +21,7 @@
 	.wrapper {
 		display: grid;
 		margin: auto auto 0 auto;
-		max-width: 84ch;
+		max-width: 97ch;
 		text-align: center;
 	}
 	h1:first-of-type {

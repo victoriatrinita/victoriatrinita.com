@@ -9,7 +9,7 @@
 		display: grid;
 		padding: clamp(2em, 3vw, 4em) 1em;
 		margin: auto;
-		max-width: 84ch;
+		max-width: 97ch;
 	}
 	article :global(section) {
 		margin-top: 2em;
@@ -32,7 +32,7 @@
 	}
 
 	article :global(p) {
-		font-size: clamp(1rem, 2vw, 1.125rem);
+		font-size: clamp(1rem, 2vw, 1.15rem);
 		line-height: 1.8rem;
 		margin-top: 0.75em;
 	}
@@ -56,7 +56,7 @@
 	article :global(h2),
 	article :global(h3) {
 		font-weight: 500;
-		font-family: 'Poppins';
+		font-family: var(--font-heading);
 		width: fit-content;
 		position: relative;
 	}

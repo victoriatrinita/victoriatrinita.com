@@ -33,9 +33,9 @@
 	{#if innerWidth > 600 || opened}
 		<div class="menu" transition:slide={{ duration: opened ? 100 : 0 }}>
 			{#each Object.entries(menu) as [title, link]}
-				<a class:active={$page.url.pathname === `/${link}`} data-sveltekit-preload-data href="/{link}"
-					>{capitalize(title)}</a
-				>
+			<a class:active={$page.url.pathname === `/${link}`} data-sveltekit-preload-data href="/{link}"
+				>{capitalize(title)}</a
+			>
 			{/each}
 		</div>
 	{/if}
@@ -51,6 +51,7 @@
 		position: sticky;
 		top: 0;
 		z-index: 1;
+		font-family: var(--font-heading);
 	}
 
 	nav > span {

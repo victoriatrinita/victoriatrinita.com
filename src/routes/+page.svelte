@@ -49,7 +49,7 @@
 		display: grid;
 		padding: clamp(2em, 3vw, 4em) 1em;
 		margin: auto;
-		max-width: 84ch;
+		max-width: 97ch;
 	}
 
 	header {
@@ -57,6 +57,7 @@
 		align-items: center;
 		display: flex;
 		flex-direction: column;
+		font-family: var(--font-heading);
 	}
 
 	header div {
@@ -87,6 +88,7 @@
 		width: fit-content;
 		position: relative;
 		margin-bottom: 0.5em;
+		font-family: var(--font-heading);
 	}
 
 	h2::after {
@@ -112,7 +114,7 @@
 	}
 
 	p {
-		font-size: clamp(1rem, 2vw, 1.125rem);
+		font-size: clamp(1rem, 2vw, 1.15rem);
 		line-height: 1.8rem;
 	}
 </style>

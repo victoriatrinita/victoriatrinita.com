@@ -25,6 +25,7 @@
 		color: var(--mine-shaft);
 		font-size: clamp(0.875em, 2vw, 1em);
 		margin: auto auto 2em;
+		font-family: var(--font-heading);
 	}
 
 	section {

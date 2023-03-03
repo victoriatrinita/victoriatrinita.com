@@ -7,7 +7,7 @@
 
 <Navigation />
 
-	<slot />
+<slot />
 
 <Footer />
 
@@ -16,6 +16,6 @@
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
-		font-family: 'Poppins', sans-serif;
+		font-family: var(--font-default);
 	}
 </style>
