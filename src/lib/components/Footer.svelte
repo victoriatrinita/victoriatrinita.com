@@ -13,7 +13,7 @@
 	</section>
 
 	<section>
-		Copyright &copy; {new Date().getFullYear()} Victoria Trinita P. All Rights Reserved.
+		Copyright &copy; 2022 &ndash; {new Date().getFullYear()} Victoria Trinita P. All Rights Reserved.
 	</section>
 </footer>
 
