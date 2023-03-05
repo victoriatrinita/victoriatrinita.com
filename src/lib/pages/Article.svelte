@@ -7,7 +7,7 @@
 		word-wrap: break-word;
 		line-height: 1.5;
 		display: grid;
-		padding: clamp(2em, 3vw, 4em) 1em;
+		padding: clamp(2em, 3vw, 4em) 1em 0;
 		margin: auto;
 		max-width: 97ch;
 	}
