@@ -108,6 +108,26 @@
 		transition: color 0.2s linear;
 	}
 
+	.menu a::before {
+		content: '';
+		position: absolute;
+		background: var(--beauty-bush);
+		height: 0.5em;
+		bottom: 10px;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		margin: 0 1em;
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform 0.25s ease-in-out;
+	}
+
+	.menu a:hover::before {
+		transform-origin: left;
+		transform: scaleX(1);
+	}
+
 	.menu a.active::after {
 		position: absolute;
 		content: '';
@@ -117,7 +137,7 @@
 		left: 0;
 		right: 0;
 		margin: 0 1em;
-		background: #f0c2c2;
+		background: var(--beauty-bush);
 	}
 
 	@media only screen and (max-width: 600px) {

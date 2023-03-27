@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { GithubIcon, LinkedinIcon } from 'svelte-feather-icons';
+	import Link from '$lib/components/Link.svelte';
 </script>
 
 <footer>
@@ -17,8 +18,8 @@
 			Copyright &copy; 2022 &ndash; {new Date().getFullYear()} Victoria Trinita P. All Rights Reserved.
 		</p>
 		<p>
-			Peek at this website's source code on <a
-				href="https://github.com/victoriatrinita/victoriatrinita.com/">Github</a
+			Peek at this website's source code on <Link
+				href="https://github.com/victoriatrinita/victoriatrinita.com/">Github</Link
 			>!
 		</p>
 	</section>

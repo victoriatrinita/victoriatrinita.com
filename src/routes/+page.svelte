@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Link from '$lib/components/Link.svelte';
 	$: innerWidth = 0;
 </script>
 
@@ -30,7 +31,7 @@
 			the internet.
 		</p>
 		<br />
-		<a href="/about">More info...</a>
+		<Link href="/about">More info...</Link>
 	</div>
 
 	<div>
