@@ -10,6 +10,6 @@
 <style>
 	a:hover {
 		transition: 0.1s ease-in-out;
-		color: #6f66d1;
+		color: var(--moody-blue);
 	}
 </style>
