@@ -100,7 +100,7 @@
 		z-index: -1;
 		left: 0;
 		right: 0;
-		background: #e8d8ff;
+		background: var(--blue-chalk);
 	}
 
 	h1::after {
@@ -111,7 +111,7 @@
 		z-index: -1;
 		left: 0;
 		right: 0;
-		background: #c7fcc6;
+		background: var(--snowy-mint);
 	}
 
 	p {

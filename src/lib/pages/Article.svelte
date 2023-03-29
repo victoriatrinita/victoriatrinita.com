@@ -69,7 +69,7 @@
 		z-index: -1;
 		left: 0;
 		right: 0;
-		background: #e8d8ff;
+		background: var(--blue-chalk);
 	}
 
 	article :global(h2) {

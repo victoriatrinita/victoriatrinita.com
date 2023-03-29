@@ -33,9 +33,9 @@
 	{#if innerWidth > 600 || opened}
 		<div class="menu" transition:slide={{ duration: opened ? 100 : 0 }}>
 			{#each Object.entries(menu) as [title, link]}
-			<a class:active={$page.url.pathname === `/${link}`} data-sveltekit-preload-data href="/{link}"
+				<a class:active={$page.url.pathname === `/${link}`} data-sveltekit-preload-data href="/{link}"
 				>{capitalize(title)}</a
-			>
+				>
 			{/each}
 		</div>
 	{/if}
@@ -45,7 +45,7 @@
 	nav {
 		padding: 0.5em 1em;
 		height: 3.5em;
-		background-color: #ffff;
+		background-color: var(--white);
 		display: flex;
 		justify-content: space-between;
 		position: sticky;
@@ -85,7 +85,7 @@
 		z-index: -1;
 		left: 0;
 		right: 0;
-		background: #fff8ba;
+		background: var(--buttermilk);
 	}
 
 	.menu {
@@ -172,7 +172,7 @@
 			gap: 1em;
 			box-shadow: 0px -4px 8px rgba(152, 152, 152, 0.12);
 			transform: translateY(-100%);
-			background: #fff;
+			background: var(--white);
 		}
 	}
 </style>

@@ -18,7 +18,7 @@
 	.polaroid {
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 		padding: 1.25em 0.75em 2.75em;
-		background: #fff;
+		background: var(--white);
 	}
 
 	.tape {
@@ -28,7 +28,7 @@
 
 	.tape:before,
 	.tape:after {
-		background: rgb(216, 191, 154);
+		background: var(--pavlova);
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 		content: '';
 		display: fixed;
@@ -42,7 +42,7 @@
 		left: -1.25em;
 		top: 0.4375em;
 		transform: rotate(-30deg);
-		border-color: #fff;
+		border-color: var(--white);
 		left: -1.0625em;
 	}
 
@@ -50,7 +50,7 @@
 		bottom: 0.625em;
 		right: -1.25em;
 		transform: rotate(-45deg);
-		border-color: #fff;
+		border-color: var(--white);
 		right: -1.25em;
 	}
 </style>
