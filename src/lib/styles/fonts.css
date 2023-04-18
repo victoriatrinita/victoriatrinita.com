@@ -74,6 +74,20 @@
 @font-face {
 	font-family: 'Segoe UI';
 	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('/assets/fonts/Segoe-UI-SemiBold.ttf');
+}
+@font-face {
+	font-family: 'Segoe UI';
+	font-style: italic;
+	font-weight: 500;
+	font-display: swap;
+	src: url('/assets/fonts/Segoe-UI-SemiBoldItalic.ttf');
+}
+@font-face {
+	font-family: 'Segoe UI';
+	font-style: normal;
 	font-weight: 600;
 	font-display: swap;
 	src: url('/assets/fonts/Segoe-UI-Bold.ttf');
