@@ -1,31 +1,11 @@
 import { parseFile } from '$lib/utils/parser';
 import type { PageServerLoad } from './$types';
-
-interface RawPost {
-	title: string;
-	tags: string[];
-	language: string;
-	description?: string;
-	date?: { updated?: string | Date };
-}
-
-declare class FinalPost implements RawPost {
-	slug: string;
-	title: string;
-	tags: string[];
-	language: string;
-	description?: string;
-	date: {
-		published: string | Date;
-		updated?: string | Date;
-	};
-	content?: string;
-}
+import type { Post } from '$lib/types';
 
 export const load: PageServerLoad = async ({ params }) => {
 	const slug = params['slug'];
 
-	function hydrate(data: FinalPost, content: string, filename: string): FinalPost | null {
+	function hydrate(data: Post, content: string, filename: string): Post | null {
 		const [filename_slug] = filename.split('.');
 		if (filename_slug !== slug) return null;
 		const date = {

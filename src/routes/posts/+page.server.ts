@@ -1,8 +1,9 @@
-import type { PageServerLoad } from './$types';
 import { parseDir } from '$lib/utils/parser';
+import type { PageServerLoad } from './$types';
+import type { Post } from '$lib/types';
 
 export const load: PageServerLoad = async () => {
-	function hydrate(data: any, _: string, filename: string): any {
+	function hydrate(data: Post, _: string, filename: string): Post | null {
 		const [slug] = filename.split('.');
 		return { slug, ...data };
 	}

@@ -1,15 +1,7 @@
 <script lang="ts">
-	export let post: {
-		slug: string;
-		title: string;
-		tags: string[];
-		language: string;
-		description: string;
-		date: {
-			published: string | Date;
-			updated?: string | Date;
-		};
-	};
+	import type { Post } from '$lib/types';
+
+	export let post: Post;
 </script>
 
 <a href="posts/{post.slug}">
