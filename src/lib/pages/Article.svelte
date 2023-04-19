@@ -16,7 +16,7 @@
 		font-size: clamp(1rem, 2vw, 1.15rem);
 	}
 	article > :global(section:first-of-type) {
-		margin-top: 4em;
+		margin-top: 1em;
 	}
 
 	article :global(section > :first-child) {
