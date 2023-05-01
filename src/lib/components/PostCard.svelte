@@ -28,7 +28,6 @@
 		padding: 1em 1.5em;
 		cursor: pointer;
 		color: var(--martinique);
-		/* box-shadow: 0px 3px 17px rgba(0, 0, 0, 0.14); */
 		transition: all 300ms ease-out;
 		border: solid #cecece 1px;
 		display: grid;
@@ -36,8 +35,8 @@
 	}
 
 	section:hover {
-		/* box-shadow: 0px 3.4359px 38px rgba(0, 0, 0, 0.2);
-		transform: translateY(-0.5em); */
+		box-shadow: 0px 3.4359px 18px rgba(0, 0, 0, 0.2);
+		transform: translateY(-0.2em);
 		background-color: #efedf8;
 		border: solid #cec2dc 1px;
 	}
