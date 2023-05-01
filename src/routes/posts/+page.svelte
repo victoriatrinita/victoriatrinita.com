@@ -9,19 +9,31 @@
 	<title>Posts | Victoria T P</title>
 </svelte:head>
 
-<wrapper>
-	<h2>Posts</h2>
-	{#if Array.isArray(data.posts) && !data.posts.length}
-		<p>no posts found</p>
-	{/if}
-
-	{#each data.posts as post}
-		<PostCard {post} />
-	{/each}
-</wrapper>
+{#if !data.posts.length}
+	<section>
+		<h1>No posts found</h1>
+		<p>There's nothing to see here at the moment,</p>
+		<p>stay tuned for updates coming soon!</p>
+	</section>
+{:else}
+	<main>
+		<h2>Posts</h2>
+		{#each data.posts as post}
+			<PostCard {post} />
+		{/each}
+	</main>
+{/if}
 
 <style>
-	wrapper {
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: auto auto 2.5em;
+	}
+
+	main {
 		word-wrap: break-word;
 		line-height: 1.5;
 		margin: auto;
@@ -31,6 +43,11 @@
 		padding: clamp(2em, 3vw, 4em) 1em 0;
 		margin: auto;
 		max-width: 97ch;
+	}
+
+	h1 {
+		font-weight: 500;
+		margin-bottom: 0.3em;
 	}
 
 	h2 {
@@ -52,5 +69,9 @@
 		left: 0;
 		right: 0;
 		background: #e8d8ff;
+	}
+
+	p {
+		color: #818488;
 	}
 </style>
