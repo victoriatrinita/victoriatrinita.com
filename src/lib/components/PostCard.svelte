@@ -1,7 +1,5 @@
 <script lang="ts">
-	import type { Post } from '$lib/types';
-
-	export let post: Post;
+	export let post: import('$lib/types').Post;
 </script>
 
 <a href="posts/{post.slug}">
