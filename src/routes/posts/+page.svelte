@@ -67,10 +67,10 @@
 		z-index: -1;
 		left: 0;
 		right: 0;
-		background: #e8d8ff;
+		background: var(--blue-chalk);
 	}
 
 	p {
-		color: #818488;
+		color: var(--oslo-gray);
 	}
 </style>
