@@ -36,7 +36,7 @@
 		word-wrap: break-word;
 		line-height: 1.5;
 		margin: auto;
-		min-width: 84ch;
+		min-width: 50%;
 		gap: 1em;
 		display: grid;
 		padding: clamp(2em, 3vw, 4em) 1em 0;
