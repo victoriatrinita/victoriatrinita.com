@@ -1,6 +1,10 @@
 <script lang="ts">
 	import Link from '$lib/components/Link.svelte';
+	import PreviewCard from '$lib/components/PreviewCard.svelte';
+
 	$: innerWidth = 0;
+
+	export let data;
 </script>
 
 <svelte:head>
@@ -22,7 +26,7 @@
 		</div>
 	</header>
 
-	<div>
+	<section>
 		<h2>About</h2>
 		<p>
 			Hi there! I'm Victoria, a final year Information Engineering student. I enjoy exploring in the
@@ -32,20 +36,34 @@
 		</p>
 		<br />
 		<Link href="/about">More info...</Link>
-	</div>
+	</section>
 
-	<div>
+	<section>
 		<h2>Recent Posts</h2>
-		<p>No posts yet.</p>
-	</div>
 
-	<div>
+		<div>
+			{#each data.posts
+				.sort((x, y) => x.id - y.id)
+				.slice(-3)
+				.reverse() as post}
+				<PreviewCard {post} />
+			{/each}
+		</div>
+	</section>
+
+	<section>
 		<h2>Tags</h2>
 		<p>No tags yet.</p>
-	</div>
+	</section>
 </div>
 
 <style>
+	section:nth-of-type(2) div {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1em;
+	}
+
 	.wrapper {
 		display: grid;
 		padding: clamp(2em, 3vw, 4em) 1em 0;
@@ -67,7 +85,7 @@
 		flex-direction: column;
 	}
 
-	div {
+	section {
 		padding-bottom: 1.5em;
 	}
 
