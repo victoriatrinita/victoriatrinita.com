@@ -83,6 +83,7 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		padding-bottom: 1.5em;
 	}
 
 	section {
