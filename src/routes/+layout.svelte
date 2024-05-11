@@ -16,6 +16,5 @@
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
-		font-family: var(--font-default);
 	}
 </style>

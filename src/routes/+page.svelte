@@ -76,7 +76,6 @@
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		font-family: var(--font-heading);
 	}
 
 	header div {
@@ -96,19 +95,18 @@
 	}
 
 	h1 {
-		font-weight: 500;
+		font-weight: 600;
 		font-size: clamp(1.5rem, 3vw, 2rem);
 		width: fit-content;
 		position: relative;
 	}
 
 	h2 {
-		font-weight: 500;
+		font-weight: 600;
 		font-size: clamp(1.5rem, 3vw, 2rem);
 		width: fit-content;
 		position: relative;
 		margin-bottom: 0.5em;
-		font-family: var(--font-heading);
 	}
 
 	h2::after {

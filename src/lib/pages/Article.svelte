@@ -55,8 +55,7 @@
 	}
 	article :global(h2),
 	article :global(h3) {
-		font-weight: 500;
-		font-family: var(--font-heading);
+		font-weight: 600;
 		width: fit-content;
 		position: relative;
 	}
@@ -118,7 +117,7 @@
 		margin-left: unset;
 	}
 	article :global(strong) {
-		font-weight: 500;
+		font-weight: bolder;
 	}
 	article :global(hr) {
 		height: 0.1em;

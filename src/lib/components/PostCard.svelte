@@ -42,7 +42,7 @@
 	}
 
 	h3 {
-		font-weight: 500;
+		font-weight: 600;
 		font-size: clamp(1.125rem, 2vw, 1.25rem);
 	}
 

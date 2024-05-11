@@ -53,8 +53,7 @@
 		margin-top: 1em;
 		margin-bottom: 0.5em;
 		font-size: clamp(1.5rem, 4vw, 2rem);
-		font-weight: 500;
-		font-family: 'Poppins';
+		font-weight: 700;
 		width: fit-content;
 		position: relative;
 	}
