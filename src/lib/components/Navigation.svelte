@@ -51,7 +51,6 @@
 		position: sticky;
 		top: 0;
 		z-index: 1;
-		font-family: var(--font-heading);
 	}
 
 	nav > span {
@@ -71,7 +70,7 @@
 
 	.logo p {
 		font-size: 0.75rem;
-		font-weight: 500;
+		font-weight: 600;
 		color: var(--martinique);
 		width: fit-content;
 		position: relative;
@@ -102,7 +101,7 @@
 		align-items: center;
 		padding: 0 1em;
 		color: var(--martinique);
-		font-weight: 500;
+		font-weight: 600;
 		font-size: 1rem;
 		text-decoration: none;
 		transition: color 0.2s linear;

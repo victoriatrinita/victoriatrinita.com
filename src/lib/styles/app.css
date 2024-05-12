@@ -1,10 +1,6 @@
 @import '@fontsource/fira-mono';
 
 :root {
-	--font-default: 'Segoe UI', sans-serif;
-	--font-heading: 'Poppins', sans-serif;
-	--font-mono: 'Fira Mono', monospace;
-
 	/* Chir.ag’s Name that Color utility http://chir.ag/projects/name-that-color/ */
 	--white: #ffffff;
 	--wild-sand: #f4f4f4;
@@ -31,6 +27,9 @@ html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+
+	--font-mono: 'Fira Mono', monospace;
+	font-family: 'Inter', sans-serif;
 }
 
 *,
@@ -86,6 +85,7 @@ p,
 ul[class] {
 	margin: 0;
 	font-weight: normal;
+	color: var(--martinique);
 }
 code,
 kbd,
@@ -95,12 +95,6 @@ samp {
 	font-weight: lighter;
 }
 
-h1,
-h2,
-p {
-	font-weight: 400;
-	color: var(--martinique);
-}
 
 p {
 	line-height: 1.5;

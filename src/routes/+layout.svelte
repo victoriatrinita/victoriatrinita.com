@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import '$lib/styles/fonts.css';
 	import '$lib/styles/app.css';
 </script>
 
@@ -16,6 +15,5 @@
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
-		font-family: var(--font-default);
 	}
 </style>

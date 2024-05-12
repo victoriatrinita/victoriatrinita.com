@@ -47,7 +47,6 @@
 		font-size: clamp(0.875em, 2vw, 1em);
 		padding: 3em 1em;
 		margin: auto auto 2.5em;
-		font-family: var(--font-heading);
 	}
 
 	section {

@@ -68,7 +68,7 @@
 		display: grid;
 		padding: clamp(2em, 3vw, 4em) 1em 0;
 		margin: auto;
-		max-width: 97ch;
+		max-width: 80ch;
 	}
 
 	header {
@@ -76,7 +76,6 @@
 		align-items: center;
 		display: flex;
 		flex-direction: column;
-		font-family: var(--font-heading);
 	}
 
 	header div {
@@ -96,26 +95,25 @@
 	}
 
 	h1 {
-		font-weight: 500;
+		font-weight: bolder;
 		font-size: clamp(1.5rem, 3vw, 2rem);
 		width: fit-content;
 		position: relative;
 	}
 
 	h2 {
-		font-weight: 500;
+		font-weight: bolder;
 		font-size: clamp(1.5rem, 3vw, 2rem);
 		width: fit-content;
 		position: relative;
 		margin-bottom: 0.5em;
-		font-family: var(--font-heading);
 	}
 
 	h2::after {
 		position: absolute;
 		content: '';
 		height: 0.5em;
-		bottom: 2px;
+		bottom: 0;
 		z-index: -1;
 		left: 0;
 		right: 0;
@@ -126,7 +124,7 @@
 		position: absolute;
 		content: '';
 		height: 0.5em;
-		bottom: 2px;
+		bottom: 0;
 		z-index: -1;
 		left: 0;
 		right: 0;
