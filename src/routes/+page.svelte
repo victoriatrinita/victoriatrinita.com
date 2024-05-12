@@ -113,7 +113,7 @@
 		position: absolute;
 		content: '';
 		height: 0.5em;
-		bottom: 2px;
+		bottom: 0;
 		z-index: -1;
 		left: 0;
 		right: 0;
@@ -124,7 +124,7 @@
 		position: absolute;
 		content: '';
 		height: 0.5em;
-		bottom: 2px;
+		bottom: 0;
 		z-index: -1;
 		left: 0;
 		right: 0;
