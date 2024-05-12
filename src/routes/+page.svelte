@@ -68,7 +68,7 @@
 		display: grid;
 		padding: clamp(2em, 3vw, 4em) 1em 0;
 		margin: auto;
-		max-width: 97ch;
+		max-width: 80ch;
 	}
 
 	header {
