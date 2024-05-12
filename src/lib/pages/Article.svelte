@@ -55,7 +55,7 @@
 	}
 	article :global(h2),
 	article :global(h3) {
-		font-weight: 600;
+		font-weight: 700;
 		width: fit-content;
 		position: relative;
 	}
