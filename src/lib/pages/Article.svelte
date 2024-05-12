@@ -1,4 +1,9 @@
+<script lang="ts">
+	import ProgressBar from '$lib/components/ProgressBar.svelte';
+</script>
+
 <article>
+	<ProgressBar />
 	<slot />
 </article>
 
