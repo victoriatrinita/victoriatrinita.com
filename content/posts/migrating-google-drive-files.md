@@ -1,3 +1,12 @@
+---
+title: Migrating Google Drive Files to another Google Account
+tags: 
+language: english
+description: Migrate all data from Google Drive university account to personal google drive
+date:published: 2024-05-20
+date:updated:
+---
+
 Migrating Google Drive Files to another Google Account
 
 Use cases, migrate all data from Google Drive university account to personal google drive. Either because of one thing or another that the data or account will be deleted after graduate.
