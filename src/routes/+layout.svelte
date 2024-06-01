@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>{$page.data.meta.title}</title>
+	<title>{$page.data.meta?.title || $page.status}</title>
 </svelte:head>
 
 <Navigation />
