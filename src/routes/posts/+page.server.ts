@@ -11,6 +11,9 @@ export const load: PageServerLoad = async () => {
 	const posts = parseDir('content/posts', hydrate);
 
 	return {
-		posts
+		posts,
+		meta: {
+			title: 'Posts'
+		}
 	};
 };

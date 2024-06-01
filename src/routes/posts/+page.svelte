@@ -4,10 +4,6 @@
 	export let data: import('./$types').PageData;
 </script>
 
-<svelte:head>
-	<title>Posts | Victoria T P</title>
-</svelte:head>
-
 {#if !data.posts.length}
 	<section>
 		<h1>No posts found</h1>
