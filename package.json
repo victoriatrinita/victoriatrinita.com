@@ -1,5 +1,4 @@
 {
-	"name": "victoriatrinita",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
