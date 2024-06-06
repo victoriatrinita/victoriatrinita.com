@@ -1,4 +1,4 @@
 /.svelte-kit
 /content
 
-package-lock.json
+pnpm-lock.yaml
