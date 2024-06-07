@@ -10,6 +10,9 @@ export async function load() {
 	const posts = parseDir('content/posts', hydrate);
 
 	return {
-		posts
+		posts,
+		meta: {
+			title: 'Victoria Trinita Pardede'
+		}
 	};
 }

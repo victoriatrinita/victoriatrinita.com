@@ -19,6 +19,9 @@ export const load: PageServerLoad = async ({ params }) => {
 	const post = parseFile(`content/posts/${slug}.md`, hydrate);
 
 	return {
-		post
+		post,
+		meta: {
+			title: post.title
+		}
 	};
 };

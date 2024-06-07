@@ -4,7 +4,12 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import '$lib/styles/app.css';
+	import { page } from '$app/stores';
 </script>
+
+<svelte:head>
+	<title>{$page.data.meta?.title || $page.status}</title>
+</svelte:head>
 
 <Navigation />
 

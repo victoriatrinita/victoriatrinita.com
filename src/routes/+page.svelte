@@ -7,10 +7,6 @@
 	export let data;
 </script>
 
-<svelte:head>
-	<title>Home | Victoria T P</title>
-</svelte:head>
-
 <svelte:window bind:innerWidth />
 
 <div class="wrapper">
