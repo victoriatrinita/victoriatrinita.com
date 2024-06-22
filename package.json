@@ -5,7 +5,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "pnpm run \"/^check:.*/\"",
-		"check:style": "prettier --check",
+		"check:style": "prettier --check .",
 		"check:svelte": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write ."
@@ -18,6 +18,8 @@
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.1.1",
 		"@types/eslint": "^8.56.0",
+		"@types/markdown-it": "^14.1.1",
+		"@types/node": "^20.14.8",
 		"@typescript-eslint/eslint-plugin": "^7.0.0",
 		"@typescript-eslint/parser": "^7.0.0",
 		"eslint": "^8.56.0",
