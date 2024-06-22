@@ -6,14 +6,14 @@
 <Article>
 	<TapedPolaroid src="assets/profile/ori.jpg" alt="Self portrait" />
 
-	<h2 id="about" style:margin-top="1.5rem">About Self</h2>
+	<h2 id="about">About Self</h2>
 
 	<p>
 		Hello, I am Victoria Trinita Pardede, a final year Information Engineering student at
 		Universitas Gadjah Mada. I enjoy exploring the world of web development.
 	</p>
 
-	<h2 id="backstory" style:margin-top="1.5rem">This Website's Backstory</h2>
+	<h2 id="backstory">This Website's Backstory</h2>
 
 	<p>
 		I remember in primary school, our teachers used to assign us to make scrapbooks that showcase
