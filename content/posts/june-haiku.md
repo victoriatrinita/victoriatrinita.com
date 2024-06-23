@@ -1,6 +1,6 @@
 ---
 title: June Haiku
-tags:
+tags: log
 language: english
 description: Daily log of June 2024
 date:published: 2024-06-30
