@@ -91,3 +91,45 @@ Late wake-up, sleepy
 Weariness lingers all day
 Film with dear, unwind
 
+**Sun, 2024.06.16**
+
+Sunday with toddlers
+Awkward, yet a child once more
+Made a cool friend too
+
+**Mon, 2024.06.17**
+
+Fell asleep early
+Japanese book in my hands
+_Ganbarimasu_
+
+**Tue, 2024.06.18**
+
+Lost track of time again
+Editing and checking views
+Midnight—time to sleep
+
+**Thu, 2024.06.20**
+
+Simple day unfolds
+Workload light, more time to rest
+Breathing easy now
+
+**Fri, 2024.06.21**
+
+Work from home by day
+Indonesian dine out by night
+Life's course reassured
+
+**Sat, 2024.06.22**
+
+Staying home today
+Clearing mess, I declutter
+Lightness fills the air
+
+**Sun, 2024.06.23**
+
+Church hour, then lunch
+Girls discuss life, love, and such
+Shared views enlighten
+
