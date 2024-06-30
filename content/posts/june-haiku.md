@@ -133,3 +133,39 @@ Church hour, then lunch
 Girls discuss life, love, and such
 Shared views enlighten
 
+
+**Mon, 2024.06.24**
+
+Plans to visit home
+December’s days work the best
+See parents while we can
+
+**Tue, 2024.06.25**
+
+Different words bring laughs
+Embarrassed by my Japanese
+Sweaty sleep, unwashed
+
+**Wed, 2024.06.26**
+
+Thorough code review
+Avoiding offense, I strive
+Recent reads guide me
+
+**Thu, 2024.06.27**
+
+Morning bus, eyes trace
+Maybe recall my face
+Lesson learned, move on.
+
+**Fri, 2024.06.28**
+
+Code review at home
+Questions, not code, fill the day
+Showing why and how
+
+**Sat, 2024.06.29**
+
+Read, found a typo
+Fixed and approved—a debut
+In contribution
