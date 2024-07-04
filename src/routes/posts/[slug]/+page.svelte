@@ -4,7 +4,7 @@
 	export let data: import('./$types').PageData;
 </script>
 
-<Article>
+<Article showProgress={true}>
 	<section>
 		{@html data.post.content}
 	</section>
