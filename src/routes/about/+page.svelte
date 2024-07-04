@@ -6,6 +6,7 @@
 <Article>
 	<TapedPolaroid src="assets/profile/ori.jpg" alt="Self portrait" />
 
+	<section>
 	<h2 id="about">About Self</h2>
 
 	<p>
@@ -68,4 +69,5 @@
 	</p>
 
 	<p>Wrapping up, I hope this place stays as a permanent "encyclopedia" for my future self :)</p>
+</section>
 </Article>
