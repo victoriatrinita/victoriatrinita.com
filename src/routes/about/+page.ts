@@ -1,7 +1,5 @@
-export const load: import('./$types').PageLoad = async ({ fetch }) => {
-	const articles = await fetch('/about.json').then((r) => r.json());
+export const load: import('./$types').PageLoad = async () => {
 	return {
-		post: articles.index,
 		meta: {
 			title: 'About'
 		}
