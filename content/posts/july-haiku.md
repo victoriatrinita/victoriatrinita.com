@@ -7,6 +7,8 @@ date:published: 2024-07-31
 date:updated:
 ---
 
+## Haiku: July
+
 **Mon, 2024.07.01**
 
 Video shook me
