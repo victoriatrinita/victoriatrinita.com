@@ -1,6 +1,6 @@
 ---
 title: July Haiku
-tags: log
+tags: log, haiku
 language: english
 description: Daily log of July 2024
 date:published: 2024-07-31
@@ -59,25 +59,53 @@ date:updated:
 
 **Sat, 2024.07.06**
 
+Yesterday it came
+
+Monthly cycle—maybe linked
+
+Hope the lump will shrink
+
+
 **Fri, 2024.07.05**
+
+Mom shared a big news
+
+Sister's expecting—soon aunt
+
+Joy, yet feeling old
+
 
 **Thu, 2024.07.04**
 
+_Jin dan Jun_ at night
+
+2000s Indonesian show
+
+Kindergarten days
+
+
 **Wed, 2024.07.03**
 
-Lying if I said <br>
-I did not think of it all day <br>
+Lying if I said
+
+I did not think of it all day
+
 Chest lump found last night
 
 
 **Tue, 2024.07.02**
-Caught the bus in rush, <br>
-Card reader fails, I step off <br>
+
+Caught the bus in rush
+
+Card reader fails, I step off
+
 Avoid past mistake
 
 
 **Mon, 2024.07.01**
 
-Video shook me <br>
-Life's fragility felt <br>
+Video shook me
+
+Life's fragility felt
+
 Health worries arise
