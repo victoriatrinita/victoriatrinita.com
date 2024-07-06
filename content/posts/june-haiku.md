@@ -7,6 +7,8 @@ date:published: 2024-06-30
 date:updated:
 ---
 
+## Haiku: June
+
 **Sat, 2024.06.01**
 
 It is the weekend
