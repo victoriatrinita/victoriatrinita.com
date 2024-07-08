@@ -128,7 +128,7 @@
 	}
 
 	p {
-		font-size: clamp(1rem, 2vw, 1.15rem);
+		font-size: clamp(1rem, 2vw, 1.125rem);
 		line-height: 1.8rem;
 	}
 </style>
