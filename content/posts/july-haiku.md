@@ -65,9 +65,30 @@ Hope the lump will shrink
 
 **Sun, 2024.07.07**
 
+Japanese test day
+
+Reading tough, listening fine
+
+Overall, quite hard
+
+
 **Mon, 2024.07.08**
 
+Hot air all around
+
+Sausage waits in office fridge
+
+Forgot to bring home
+
+
 **Tue, 2024.07.09**
+
+WFH today
+
+Light tasks, life tidied just okay
+
+A calm, simple day
+
 
 **Wed, 2024.07.10**
 
