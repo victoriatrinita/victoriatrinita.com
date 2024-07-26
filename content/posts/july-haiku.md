@@ -107,19 +107,75 @@ Praying all is well
 
 **Sun, 2024.07.14**
 
+Church folks inquire
+
+About my job’s challenges
+
+Surprised by their concern
+
+
 **Mon, 2024.07.15**
+
+Sea day turned to hills
+
+Waterfall's coolness felt good
+
+Church friends' warmth, unmatched
+
 
 **Tue, 2024.07.16**
 
+Health check, half workday
+
+Bought breads from the station shop
+
+Results in a week
+
+
 **Wed, 2024.07.17**
+
+Worked from home today
+
+Routine, nothing much to note
+
+Made hiking poster
+
 
 **Thu, 2024.07.18**
 
+Social gathering
+
+HR’s effort to connect
+
+Grateful for their care
+
+
 **Fri, 2024.07.19**
+
+Talked about our path
+
+Decisions take time to make
+
+Not an easy choice
+
 
 **Sat, 2024.07.20**
 
+Youth service, then dine
+
+Seated with quiet people
+
+Awkward, few words shared
+
+
 **Sun, 2024.07.21**
+
+Girls karaoke
+
+Their voices loud, mine is weak
+
+Must practice my voice
+
 
 **Mon, 2024.07.22**
 
@@ -128,6 +184,13 @@ Praying all is well
 **Wed, 2024.07.24**
 
 **Thu, 2024.07.25**
+
+Worked til 4am
+
+Three hours of sleep by choice
+
+Should get paid more still
+
 
 **Fri, 2024.07.26**
 
