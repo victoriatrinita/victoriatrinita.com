@@ -101,6 +101,13 @@ Praying all is well
 
 **Thu, 2024.07.11**
 
+Workplace advice heard
+
+Language skills decide trust
+
+Mine still lacking, sigh
+
+
 **Fri, 2024.07.12**
 
 Father's last workday
@@ -246,6 +253,13 @@ Beautiful escape
 
 
 **Sun, 2024.07.28**
+
+Sunday with the kids
+
+Disobedient and rude
+
+I walked away, done
+
 
 **Mon, 2024.07.29**
 
