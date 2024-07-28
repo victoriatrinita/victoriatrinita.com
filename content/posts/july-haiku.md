@@ -103,7 +103,21 @@ Praying all is well
 
 **Fri, 2024.07.12**
 
+Father's last workday
+
+Sixty-two, retiring strong
+
+Inspired by him
+
+
 **Sat, 2024.07.13**
+
+By the river's side
+
+Bible study, BBQ
+
+Rice and meat, so good
+
 
 **Sun, 2024.07.14**
 
