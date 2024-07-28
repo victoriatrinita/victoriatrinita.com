@@ -190,6 +190,13 @@ Awkwardness relieved
 
 **Wed, 2024.07.24**
 
+Sudden Monday task
+
+Screen specs for admin site done
+
+Checked friend's PR too
+
+
 **Thu, 2024.07.25**
 
 Worked til 4am
@@ -201,7 +208,21 @@ Should get paid more still
 
 **Fri, 2024.07.26**
 
+New friend from Tuesday
+
+Her stay alters weekend's calm
+
+Quiet discomfort
+
+
 **Sat, 2024.07.27**
+
+Two nights, sighs and stress
+
+Fireworks in Sumida
+
+Beautiful escape
+
 
 **Sun, 2024.07.28**
 
