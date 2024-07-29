@@ -263,6 +263,13 @@ I walked away, done
 
 **Mon, 2024.07.29**
 
+Infra task due soon
+
+Finally seeing some light
+
+Slight relief, not done
+
+
 **Tue, 2024.07.30**
 
 **Wed, 2024.07.31**
