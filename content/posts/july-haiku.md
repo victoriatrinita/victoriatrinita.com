@@ -272,4 +272,17 @@ Slight relief, not done
 
 **Tue, 2024.07.30**
 
+Staging works at last
+
+Endless hurdles fade away
+
+Set for tomorrow
+
+
 **Wed, 2024.07.31**
+
+Years as Christian
+
+Today, eyes open wide
+
+Bible's a must-read
