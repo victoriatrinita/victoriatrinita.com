@@ -4,13 +4,20 @@ You’ve found my personal site—a space where I explore and nurture my own vis
 
 ## Setup Guide
 
-```bash
-# 1. Fork and clone the repository
-git clone <url>
+1. Fork and clone the repository
 
-# 2. Install dependencies
-pnpm install
+   ```bash
+   git clone <url>
+   ```
 
-# 3. Start the development server
-pnpm dev
-```
+2. Install dependencies
+
+   ```bash
+   pnpm install
+   ```
+
+3. Start the development server
+
+   ```bash
+   pnpm dev
+   ```
