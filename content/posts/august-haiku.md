@@ -44,9 +44,9 @@ leans on ChatGPT
 
 **Wed, 2024.08.07**
 
-Created a guide,
+Created a guide
 
-Briefed new older team member, 
+Briefed new older team member
 
 Unease with leading
 
