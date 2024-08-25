@@ -69,13 +69,48 @@ Unease with leading
 
 **Fri, 2024.08.16**
 
+Mom’s friend vlogs abroad
+
+Awakens my longing to share
+
+Japan with parents
+
+
 **Sat, 2024.08.17**
+
+Feeling drawn to go
+
+Netherlands seems inviting
+
+Bored with Asian faces
+
 
 **Sun, 2024.08.18**
 
+Up till 5 a.m.
+
+Woke at 10, got to church late
+
+Still found joy with them
+
+
 **Mon, 2024.08.19**
 
+Marcel’s birthday joy
+
+Cake and a custom portrait
+
+Grateful for his smile
+
+
 **Tue, 2024.08.20**
+
+Today I wondered
+
+Will my future child see me
+
+Brave and proud as mom?
+
 
 **Wed, 2024.08.21**
 
@@ -83,9 +118,30 @@ Unease with leading
 
 **Fri, 2024.08.23**
 
+Language isn’t the
+
+barrier—it's missing links
+
+Assumptions blind eyes
+
+
 **Sat, 2024.08.24**
 
+Marcel’s treats today
+
+cake and coffee meant for work
+
+but I cleaned instead
+
+
 **Sun, 2024.08.25**
+
+Kids share their pure faith
+
+Teaching me as I observe
+
+Wisdom from their hearts
+
 
 **Mon, 2024.08.26**
 
