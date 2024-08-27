@@ -145,7 +145,21 @@ Wisdom from their hearts
 
 **Mon, 2024.08.26**
 
+Left office early
+
+Thyroid test shows all is well
+
+安心できた
+
+
 **Tue, 2024.08.27**
+
+Colleague “sick,” tasks eased,
+
+Boss’s kindness misses truth
+
+I bear the burden
+
 
 **Wed, 2024.08.28**
 
