@@ -53,6 +53,13 @@ Unease with leading
 
 **Thu, 2024.08.08**
 
+Work's perfection drains
+
+Yet my own dreams lie untouched
+
+Time to realign
+
+
 **Fri, 2024.08.09**
 
 **Sat, 2024.08.10**
