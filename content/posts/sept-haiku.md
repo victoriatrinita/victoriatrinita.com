@@ -11,6 +11,13 @@ date:updated:
 
 **Sun, 2024.09.01**
 
+Plans shifted, we roamed
+
+Stroll around Harajuku
+
+Gossip spiced the night
+
+
 **Mon, 2024.09.02**
 
 Exhaustive efforts
