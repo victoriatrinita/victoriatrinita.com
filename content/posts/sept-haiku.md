@@ -38,7 +38,21 @@ Summer trip ahead
 
 **Wed, 2024.09.04**
 
+Thought I'd find some rest
+
+But there’s more work than I thought
+
+Sigh, no ease today
+
+
 **Thu, 2024.09.05**
+
+Five months of effort
+
+Project's end is close at hand
+
+Validation soothes
+
 
 **Fri, 2024.09.06**
 
