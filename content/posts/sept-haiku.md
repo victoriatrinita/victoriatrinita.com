@@ -56,7 +56,21 @@ Validation soothes
 
 **Fri, 2024.09.06**
 
+Leading felt awkward
+
+But I'll push through discomfort
+
+Learning never ends
+
+
 **Sat, 2024.09.07**
+
+Behind strength, unknown
+
+A side I didn’t expect
+
+Each has their burden
+
 
 **Sun, 2024.09.08**
 
