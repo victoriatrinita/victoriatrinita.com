@@ -74,6 +74,13 @@ Each has their burden
 
 **Sun, 2024.09.08**
 
+Looked up to their lives
+
+Now I see a different light
+
+Mom and Dad were right
+
+
 **Mon, 2024.09.09**
 
 **Tue, 2024.09.10**
