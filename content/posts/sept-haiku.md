@@ -107,6 +107,13 @@ Mom and Dad were right
 
 **Sat, 2024.09.21**
 
+Woke late, cooked and napped
+
+Watched J-drama, sang at home
+
+1 a.m. showered
+
+
 **Sun, 2024.09.22**
 
 Resting at home today
