@@ -109,7 +109,21 @@ Mom and Dad were right
 
 **Sun, 2024.09.22**
 
+Resting at home today
+
+Practiced speaking, learned my gaps
+
+Hyougen and kanji
+
+
 **Mon, 2024.09.23**
+
+Senzokuike
+
+First walk here after two years
+
+Tamagawa next
+
 
 **Tue, 2024.09.24**
 
