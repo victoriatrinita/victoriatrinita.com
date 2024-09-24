@@ -103,7 +103,21 @@ Mom and Dad were right
 
 **Thu, 2024.09.19**
 
+Onsen noon to night
+
+Relax in comfort and peace
+
+Then shinkansen home
+
+
 **Fri, 2024.09.20**
+
+Returned home last night
+
+Rest body and gather thoughts
+
+Holidays to breathe
+
 
 **Sat, 2024.09.21**
 
@@ -133,6 +147,13 @@ Tamagawa next
 
 
 **Tue, 2024.09.24**
+
+First day back at work
+
+Just research, writing, and talks
+
+Already want rest
+
 
 **Wed, 2024.09.25**
 
