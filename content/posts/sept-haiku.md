@@ -92,20 +92,48 @@ Leader praised the team
 
 **Tue, 2024.09.10**
 
-With tasks all wrapped up
+Church ministry work
 
-My laughter comes easily
+and trip planning the whole day
 
-Eager for next month
+Tough and challenging
 
 
 **Wed, 2024.09.11**
 
+Rushed for hiking gear
+
+Left the shops with empty hands
+
+Rain then dashed my plans
+
+
 **Thu, 2024.09.12**
+
+Late night, plans revised
+
+Two hours of sleep makes work hard
+
+But I got things done
+
 
 **Fri, 2024.09.13**
 
+Tonight’s nomikai
+
+Surprisingly not draining
+
+Comfort or used to?
+
+
 **Sat, 2024.09.14**
+
+No sleep, morning rush
+
+Hike fushimi inari
+
+Summer trip begins
+
 
 **Sun, 2024.09.15**
 
