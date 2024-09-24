@@ -137,7 +137,21 @@ Summer trip begins
 
 **Sun, 2024.09.15**
 
+Journeyed to Ine
+
+Biked, boated, BBQ night
+
+Fireworks by the sea
+
+
 **Mon, 2024.09.16**
+
+Farewell, kind host
+
+Amanohashidate
+
+A sight to treasure
+
 
 **Tue, 2024.09.17**
 
