@@ -113,7 +113,21 @@ Eager for next month
 
 **Tue, 2024.09.17**
 
+Wandered with Kak Steph
+
+Kyoto temples, then we part
+
+Night in capsule room
+
+
 **Wed, 2024.09.18**
+
+Working from cafe
+
+Alone in Kyoto hotel
+
+Onsen, calls, breakfast
+
 
 **Thu, 2024.09.19**
 
