@@ -121,7 +121,21 @@ Brave and proud as mom?
 
 **Wed, 2024.08.21**
 
+Focus on testing
+
+Found gaps with careful thinking
+
+Issues noted down
+
+
 **Thu, 2024.08.22**
+
+GitHub issues made
+
+Failed integration tests logged
+
+Performance tests done
+
 
 **Fri, 2024.08.23**
 
