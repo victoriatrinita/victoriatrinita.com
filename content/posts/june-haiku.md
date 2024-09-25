@@ -1,13 +1,11 @@
 ---
-title: June Haiku
+title: 202406 Haiku
 tags: log
 language: english
-description: Daily log of June 2024
+description: June 2024 daily haiku log
 date:published: 2024-06-30
 date:updated:
 ---
-
-## Haiku: June
 
 **Sat, 2024.06.01**
 
