@@ -227,6 +227,13 @@ Already want rest
 
 **Wed, 2024.09.25**
 
+Summer heat is gone
+
+Yesterday suddenly cold
+
+Autumn’s here for sure
+
+
 **Thu, 2024.09.26**
 
 **Fri, 2024.09.27**
