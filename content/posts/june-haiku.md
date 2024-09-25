@@ -1,6 +1,6 @@
 ---
 title: 202406 Haiku
-tags: log
+tags: haiku, log
 language: english
 description: June 2024 daily haiku log
 date:published: 2024-06-30
