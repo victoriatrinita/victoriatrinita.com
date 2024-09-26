@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@fontsource-variable/roboto-slab':
+        specifier: ^5.0.20
+        version: 5.0.20
       '@fontsource-variable/inter':
         specifier: ^5.0.18
         version: 5.0.18
@@ -245,6 +248,9 @@ packages:
 
   '@fontsource-variable/inter@5.0.18':
     resolution: {integrity: sha512-rJzSrtJ3b7djiGFvRuTe6stDfbYJGhdQSfn2SI2WfXviee7Er0yKAHE5u7FU7OWVQQQ1x3+cxdmx9NdiAkcrcA==}
+
+  '@fontsource-variable/roboto-slab@5.0.20':
+    resolution: {integrity: sha512-P+SYnhWntwbguWtOp9GkT3fDRN/E09NGNEBMCehhp+K+jctha00h7rn+G0IGJqUcifWZwEWBIFPFVy1ml8bjvQ==}
 
   '@fontsource/fira-mono@4.5.10':
     resolution: {integrity: sha512-bxUnRP8xptGRo8YXeY073DSpfK74XpSb0ZyRNpHV9WvLnJ7TwPOjZll8hTMin7zLC6iOp59pDZ8EQDj1gzgAQQ==}
@@ -1395,6 +1401,8 @@ snapshots:
   '@eslint/js@8.57.0': {}
 
   '@fontsource-variable/inter@5.0.18': {}
+
+  '@fontsource-variable/roboto-slab@5.0.20': {}
 
   '@fontsource/fira-mono@4.5.10': {}
 
