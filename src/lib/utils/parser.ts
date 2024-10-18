@@ -49,5 +49,9 @@ export function parseFile(path: string, hydrate: Function) {
 }
 
 export function parseDir(dirname: string, hydrate: Function) {
-	return readdirSync(dirname).map((filename) => parseFile(join(dirname, filename), hydrate));
+	const posts = readdirSync(dirname).map((filename) => parseFile(join(dirname, filename), hydrate));
+
+	return posts.sort(
+		(a, b) => new Date(b.date.published).getTime() - new Date(a.date.published).getTime()
+	);
 }
