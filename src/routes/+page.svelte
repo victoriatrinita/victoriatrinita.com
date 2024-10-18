@@ -38,10 +38,7 @@
 		<h2>Recent Posts</h2>
 
 		<div>
-			{#each data.posts
-				.sort((x, y) => x.id - y.id)
-				.slice(-3)
-				.reverse() as post}
+			{#each data.posts.slice(0, 3) as post}
 				<PreviewCard {post} />
 			{/each}
 		</div>
