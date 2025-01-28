@@ -10,6 +10,11 @@ date:updated:
 # I Don't Balance, I Juggle
 
 Juggle illustration
+- kadang ada yg kepegang, ada yang engga
+- ada yang di atas, ada yg di bawah
+- sometimes the balls also fall out of reach of my hands, but i pick it up again.. and start juggling again..
+- but also there are times when it's time to let the ball out of our juggling hands, delegating it, but we take another ball (lol)
+
 Balance illustration
 
 - Family
@@ -20,7 +25,7 @@ Balance illustration
 
 - All those sections are done alongwith faith but i still fail to set aside a special time for God not while doing something else
 
-Thing is i do things with full conscience so i dont act if i am on half conscience. i dont multitask. That's my limitation but also strength.
+Thing is i do things with full consciousness so i dont act if i am on half conscience. i dont multitask. That's my limitation but also strength.
 
 Often times, i am available on one then absent on the other.
 
