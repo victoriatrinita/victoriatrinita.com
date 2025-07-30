@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'fs';
+import { readdirSync, readFileSync, statSync } from 'fs';
 import { join } from 'path';
 import marker from './marker';
 
@@ -49,7 +49,12 @@ export function parseFile(path: string, hydrate: Function) {
 }
 
 export function parseDir(dirname: string, hydrate: Function) {
-	const posts = readdirSync(dirname).map((filename) => parseFile(join(dirname, filename), hydrate));
+	const entries = readdirSync(dirname);
+	const posts = entries
+		.map((filename) => join(dirname, filename))
+		.filter((filepath) => statSync(filepath).isFile())
+		.map((filepath) => parseFile(filepath, hydrate))
+		.filter(Boolean);
 
 	return posts.sort(
 		(a, b) => new Date(b.date.published).getTime() - new Date(a.date.published).getTime()
