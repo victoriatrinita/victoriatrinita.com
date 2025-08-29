@@ -1,7 +1,11 @@
 <script lang="ts">
 	import Article from '$lib/pages/Article.svelte';
 
-	export let data: import('./$types').PageData;
+	interface Props {
+		data: import('./$types').PageData;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <Article showProgress={true}>

@@ -4,16 +4,21 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import '$lib/styles/app.css';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <svelte:head>
-	<title>{$page.data.meta?.title || $page.status}</title>
+	<title>{page.data.meta?.title || page.status}</title>
 </svelte:head>
 
 <Navigation />
 
-<slot />
+{@render children?.()}
 
 <Footer />
 

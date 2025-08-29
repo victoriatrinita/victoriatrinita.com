@@ -1,10 +1,15 @@
-<script>
-	export let href = '';
-	export let label = '';
+<script lang="ts">
+	interface Props {
+		href?: string;
+		label?: string;
+		children?: import('svelte').Snippet;
+	}
+
+	let { href = '', label = '', children }: Props = $props();
 </script>
 
 <a {href} aria-label={label || undefined}>
-	<slot />
+	{@render children?.()}
 </a>
 
 <style>

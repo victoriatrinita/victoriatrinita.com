@@ -1,19 +1,19 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 </script>
 
 <svelte:head>
-	<title>{$page.status}</title>
+	<title>{page.status}</title>
 </svelte:head>
 
 <div class="wrapper">
-	{#if $page.status == 404}
+	{#if page.status == 404}
 		<h1>404</h1>
 		<h1>Oops! Looks like you're lost!</h1>
 		<h2>Let's head back <a href="/">home</a>.</h2>
 	{:else}
-		<h1>{$page.status}</h1>
-		<h2>{$page.error?.message}</h2>
+		<h1>{page.status}</h1>
+		<h2>{page.error?.message}</h2>
 	{/if}
 </div>
 

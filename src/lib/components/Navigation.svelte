@@ -1,12 +1,17 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { navigating, page } from '$app/stores';
 	import { capitalize } from '$lib/utils/utils';
 	import { MenuIcon, XIcon } from 'svelte-feather-icons';
 	import { slide } from 'svelte/transition';
-	let y: number;
-	$: innerWidth = 0;
-	let opened = false;
-	$: opened = $navigating ? false : opened;
+	let y: number = $state();
+	let innerWidth = $state(0);
+
+	let opened = $state(false);
+	run(() => {
+		opened = $navigating ? false : opened;
+	});
 	const menu = { home: '', about: 'about', posts: 'posts' };
 </script>
 
@@ -21,7 +26,7 @@
 	</div>
 
 	{#if innerWidth < 600}
-		<span on:click={() => (opened = !opened)}>
+		<span onclick={() => (opened = !opened)}>
 			{#if opened}
 				<XIcon size="24" />
 			{:else}
