@@ -1,6 +1,11 @@
 <script lang="ts">
 	import ProgressBar from '$lib/components/ProgressBar.svelte';
-	export let showProgress: boolean = false;
+	interface Props {
+		showProgress?: boolean;
+		children?: import('svelte').Snippet;
+	}
+
+	let { showProgress = false, children }: Props = $props();
 </script>
 
 <article>
@@ -8,7 +13,7 @@
 		<ProgressBar />
 	{/if}
 
-	<slot />
+	{@render children?.()}
 </article>
 
 <style>

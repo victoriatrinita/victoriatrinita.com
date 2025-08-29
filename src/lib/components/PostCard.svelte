@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let post: import('$lib/types').Post;
+	interface Props {
+		post: import('$lib/types').Post;
+	}
+
+	let { post }: Props = $props();
 </script>
 
 <a href="posts/{post.slug}">

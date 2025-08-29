@@ -1,5 +1,10 @@
 <script lang="ts">
-	export let src: string, alt: string;
+	interface Props {
+		src: string;
+		alt: string;
+	}
+
+	let { src, alt }: Props = $props();
 </script>
 
 <div class="tape">

@@ -1,12 +1,13 @@
 <script lang="ts">
-	import { navigating, page } from '$app/stores';
+	import { page } from '$app/state';
 	import { capitalize } from '$lib/utils/utils';
 	import { MenuIcon, XIcon } from 'svelte-feather-icons';
 	import { slide } from 'svelte/transition';
-	let y: number;
-	$: innerWidth = 0;
-	let opened = false;
-	$: opened = $navigating ? false : opened;
+	let y: number = $state(0);
+	let innerWidth = $state(0);
+
+	let opened = $state(false);
+
 	const menu = { home: '', about: 'about', posts: 'posts' };
 </script>
 
@@ -21,20 +22,20 @@
 	</div>
 
 	{#if innerWidth < 600}
-		<span on:click={() => (opened = !opened)}>
+		<button onclick={() => (opened = !opened)}>
 			{#if opened}
 				<XIcon size="24" />
 			{:else}
 				<MenuIcon size="24" />
 			{/if}
-		</span>
+		</button>
 	{/if}
 
 	{#if innerWidth > 600 || opened}
 		<div class="menu" transition:slide={{ duration: opened ? 100 : 0 }}>
 			{#each Object.entries(menu) as [title, link]}
 				<a
-					class:active={$page.url.pathname === `/${link}`}
+					class:active={page.url.pathname === `/${link}`}
 					data-sveltekit-preload-data
 					href="/{link}">{capitalize(title)}</a
 				>
@@ -55,10 +56,13 @@
 		z-index: 1;
 	}
 
-	nav > span {
+	nav > button {
 		cursor: pointer;
 		display: flex;
 		color: var(--martinique);
+		background: none;
+		border: none;
+		padding: 0;
 	}
 
 	.shadowed {

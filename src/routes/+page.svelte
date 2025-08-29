@@ -2,9 +2,9 @@
 	import Link from '$lib/components/Link.svelte';
 	import PreviewCard from '$lib/components/PreviewCard.svelte';
 
-	$: innerWidth = 0;
+	let innerWidth = $state(0);
 
-	export let data;
+	let { data } = $props();
 </script>
 
 <svelte:window bind:innerWidth />
