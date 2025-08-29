@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
-	import { navigating, page } from '$app/stores';
+	import { page } from '$app/state';
 	import { capitalize } from '$lib/utils/utils';
 	import { MenuIcon, XIcon } from 'svelte-feather-icons';
 	import { slide } from 'svelte/transition';
@@ -9,9 +7,7 @@
 	let innerWidth = $state(0);
 
 	let opened = $state(false);
-	run(() => {
-		opened = $navigating ? false : opened;
-	});
+
 	const menu = { home: '', about: 'about', posts: 'posts' };
 </script>
 
@@ -39,7 +35,7 @@
 		<div class="menu" transition:slide={{ duration: opened ? 100 : 0 }}>
 			{#each Object.entries(menu) as [title, link]}
 				<a
-					class:active={$page.url.pathname === `/${link}`}
+					class:active={page.url.pathname === `/${link}`}
 					data-sveltekit-preload-data
 					href="/{link}">{capitalize(title)}</a
 				>
