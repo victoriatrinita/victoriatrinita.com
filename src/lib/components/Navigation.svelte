@@ -5,7 +5,7 @@
 	import { capitalize } from '$lib/utils/utils';
 	import { MenuIcon, XIcon } from 'svelte-feather-icons';
 	import { slide } from 'svelte/transition';
-	let y: number = $state();
+	let y: number = $state(0);
 	let innerWidth = $state(0);
 
 	let opened = $state(false);
@@ -26,13 +26,13 @@
 	</div>
 
 	{#if innerWidth < 600}
-		<span onclick={() => (opened = !opened)}>
+		<button onclick={() => (opened = !opened)}>
 			{#if opened}
 				<XIcon size="24" />
 			{:else}
 				<MenuIcon size="24" />
 			{/if}
-		</span>
+		</button>
 	{/if}
 
 	{#if innerWidth > 600 || opened}
@@ -60,10 +60,13 @@
 		z-index: 1;
 	}
 
-	nav > span {
+	nav > button {
 		cursor: pointer;
 		display: flex;
 		color: var(--martinique);
+		background: none;
+		border: none;
+		padding: 0;
 	}
 
 	.shadowed {
