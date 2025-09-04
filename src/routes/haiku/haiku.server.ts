@@ -35,7 +35,5 @@ function hydrateHaiku(_frontMatter: any, content: string, filename: string): Hai
 
 export function getByMonth(year: string, month: string): Haiku[] {
 	const dir = join('content', 'haiku', year, month);
-	return parseDir(dir, hydrateHaiku).sort((a: Haiku, b: Haiku) =>
-		a.slug > b.slug ? 1 : -1
-	);
+	return parseDir(dir, hydrateHaiku).sort((a: Haiku, b: Haiku) => (a.slug > b.slug ? 1 : -1));
 }
