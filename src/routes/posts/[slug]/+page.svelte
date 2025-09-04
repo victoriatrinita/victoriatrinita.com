@@ -13,4 +13,3 @@
 		{@html data.post.content}
 	</section>
 </Article>
-{console.log(data.post.content)}
