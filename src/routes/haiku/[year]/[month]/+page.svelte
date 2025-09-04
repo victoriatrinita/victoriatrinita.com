@@ -8,9 +8,8 @@
 	let { data }: Props = $props();
 </script>
 
-<h1>{data.year}.{data.month}</h1>
-
 <Article showProgress={true}>
+	<h1>{data.year}.{data.month}</h1>
 	<section>
 		{#each data.items as item}
 			<h3>{item.date}</h3>
