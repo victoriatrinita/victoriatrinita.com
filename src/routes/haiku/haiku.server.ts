@@ -1,5 +1,6 @@
 import { join } from 'path';
 import { parseDir } from '$lib/utils/parser';
+import { readdirSync } from 'fs';
 
 export type Haiku = {
 	slug: string;
@@ -36,4 +37,21 @@ function hydrateHaiku(_frontMatter: any, content: string, filename: string): Hai
 export function getByMonth(year: string, month: string): Haiku[] {
 	const dir = join('content', 'haiku', year, month);
 	return parseDir(dir, hydrateHaiku).sort((a: Haiku, b: Haiku) => (a.slug > b.slug ? 1 : -1));
+}
+
+export function getDates(): { year: string; month: string }[] {
+	const base = join('content', 'haiku');
+	const years = readdirSync(base);
+	const dates: { year: string; month: string }[] = [];
+
+	for (const y of years) {
+		const ym = readdirSync(join(base, y));
+		for (const m of ym) {
+			dates.push({ year: y, month: m });
+		}
+	}
+
+	return dates.sort((a, b) =>
+		a.year === b.year ? b.month.localeCompare(a.month) : b.year.localeCompare(a.year)
+	);
 }
