@@ -8,7 +8,7 @@
 
 	let opened = $state(false);
 
-	const menu = { home: '', about: 'about', posts: 'posts' };
+	const menu = { home: '', about: 'about', posts: 'posts', haiku: 'haiku' };
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerWidth />
