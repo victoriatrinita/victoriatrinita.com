@@ -1,6 +1,6 @@
 ---
 id: 012
-title: "ワンパンフレンチトースト"
+title: ワンパンフレンチトースト
 date_cooked: 1999-01-01
 image: /images/cooklog/012-wanpan-furenci-toosuto.jpg
 tags: []

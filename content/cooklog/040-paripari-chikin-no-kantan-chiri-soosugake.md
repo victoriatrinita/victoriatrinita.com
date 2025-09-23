@@ -1,6 +1,6 @@
 ---
 id: 040
-title: "パリパリチキンの簡単チリソースがけ"
+title: パリパリチキンの簡単チリソースがけ
 date_cooked: 
 image: /images/cooklog/040-paripari-chikin-no-kantan-chiri-soosugake.jpg
 tags: [肉, 鶏胸肉]
