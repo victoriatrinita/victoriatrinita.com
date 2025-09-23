@@ -32,13 +32,13 @@
 		<h2>HAIKUS</h2>
 		<!-- <HaikuCard {data.haiku}/> -->
 
-		<Link href="/haikus">→ SEE MORE</Link>
+		<Link href="/">→ SEE MORE</Link>
 	</section>
 
 	<section>
 		<h2>COOKLOGS</h2>
 		<!-- <CooklogCard {data.cooklog}/> -->
-		<Link href="/cooklogs">→ SEE MORE</Link>
+		<Link href="/">→ SEE MORE</Link>
 	</section>
 
 	<VerseOfTheDay />
