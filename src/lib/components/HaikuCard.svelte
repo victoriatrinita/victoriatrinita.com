@@ -1,22 +1,25 @@
 <script lang="ts">
 	interface Props {
-		post: import('$lib/types').Post;
+		haiku: import('$lib/types').Haiku;
 	}
 
-	let { post }: Props = $props();
+	let { haiku }: Props = $props();
 </script>
 
-<a href="posts/{post.slug}">
+<a href="posts/{haiku.date}">
 	<section>
-		<h3>{post.title}</h3>
-		<small>{post.description}</small>
-		<footer>
-			<small>{post.date.published}</small>
-		</footer>
+		{haiku.date}
 		<div>
-			{#each post.tags as tag}
-				<small>{tag}</small>
-			{/each}
+			<div class="haiku-en">
+				{#each haiku.en as line}
+					<p>{line}</p>
+				{/each}
+			</div>
+			<div class="haiku-ja">
+				{#each haiku.ja as line}
+					<p>{line}</p>
+				{/each}
+			</div>
 		</div>
 	</section>
 </a>
@@ -27,15 +30,20 @@
 	}
 
 	section {
-		background-color: var(--wild-sand);
-		border-radius: 20px;
+		/* background-color: var(--wild-sand); */
+		/* border-radius: 20px; */
 		padding: 1em 1.5em;
 		cursor: pointer;
 		color: var(--martinique);
 		transition: all 300ms ease-out;
-		border: solid var(--alto) 1px;
-		display: grid;
-		gap: 0.25em;
+		/* border: solid var(--alto) 1px; */
+
+		background-image: url('/assets/dotted.svg');
+		background-repeat: no-repeat;
+		background-size: cover; /* fill container, crop if needed */
+		background-position: center;
+		/* grid-template-columns: 1fr 1fr 1fr; */
+		/* gap: 0.25em; */
 	}
 
 	section:hover {
@@ -45,12 +53,12 @@
 		border: solid var(--lavender-gray) 1px;
 	}
 
-	h3 {
+	/* h3 {
 		font-weight: 600;
 		font-size: clamp(1.125rem, 2vw, 1.25rem);
-	}
+	} */
 
-	div {
+	/* div {
 		display: flex;
-	}
+	} */
 </style>

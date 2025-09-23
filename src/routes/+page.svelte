@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Link from '$lib/components/Link.svelte';
 	import PostList from '$lib/components/PostList.svelte';
-	// import HaikuCard from '$lib/components/HaikuCard.svelte';
-	// import CooklogCard from '$lib/components/CooklogCard.svelte';
+	import HaikuCard from '$lib/components/HaikuCard.svelte';
+	import CooklogCard from '$lib/components/CooklogCard.svelte';
 	import VerseOfTheDay from '$lib/components/VerseOfTheDay.svelte';
 
 	let innerWidth = $state(0);
@@ -30,14 +30,22 @@
 
 	<section>
 		<h2>HAIKUS</h2>
-		<!-- <HaikuCard {data.haiku}/> -->
-
+		<ul>
+			{#each data.recentHaikus as haiku}
+				<HaikuCard {haiku} />
+				{console.log(haiku)}
+			{/each}
+		</ul>
 		<Link href="/">→ SEE MORE</Link>
 	</section>
 
 	<section>
 		<h2>COOKLOGS</h2>
-		<!-- <CooklogCard {data.cooklog}/> -->
+		<ul>
+			{#each data.recentCooklogs as cooklog}
+				<CooklogCard {cooklog} />
+			{/each}
+		</ul>
 		<Link href="/">→ SEE MORE</Link>
 	</section>
 
@@ -58,11 +66,16 @@
 		margin-left: 1rem;
 	}
 
-	/* section:nth-of-type(2) div {
+	section:nth-of-type(3) ul,
+	section:nth-of-type(4) ul {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 1em;
-	} */
+		align-items: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
 
 	.wrapper {
 		display: grid;

@@ -26,7 +26,8 @@ html {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
-	--font-mono: 'Fira Mono', monospace;
+	/* --font-mono: 'Fira Mono', monospace; */
+	--font-mono: 'Departure Mono', monospace;
 	font-family: 'New York', serif;
 }
 

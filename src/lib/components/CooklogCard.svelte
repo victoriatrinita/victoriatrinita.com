@@ -1,41 +1,43 @@
 <script lang="ts">
 	interface Props {
-		post: import('$lib/types').Post;
+		cooklog: import('$lib/types').Cooklog;
 	}
 
-	let { post }: Props = $props();
+	let { cooklog }: Props = $props();
 </script>
 
-<a href="posts/{post.slug}">
+<a href="posts/{cooklog.title}">
 	<section>
-		<h3>{post.title}</h3>
-		<small>{post.description}</small>
-		<footer>
-			<small>{post.date.published}</small>
-		</footer>
-		<div>
-			{#each post.tags as tag}
-				<small>{tag}</small>
-			{/each}
-		</div>
+		<p>[{cooklog.id}]</p>
+		<small>{cooklog.title}</small>
 	</section>
 </a>
 
 <style>
+	p {
+		font-family: var(--font-mono);
+		color: #858585;
+		font-size: clamp(0.5rem, 2vw, 0.75rem);
+	}
 	small {
 		font-size: clamp(0.8rem, 2vw, 0.875rem);
 	}
 
 	section {
-		background-color: var(--wild-sand);
-		border-radius: 20px;
+		/* background-color: var(--wild-sand); */
+		border-radius: 3px;
 		padding: 1em 1.5em;
 		cursor: pointer;
 		color: var(--martinique);
 		transition: all 300ms ease-out;
-		border: solid var(--alto) 1px;
+		/* border: solid var(--alto) 1px; */
 		display: grid;
 		gap: 0.25em;
+
+		background-image: url('/assets/grid.svg');
+		background-repeat: no-repeat;
+		background-size: cover; /* fill container, crop if needed */
+		background-position: center;
 	}
 
 	section:hover {
@@ -43,14 +45,5 @@
 		transform: translateY(-0.2em);
 		background-color: var(--white-lilac);
 		border: solid var(--lavender-gray) 1px;
-	}
-
-	h3 {
-		font-weight: 600;
-		font-size: clamp(1.125rem, 2vw, 1.25rem);
-	}
-
-	div {
-		display: flex;
 	}
 </style>
