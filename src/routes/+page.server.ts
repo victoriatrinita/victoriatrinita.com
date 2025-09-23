@@ -7,10 +7,14 @@ export async function load() {
 		return { slug, ...data };
 	}
 
-	const posts = parseDir('content/posts', hydrate);
+	const recentPosts = parseDir('content/posts', hydrate);
+	// const recentHaikus = parseDir('content/haikus', hydrate);
+	// const recentCooklogs = parseDir('content/cooklog', hydrate);
 
 	return {
-		posts,
+		recentPosts,
+		// recentHaikus,
+		// recentCooklogs,
 		meta: {
 			title: 'Victoria Trinita Pardede'
 		}
