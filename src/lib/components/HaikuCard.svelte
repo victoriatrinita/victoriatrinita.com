@@ -6,7 +6,7 @@
 	let { haiku }: Props = $props();
 </script>
 
-<a href="posts/{haiku.date}">
+<a href="/">
 	<section>
 		{haiku.date}
 		<div>
