@@ -1,7 +1,8 @@
 import { readdirSync, readFileSync, statSync } from 'fs';
 import { join } from 'path';
-import marker from './marker';
 import YAML from 'yaml';
+import type { Haiku } from '$lib/types';
+import marker from './marker';
 
 export function splitAt(index: number, text: string): [string, string] {
 	return [text.slice(0, index), text.slice(index + 1)];
