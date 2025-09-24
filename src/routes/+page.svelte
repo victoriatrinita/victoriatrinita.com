@@ -36,7 +36,7 @@
 				{console.log(haiku)}
 			{/each}
 		</ul>
-		<Link href="/">→ SEE MORE</Link>
+		<Link href="/haiku">→ SEE MORE</Link>
 	</section>
 
 	<section>
@@ -75,6 +75,7 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		align-items: stretch;
 	}
 
 	.wrapper {
@@ -85,7 +86,9 @@
 	}
 
 	section {
-		padding-bottom: 1.5em;
+		display: grid;
+		gap: 1rem;
+		margin-bottom: 1.5em;
 	}
 
 	h2 {
@@ -95,6 +98,7 @@
 		position: relative;
 		margin-bottom: 0.5em; */
 		font-family: 'Departure Mono', monospace;
+		/* margin-bottom: 0.75rem; */
 	}
 
 	p {

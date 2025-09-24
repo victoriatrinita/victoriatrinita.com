@@ -24,19 +24,16 @@
 	}
 
 	section {
-		/* background-color: var(--wild-sand); */
 		border-radius: 3px;
 		padding: 1em 1.5em;
 		cursor: pointer;
-		color: var(--martinique);
 		transition: all 300ms ease-out;
-		/* border: solid var(--alto) 1px; */
 		display: grid;
 		gap: 0.25em;
 
 		background-image: url('/assets/grid.svg');
 		background-repeat: no-repeat;
-		background-size: cover; /* fill container, crop if needed */
+		background-size: cover;
 		background-position: center;
 	}
 
