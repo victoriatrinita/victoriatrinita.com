@@ -1,6 +1,6 @@
 ---
 id: 144
-title: "超簡単なお好み焼き"
+title: 超簡単なお好み焼き
 date_cooked: 
 image: /images/cooklog/144-choukantanna-okonomiyaki.jpg
 tags: [肉,牛ひき肉]

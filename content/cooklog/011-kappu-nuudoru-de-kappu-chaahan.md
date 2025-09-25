@@ -1,6 +1,6 @@
 ---
 id: 011
-title: "カップヌードルでカップチャーハン"
+title: カップヌードルでカップチャーハン
 date_cooked: 1999-01-01
 image: /images/cooklog/011-kappu-nuudoru-de-kappu-chaahan.jpg
 tags: []
