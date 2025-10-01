@@ -80,7 +80,6 @@ p,
 ul[class] {
 	margin: 0;
 	font-weight: normal;
-	/* color: var(--martinique); */
 	color: oklab(0 0 0 / 0.8);
 }
 code,

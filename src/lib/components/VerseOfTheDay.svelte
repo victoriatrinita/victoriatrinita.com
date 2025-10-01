@@ -16,6 +16,7 @@
 		text-align: center;
 	}
 	section {
+		font-size: 0.875rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

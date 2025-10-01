@@ -14,8 +14,10 @@
 
 <main class="wrapper">
 	<section>
-		<h1>Victoria Trinita Pardede</h1>
-		<p>Engineer by trade, writer by day.</p>
+		<div>
+			<h1>Victoria Trinita Pardede</h1>
+			<p>Building, writing, growing.</p>
+		</div>
 	</section>
 
 	<section>
@@ -25,7 +27,7 @@
 			<PostList {post} />
 		{/each}
 
-		<Link href="/posts">→ SEE MORE</Link>
+		{@render link('posts')}
 	</section>
 
 	<section>
@@ -36,7 +38,7 @@
 				{console.log(haiku)}
 			{/each}
 		</ul>
-		<Link href="/haiku">→ SEE MORE</Link>
+		{@render link('haiku')}
 	</section>
 
 	<section>
@@ -46,13 +48,22 @@
 				<CooklogCard {cooklog} />
 			{/each}
 		</ul>
-		<Link href="/">→ SEE MORE</Link>
+		{@render link('cooklogs')}
 	</section>
 
 	<VerseOfTheDay />
 </main>
 
+{#snippet link(path: string)}
+	<a href="/{path}" aria-label="/{path}">→ SEE MORE</a>
+{/snippet}
+
 <style>
+	a {
+		font-family: var(--font-mono);
+		font-size: 0.875rem;
+	}
+
 	h2 {
 		display: flex;
 		align-items: center;
@@ -80,7 +91,7 @@
 
 	.wrapper {
 		display: grid;
-		padding: clamp(2em, 3vw, 4em) 1em 0;
+		padding: clamp(2em, 3vw, 4em) 1em;
 		margin: auto;
 		max-width: 80ch;
 	}
@@ -88,7 +99,7 @@
 	section {
 		display: grid;
 		gap: 1rem;
-		margin-bottom: 1.5em;
+		margin-bottom: 2.5rem;
 	}
 
 	h2 {

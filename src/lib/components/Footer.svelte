@@ -5,9 +5,9 @@
 <footer>
 	<div>
 		<p>SEE SOMETHING TO IMPROVE?</p>
-		<Link href="https://github.com/victoriatrinita/victoriatrinita.com/issues"
-			>OPEN AN ISSUE ↗</Link
-		>
+		<Link newTab href="https://github.com/victoriatrinita/victoriatrinita.com/issues">
+			OPEN AN ISSUE ↗
+		</Link>
 	</div>
 
 	<p>

@@ -2,13 +2,14 @@
 	interface Props {
 		href?: string;
 		label?: string;
+		newTab?: boolean;
 		children?: import('svelte').Snippet;
 	}
 
-	let { href = '', label = '', children }: Props = $props();
+	let { href = '', label = '', newTab = false, children }: Props = $props();
 </script>
 
-<a {href} aria-label={label || undefined}>
+<a {href} target={newTab ? '_blank' : undefined} aria-label={label || undefined}>
 	{@render children?.()}
 </a>
 
@@ -19,7 +20,6 @@
 	}
 
 	a {
-		font-family: 'Departure Mono', monospace;
 		font-size: 0.75rem;
 	}
 </style>
