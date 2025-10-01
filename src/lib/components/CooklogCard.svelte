@@ -6,7 +6,7 @@
 	let { cooklog }: Props = $props();
 </script>
 
-<a href="/">
+<a href="/cooklogs">
 	<section>
 		<p>[{cooklog.id}]</p>
 		<small>{cooklog.title}</small>
