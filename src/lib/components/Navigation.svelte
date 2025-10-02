@@ -8,17 +8,21 @@
 
 	let opened = $state(false);
 
-	const menu = { home: '', about: 'about', posts: 'posts', haiku: 'haiku' };
+	const menu = {
+		about: 'about',
+		posts: 'posts',
+		haiku: 'haiku',
+		cooklogs: 'cooklogs',
+		verses: 'verses',
+		cv: 'cv'
+	};
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerWidth />
 
 <nav class={y > 1 ? 'shadowed' : ''}>
 	<div class="logo">
-		<a href="/">
-			<p>Victoria Trinita</p>
-			<p>Pardede</p>
-		</a>
+		<a href="/"> VTP. </a>
 	</div>
 
 	{#if innerWidth < 600}
@@ -37,8 +41,9 @@
 				<a
 					class:active={page.url.pathname === `/${link}`}
 					data-sveltekit-preload-data
-					href="/{link}">{capitalize(title)}</a
+					href="/{link}">{title.toUpperCase()}</a
 				>
+				•
 			{/each}
 		</div>
 	{/if}
@@ -51,9 +56,10 @@
 		background-color: var(--white);
 		display: flex;
 		justify-content: space-between;
-		position: sticky;
+		/* position: sticky; */
 		top: 0;
 		z-index: 1;
+		font-family: 'Departure Mono', monospace;
 	}
 
 	nav > button {
@@ -71,26 +77,16 @@
 	}
 
 	.logo {
-		z-index: 1;
+		display: flex;
+		align-items: center;
 	}
 
-	.logo p {
-		font-size: 0.75rem;
+	.logo a {
+		font-size: 0.875rem;
 		font-weight: 600;
-		color: var(--martinique);
 		width: fit-content;
 		position: relative;
-	}
-
-	.logo p::after {
-		position: absolute;
-		content: '';
-		height: 0.5em;
-		bottom: 2px;
-		z-index: -1;
-		left: 0;
-		right: 0;
-		background: var(--buttermilk);
+		color: oklch(0.5058 0.2886 264.84);
 	}
 
 	.menu {
@@ -108,7 +104,7 @@
 		padding: 0 1em;
 		color: var(--martinique);
 		font-weight: 600;
-		font-size: 1rem;
+		font-size: 0.875rem;
 		text-decoration: none;
 		transition: color 0.2s linear;
 	}

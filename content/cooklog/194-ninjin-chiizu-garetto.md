@@ -1,6 +1,6 @@
 ---
 id: 194
-title: "にんじんチーズガレット"
+title: にんじんチーズガレット
 date_cooked: 2025-09-03
 image: /images/cooklog/194-ninjin-chiizu-garetto.jpg
 tags: [野菜,にんじん]

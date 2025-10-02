@@ -1,6 +1,6 @@
 ---
 id: 034
-title: "サクサクチキンスティック"
+title: サクサクチキンスティック
 date_cooked: 2025-07-09
 image: /images/cooklog/034-sakusaku-chikin-sutikku.jpg
 tags: [肉, 鶏胸肉]
