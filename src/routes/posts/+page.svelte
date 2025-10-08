@@ -39,7 +39,7 @@
 		min-width: 50%;
 		gap: 1em;
 		display: grid;
-		padding: clamp(2em, 3vw, 4em) 1em 0;
+		padding: clamp(2em, 3vw, 4em) 1em;
 		margin: auto;
 		max-width: 80ch;
 	}

@@ -1,6 +1,6 @@
 ---
 id: 127
-title: "ずぼらえびチリ"
+title: ずぼらえびチリ
 date_cooked: 
 image: /images/cooklog/127-zubora-ebi-chiri.jpg
 tags: 

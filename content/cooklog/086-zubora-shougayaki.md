@@ -1,6 +1,6 @@
 ---
 id: 086
-title: "ズボラしょうが焼き"
+title: ズボラしょうが焼き
 date_cooked: 
 image: /images/cooklog/086-zubora-shougayaki.jpg
 tags: [肉, 豚ロース肉]

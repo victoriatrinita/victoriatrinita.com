@@ -1,6 +1,6 @@
 ---
 id: 037
-title: "極上のよだれどり"
+title: 極上のよだれどり
 date_cooked: 2025-07-09
 image: /images/cooklog/037-gokujou-no-yodaredori.jpg
 tags: [肉, 鶏むね肉]

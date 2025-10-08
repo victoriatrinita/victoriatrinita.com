@@ -1,5 +1,5 @@
-import { parseDir } from '$lib/utils/parser';
-import type { Post } from '$lib/types';
+import { parseDir, parseCooklogDir, parseLatestHaikuDir } from '$lib/utils/parser';
+import type { Post, Haiku } from '$lib/types';
 
 export async function load() {
 	function hydrate(data: Post, _: string, filename: string): Post | null {
@@ -7,10 +7,14 @@ export async function load() {
 		return { slug, ...data };
 	}
 
-	const posts = parseDir('content/posts', hydrate);
+	const recentPosts = parseDir('content/posts', hydrate);
+	const recentHaikus: Haiku[] = parseLatestHaikuDir('content/haiku').slice(0, 3);
+	const recentCooklogs = parseCooklogDir('content/cooklog', hydrate).slice(0, 3);
 
 	return {
-		posts,
+		recentPosts,
+		recentHaikus,
+		recentCooklogs,
 		meta: {
 			title: 'Victoria Trinita Pardede'
 		}

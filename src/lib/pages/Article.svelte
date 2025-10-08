@@ -21,7 +21,7 @@
 		word-wrap: break-word;
 		line-height: 1.5;
 		display: grid;
-		padding: clamp(2em, 3vw, 4em) 1em 0;
+		padding: clamp(2em, 3vw, 4em) 1em;
 		margin: auto;
 		max-width: 80ch;
 	}
