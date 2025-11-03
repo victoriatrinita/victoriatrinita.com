@@ -28,6 +28,11 @@ const extractMeta = (metadata: string) => {
 	}, {});
 };
 
+const extractMetaVerses = (metadata: string) => {
+	if (!metadata) return {};
+	return YAML.parse(metadata);
+};
+
 export function parseFile(path: string, hydrate: Function) {
 	const content = readFileSync(path, 'utf-8');
 	const [rawData, metadata] = /---\n([\s\S]+?)\n---/.exec(content) || ['', ''];
@@ -50,6 +55,20 @@ export function parseFile(path: string, hydrate: Function) {
 	return result;
 }
 
+export function parseFileVerses(path: string, hydrate: Function) {
+	const content = readFileSync(path, 'utf-8');
+	const [, metadata] = /---\n([\s\S]+?)\n---/.exec(content) || ['', ''];
+
+	const frontMatter = extractMetaVerses(metadata);
+	const [filename] = path.split(/[\/]/).slice(-1);
+
+	const result = hydrate(frontMatter, filename);
+
+	if (!result) return;
+
+	return result;
+}
+
 export function parseDir(dirname: string, hydrate: Function) {
 	const entries = readdirSync(dirname);
 	const posts = entries
@@ -61,6 +80,17 @@ export function parseDir(dirname: string, hydrate: Function) {
 	return posts.sort(
 		(a, b) => new Date(b.date.published).getTime() - new Date(a.date.published).getTime()
 	);
+}
+
+export function parseDirVerses(dirname: string, hydrate: Function) {
+	const entries = readdirSync(dirname);
+	const verses = entries
+		.map((filename) => join(dirname, filename))
+		.filter((filepath) => statSync(filepath).isFile())
+		.map((filepath) => parseFileVerses(filepath, hydrate))
+		.filter(Boolean);
+
+	return verses;
 }
 
 export function parseCooklogDir(dirname: string, hydrate: Function) {
