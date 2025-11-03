@@ -11,6 +11,31 @@ export interface Post {
 	content?: string;
 }
 
+export interface Verse {
+	slug?: string;
+	id: {
+		verse: string;
+		content: string;
+		translation: string;
+		link: string;
+		reflection: string;
+	};
+	en: {
+		verse: string;
+		content: string;
+		translation: string;
+		link: string;
+		reflection: string;
+	};
+	ja: {
+		verse: string;
+		content: string;
+		translation: string;
+		link: string;
+		reflection: string;
+	};
+}
+
 export interface Cooklog {
 	id: string;
 	title: string;
