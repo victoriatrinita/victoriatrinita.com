@@ -8,7 +8,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		const [slug] = filename.split('.');
 		const date = formatDate(slug);
 
-		return { slug, date, ...data };
+		return { ...data, slug, date };
 	}
 
 	function getByMonth(year: string, month: string): Haiku[] {
