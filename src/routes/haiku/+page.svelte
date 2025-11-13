@@ -10,7 +10,6 @@
 	<h2>Haiku</h2>
 	{#each data.dates as date}
 		<li>
-			{console.log(date)}
 			<a href={`/haiku/${date.year}/${date.month}`}>
 				{date.year}/{date.month}
 			</a>

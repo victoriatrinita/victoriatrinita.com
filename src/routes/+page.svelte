@@ -35,7 +35,6 @@
 		<ul>
 			{#each data.recentHaikus as haiku}
 				<HaikuCard {haiku} />
-				{console.log(haiku)}
 			{/each}
 		</ul>
 		{@render link('haiku')}

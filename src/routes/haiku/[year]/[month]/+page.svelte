@@ -13,7 +13,12 @@
 	<section>
 		{#each data.items as item}
 			<h3>{item.date}</h3>
-			{@html item.content}
+			{#each item.en as line}
+				<p>{line}</p>
+			{/each}
+			{#each item.ja as line}
+				<p>{line}</p>
+			{/each}
 			<br />
 		{/each}
 	</section>

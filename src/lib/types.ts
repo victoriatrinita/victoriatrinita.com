@@ -46,6 +46,7 @@ export interface Cooklog {
 }
 
 export interface Haiku {
+	slug: string;
 	date: string;
 	en: string[];
 	ja: string[];

@@ -55,6 +55,30 @@ export function parseFile(path: string, hydrate: Function) {
 	return result;
 }
 
+const extractMetaHaikus = (metadata: string) => {
+	if (!metadata) return {};
+
+	const meta = YAML.parse(metadata);
+
+	return {
+		en: meta.en ? meta.en.trim().split('\n') : [],
+		ja: meta.ja ? meta.ja.trim().split('\n') : []
+	};
+};
+
+export function parseFileHaikus(path: string, hydrate: Function) {
+	const content = readFileSync(path, 'utf-8');
+	const [, metadata] = /---\n([\s\S]+?)\n---/.exec(content) || ['', ''];
+
+	const frontMatter = extractMetaHaikus(metadata);
+	const [filename] = path.split(/[\/]/).slice(-1);
+	const result = hydrate(frontMatter, filename);
+
+	if (!result) return;
+
+	return result;
+}
+
 export function parseFileVerses(path: string, hydrate: Function) {
 	const content = readFileSync(path, 'utf-8');
 	const [, metadata] = /---\n([\s\S]+?)\n---/.exec(content) || ['', ''];
@@ -80,6 +104,19 @@ export function parseDir(dirname: string, hydrate: Function) {
 	return posts.sort(
 		(a, b) => new Date(b.date.published).getTime() - new Date(a.date.published).getTime()
 	);
+}
+
+export function parseDirHaikus(dirname: string, hydrate: Function) {
+	const entries = readdirSync(dirname);
+	console.log('entries', entries);
+
+	const haikus = entries
+		.map((filename) => join(dirname, filename))
+		.filter((filepath) => statSync(filepath).isFile())
+		.map((filepath) => parseFileHaikus(filepath, hydrate))
+		.filter(Boolean);
+
+	return haikus;
 }
 
 export function parseDirVerses(dirname: string, hydrate: Function) {
@@ -126,7 +163,6 @@ export function parseLatestHaikuDir(baseDir: string): Haiku[] {
 		.map((filepath) => {
 			const content = readFileSync(filepath, 'utf-8');
 
-			// extract YAML frontmatter
 			const [, metadata] = /---\n([\s\S]+?)\n---/.exec(content) || ['', ''];
 			if (!metadata) return null;
 
@@ -140,6 +176,5 @@ export function parseLatestHaikuDir(baseDir: string): Haiku[] {
 		})
 		.filter((h): h is Haiku => h !== null);
 
-	// newest first
 	return haikus.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
