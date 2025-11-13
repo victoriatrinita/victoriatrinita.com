@@ -8,6 +8,12 @@
 
 <main>
 	<h2>Haiku</h2>
+	<p>
+		This is my daily reflection written in haiku form. I prioritise the message I want to say, with
+		the 5-7-5 structure only as a baseline that I don't force when the meaning is clearer without
+		it. The Japanese translation also aims to convey the original English meaning and nuance in the
+		closest way possible, not to strictly follow 5-7-5.
+	</p>
 	{#each data.dates as date}
 		<li>
 			<a href={`/haiku/${date.year}/${date.month}`}>
