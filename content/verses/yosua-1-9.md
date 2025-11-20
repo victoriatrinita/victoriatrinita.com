@@ -1,11 +1,11 @@
 ---  
 id:  
-verse: "Yosua 1:9"  
-content: >
-  Bukankah telah Kuperintahkan kepadamu: kuatkan dan teguhkanlah hatimu? Janganlah kecut dan tawar hati, sebab TUHAN, Allahmu, menyertai engkau, ke mana pun engkau pergi.
-translation: "TB"  
-link: "https://www.bible.com/id/bible/306/JOS.1.9.TB"  
-reflection: ""  
+  verse: "Yosua 1:9"  
+  content: >
+    Bukankah telah Kuperintahkan kepadamu: kuatkan dan teguhkanlah hatimu? Janganlah kecut dan tawar hati, sebab TUHAN, Allahmu, menyertai engkau, ke mana pun engkau pergi.
+  translation: "TB"  
+  link: "https://www.bible.com/id/bible/306/JOS.1.9.TB"  
+  reflection: ""  
 
 en:  
   verse: "Joshua 1:9"  

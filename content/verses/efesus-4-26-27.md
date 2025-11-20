@@ -1,11 +1,11 @@
 ---  
 id:  
-verse: "Efesus 4:26-27"  
-content: >
-  Apabila kamu menjadi marah, janganlah kamu berbuat dosa: janganlah matahari terbenam, sebelum padam amarahmu dan janganlah beri kesempatan kepada Iblis.
-translation: "TB"  
-link: "https://www.bible.com/id/bible/306/EPH.4.26-27.TB"  
-reflection: ""  
+  verse: "Efesus 4:26-27"  
+  content: >
+    Apabila kamu menjadi marah, janganlah kamu berbuat dosa: janganlah matahari terbenam, sebelum padam amarahmu dan janganlah beri kesempatan kepada Iblis.
+  translation: "TB"  
+  link: "https://www.bible.com/id/bible/306/EPH.4.26-27.TB"  
+  reflection: ""  
 
 en:  
   verse: "Ephesians 4:26-27"  
