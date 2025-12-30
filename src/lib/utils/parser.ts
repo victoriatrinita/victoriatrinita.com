@@ -61,8 +61,18 @@ const extractMetaHaikus = (metadata: string) => {
 	const meta = YAML.parse(metadata);
 
 	return {
-		en: meta.en ? meta.en.trim().split('\n') : [],
-		ja: meta.ja ? meta.ja.trim().split('\n') : []
+		en: meta.en
+			? meta.en
+					.trim()
+					.split('\n')
+					.map((l: string) => marker.render(l))
+			: [],
+		ja: meta.ja
+			? meta.ja
+					.trim()
+					.split('\n')
+					.map((l: string) => marker.render(l))
+			: []
 	};
 };
 

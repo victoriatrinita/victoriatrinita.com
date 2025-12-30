@@ -14,10 +14,10 @@
 		{#each data.items as item}
 			<h3>{item.date}</h3>
 			{#each item.en as line}
-				<p>{line}</p>
+				<p>{@html line}</p>
 			{/each}
 			{#each item.ja as line}
-				<p>{line}</p>
+				<p>{@html line}</p>
 			{/each}
 			<br />
 		{/each}
