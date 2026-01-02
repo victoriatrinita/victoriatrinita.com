@@ -52,11 +52,11 @@
 		</p>
 
 		<p>
-			Therefore, I thought, by creating my own platform, <i>I</i> get to manage its fate. As long as
-			I have the whole code that builds up the platform (along with its backups, of course) I can always
-			keep what I have created until I actually delete it myself—which I would never think of doing.
-			This does consume a lot more effort, but hey, developing and maintaining websites and web apps
-			is what I do for a living so this counts as a media to hone my skills too.
+			Therefore, I thought, by creating my own platform, <i>I</i> get to manage its fate. As long as I
+			have the whole code that builds up the platform (along with its backups, of course) I can always
+			keep what I have created until I actually delete it myself—which I would never think of doing. This
+			does consume a lot more effort, but hey, developing and maintaining websites and web apps is what
+			I do for a living so this counts as a media to hone my skills too.
 		</p>
 
 		<p>

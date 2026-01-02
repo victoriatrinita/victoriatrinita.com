@@ -61,8 +61,7 @@
 		border-radius: var(--b-radius);
 		text-align: center;
 	}
-	article :global(img[src*="://"])
-	{
+	article :global(img[src*='://']) {
 		border: none;
 		border-radius: var(--b-radius);
 		text-align: center;
