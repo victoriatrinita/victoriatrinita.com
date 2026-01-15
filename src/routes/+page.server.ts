@@ -9,7 +9,7 @@ export async function load() {
 
 	const recentPosts = parseDir('content/posts', hydrate);
 	const recentHaikus: Haiku[] = parseLatestHaikuDir('content/haiku').slice(0, 3);
-	const recentCooklogs = parseCooklogDir('content/cooklog', hydrate).slice(0, 3);
+	const recentCooklogs = parseCooklogDir('content/cooklogs', hydrate).slice(0, 3);
 
 	return {
 		recentPosts,
