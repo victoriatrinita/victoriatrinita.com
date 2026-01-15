@@ -3,8 +3,7 @@ import type { PageServerLoad } from './$types';
 import { VITE_PUBLIC_CLOUDINARY_CLOUD_NAME } from '$env/static/private';
 
 export const load: PageServerLoad = async () => {
-	const CLOUDINARY_BASE = `https://res.cloudinary.com/${VITE_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/f_auto,q_auto/`;
-
+	const CLOUDINARY_BASE = `https://res.cloudinary.com/${VITE_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/`;
 	// This function runs for EVERY file found in the directory
 	function hydrate(data: any, content: string, filename: string) {
 		// Create the slug from the filename (e.g., "034-sakusaku...")
@@ -17,10 +16,10 @@ export const load: PageServerLoad = async () => {
 				.split('/')
 				.pop()
 				.replace(/\.[^/.]+$/, '');
-			data.image = `${CLOUDINARY_BASE}${cleanId}`;
+			data.image = `${CLOUDINARY_BASE}${cleanId}.jpg`;
 		} else if (data.image_id) {
 			// If you moved to using image_id as we discussed
-			data.image = `${CLOUDINARY_BASE}${data.image_id}`;
+			data.image = `${CLOUDINARY_BASE}${data.image_id}.jpg`;
 		}
 
 		return {
