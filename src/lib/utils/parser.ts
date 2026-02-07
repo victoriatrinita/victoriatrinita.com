@@ -125,8 +125,8 @@ export function parseDirBooks(dirname: string, hydrate: Function) {
 		.filter(Boolean);
 
 	books.sort((a, b) => {
-		const dateA = a['date:started'] ? new Date(a['date:started']).getTime() : 0;
-		const dateB = b['date:started'] ? new Date(b['date:started']).getTime() : 0;
+		const dateA = a.date.started ? new Date(a.date.started).getTime() : 0;
+		const dateB = b.date.started ? new Date(b.date.started).getTime() : 0;
 		return dateB - dateA;
 	});
 
