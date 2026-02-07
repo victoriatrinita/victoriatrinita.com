@@ -12,11 +12,11 @@
 		<small class="author">by {book.author}</small>
 		<footer>
 			<small class="status">{book.status}</small>
-			{#if book['date:started']}
-				<small>Started: {book['date:started']}</small>
+			{#if book.date.started}
+				<small>Started: {book.date.started}</small>
 			{/if}
-			{#if book['date:finished']}
-				<small>Finished: {book['date:finished']}</small>
+			{#if book.date.finished}
+				<small>Finished: {book.date.finished}</small>
 			{/if}
 		</footer>
 	</section>
