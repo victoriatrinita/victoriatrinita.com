@@ -116,6 +116,23 @@ export function parseDir(dirname: string, hydrate: Function) {
 	);
 }
 
+export function parseDirBooks(dirname: string, hydrate: Function) {
+	const entries = readdirSync(dirname);
+	const books = entries
+		.map((filename) => join(dirname, filename))
+		.filter((filepath) => statSync(filepath).isFile())
+		.map((filepath) => parseFile(filepath, hydrate))
+		.filter(Boolean);
+
+	books.sort((a, b) => {
+		const dateA = a.date.started ? new Date(a.date.started).getTime() : 0;
+		const dateB = b.date.started ? new Date(b.date.started).getTime() : 0;
+		return dateB - dateA;
+	});
+
+	return books;
+}
+
 export function parseDirHaikus(dirname: string, hydrate: Function) {
 	const entries = readdirSync(dirname);
 	console.log('entries', entries);
