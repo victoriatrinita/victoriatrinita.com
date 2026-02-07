@@ -51,3 +51,15 @@ export interface Haiku {
 	en: string[];
 	ja: string[];
 }
+
+export interface Book {
+	slug?: string;
+	title: string;
+	author: string;
+	date: {
+		started: string;
+		finished?: string;
+	};
+	status: string;
+	content?: string;
+}

@@ -6,8 +6,6 @@ date:finished:
 status: In progress
 ---
 
-# Everybody's Normal Till You Get to Know Them
-
 ## Why I Picked Up This Book
 I first noticed this title by chance on a friend's bookshelf while visiting her house. The title immediately clicked with me since I've often thought someone was "normal," only to realise how "weird" they actually are the more I get to know them.
 
