@@ -11,3 +11,5 @@ date:updated:
 - Living Water - Jonathan Ogden
 - 朽ちない冠 - Magnify Tokyo, J.Rio
 - 1 Corinthians 13:4-8 - Verses, Kristina Meyer
+- I Am - BELOVED
+- What If - Jonathan Ogden
