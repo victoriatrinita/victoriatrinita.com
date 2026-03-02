@@ -145,7 +145,8 @@ export function parseCooklogDir(dirname: string, hydrate: Function) {
 	const cooklogs = entries
 		.map((filename) => join(dirname, filename))
 		.filter((filepath) => statSync(filepath).isFile())
-		.map((filepath) => parseFile(filepath, hydrate))
+		// Use the new Cooklog specific parser
+		.map((filepath) => parseFileCooklog(filepath, hydrate))
 		.filter(Boolean);
 
 	return cooklogs.sort(
@@ -187,4 +188,29 @@ export function parseLatestHaikuDir(baseDir: string): Haiku[] {
 		.filter((h): h is Haiku => h !== null);
 
 	return haikus.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function parseFileCooklog(path: string, hydrate: Function) {
+	const content = readFileSync(path, 'utf-8');
+	// Regex to separate frontmatter from content
+	const match = /---\n([\s\S]+?)\n---/.exec(content);
+	const metadata = match ? match[1] : '';
+	const rawData = match ? match[0] : '';
+
+	// Use YAML.parse instead of the manual extractMeta
+	const frontMatter = YAML.parse(metadata);
+
+	const [filename] = path.split(/[\/]/).slice(-1);
+
+	// The rest of the file after the frontmatter
+	const article = metadata ? content.slice(rawData.length + 1) : content;
+
+	const result = hydrate(frontMatter, article, filename);
+	if (!result) return;
+
+	if (result.content) {
+		result.content = marker.render(result.content);
+	}
+
+	return result;
 }
