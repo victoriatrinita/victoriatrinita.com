@@ -10,6 +10,7 @@
 		about: 'about',
 		posts: 'posts',
 		haiku: 'haiku',
+		books: 'books',
 		cooklogs: 'cooklogs',
 		verses: 'verses',
 		cv: 'cv'
