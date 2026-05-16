@@ -1,6 +1,6 @@
 ---
 title: Refleksi dari Monolog Jumat Agung
-tags: sermon
+tags: [sermon]
 language: indonesian
 description: Monolog Ibadah Jumat Agung GSKI Rehobot | 15 April 2022
 date:published: 2022-02-13
