@@ -1,3 +1,52 @@
+<!-- <script lang="ts">
+    import PostCard from '$lib/components/PostCard.svelte';
+
+    interface Props {
+        data: import('./$types').PageData;
+    }
+
+    let { data }: Props = $props();
+</script>
+
+{#if !data.posts || data.posts.length === 0}
+    <section>
+        <h1>No posts found</h1>
+        <p>There's nothing to see here at the moment,</p>
+        <p>stay tuned for updates coming soon!</p>
+    </section>
+{:else}
+    <main>
+        <h2>Posts</h2>
+
+        {#each data.posts as post (post.id)}
+            <PostCard {post} />
+        {/each}
+    </main>
+{/if}
+
+<style>
+    /* Your existing styles remain the same */
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto auto 2.5em;
+    }
+
+    main {
+        word-wrap: break-word;
+        line-height: 1.5;
+        margin: auto;
+        min-width: 50%;
+        gap: 2em; /* Slightly increased for better card separation */
+        display: grid;
+        padding: clamp(2em, 3vw, 4em) 1em;
+        max-width: 80ch;
+    }
+
+    /* ... other styles ... */
+</style> -->
 <script lang="ts">
 	import PostCard from '$lib/components/PostCard.svelte';
 
@@ -8,7 +57,7 @@
 	let { data }: Props = $props();
 </script>
 
-{#if !data.posts.length}
+{#if !data.posts || data.posts.length === 0}
 	<section>
 		<h1>No posts found</h1>
 		<p>There's nothing to see here at the moment,</p>
@@ -17,7 +66,8 @@
 {:else}
 	<main>
 		<h2>Posts</h2>
-		{#each data.posts as post}
+
+		{#each data.posts as post (post.id)}
 			<PostCard {post} />
 		{/each}
 	</main>
@@ -29,18 +79,16 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: auto auto 2.5em;
+		margin: 5em auto;
+		text-align: center;
 	}
 
 	main {
-		word-wrap: break-word;
 		line-height: 1.5;
 		margin: auto;
-		min-width: 50%;
-		gap: 1em;
+		gap: 2em;
 		display: grid;
 		padding: clamp(2em, 3vw, 4em) 1em;
-		margin: auto;
 		max-width: 80ch;
 	}
 

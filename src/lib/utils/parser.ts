@@ -103,6 +103,100 @@ export function parseFileVerses(path: string, hydrate: Function) {
 	return result;
 }
 
+// export function parseDirByLanguage(dirname: string, hydrate: Function) {
+// 	const entries = readdirSync(dirname);
+// 	const posts: Record<string, Record<string, any>> = {};
+
+// 	entries.forEach((entry) => {
+// 		const fullPath = join(dirname, entry);
+// 		if (statSync(fullPath).isDirectory()) {
+// 			// this is a post folder, e.g., bisa-dinikmati-allah
+// 			const langFiles = readdirSync(fullPath).filter((f) => f.endsWith('.md'));
+// 			const postByLang: Record<string, any> = {};
+
+// 			langFiles.forEach((file) => {
+// 				const lang = file.replace(/\.md$/, ''); // 'id', 'en', 'ja', etc.
+// 				const filePath = join(fullPath, file);
+// 				const content = readFileSync(filePath, 'utf-8');
+
+// 				const [, metadata] = /---\n([\s\S]+?)\n---/.exec(content) || ['', ''];
+// 				const frontMatter = YAML.parse(metadata || '');
+
+// 				const article = content.replace(/---\n([\s\S]+?)\n---/, '').trim();
+// 				const hydrated = hydrate(frontMatter, article, file);
+
+// 				if (hydrated) {
+// 					if (hydrated.content) hydrated.content = marker.render(hydrated.content);
+// 					postByLang[lang] = hydrated;
+// 				}
+// 			});
+
+// 			posts[entry] = postByLang;
+// 		}
+// 	});
+
+// 	return posts;
+// }
+
+export function parseDirByLanguage(dirname: string, hydrate: Function) {
+	const folders = readdirSync(dirname).filter((entry) =>
+		statSync(join(dirname, entry)).isDirectory()
+	);
+
+	const posts = folders.map((folderName) => {
+		const fullPath = join(dirname, folderName);
+		const langFiles = readdirSync(fullPath).filter((f) => f.endsWith('.md'));
+
+		const translations: Record<string, any> = {};
+		let globalMetadata: any = {};
+
+		langFiles.forEach((file) => {
+			const lang = file.replace(/\.md$/, '');
+			const filePath = join(fullPath, file);
+			const content = readFileSync(filePath, 'utf-8');
+
+			const match = content.match(/---\n([\s\S]+?)\n---/);
+			const frontMatter = match ? YAML.parse(match[1]) : {};
+			const article = content.replace(/---\n([\s\S]+?)\n---/, '').trim();
+
+			// Run your hydrate function
+			const hydrated = hydrate(frontMatter, article, file);
+
+			if (hydrated) {
+				// If this specific file has tags or dates, promote them to globalMetadata
+				if (hydrated.tags || hydrated['date:published']) {
+					globalMetadata = {
+						tags: hydrated.tags || [],
+						date_published: hydrated['date:published'],
+						date_updated: hydrated['date:updated']
+					};
+				}
+
+				// Render content if present
+				if (hydrated.content) {
+					// Assuming 'marker' is available in your scope
+					hydrated.content = marker.render(hydrated.content);
+				}
+
+				translations[lang] = hydrated;
+			}
+		});
+
+		// Return a single object per folder (post)
+		return {
+			id: folderName, // Use folder name as the unique ID
+			...globalMetadata,
+			locales: Object.keys(translations),
+			translations
+		};
+	});
+
+	// Sort posts by date before returning
+	return posts.sort(
+		(a, b) => new Date(b.date_published).getTime() - new Date(a.date_published).getTime()
+	);
+}
+
 export function parseDir(dirname: string, hydrate: Function) {
 	const entries = readdirSync(dirname);
 	const posts = entries
