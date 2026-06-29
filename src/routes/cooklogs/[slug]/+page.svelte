@@ -1,17 +1,18 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { resolve } from '$app/paths';
 	export let data: PageData;
 	const { post } = data;
 </script>
 
 <div class="recipe-container">
 	<header class="recipe-header">
-		<a href="/cooklogs" class="back-link">← Back to Logs</a>
+		<a href={resolve('/cooklogs')} class="back-link">← Back to Logs</a>
 		<h1 class="title">{post.title}</h1>
 
 		{#if post.tags}
 			<div class="tag-list">
-				{#each post.tags as tag}
+				{#each post.tags as tag (tag)}
 					<span class="tag">#{tag}</span>
 				{/each}
 			</div>
@@ -32,7 +33,7 @@
 		<section class="log-history">
 			<h2 class="history-title">Cooking History</h2>
 
-			{#each post.cook_logs as log}
+			{#each post.cook_logs as log (log)}
 				<article class="log-card">
 					<div class="log-meta">
 						<time>{log.date}</time>
@@ -45,7 +46,7 @@
 
 					{#if log.images && log.images.length > 0}
 						<div class="log-grid" style="--img-count: {log.images.length}">
-							{#each log.images as img}
+							{#each log.images as img (img)}
 								<div class="grid-item">
 									<img src={img} alt="Cook detail" loading="lazy" />
 								</div>
@@ -100,7 +101,6 @@
 		font-weight: 500;
 	}
 
-	/* Main Visual Card */
 	.main-visual {
 		margin-bottom: 2.5rem;
 		border-radius: 12px;
@@ -121,7 +121,6 @@
 		margin-bottom: 4rem;
 	}
 
-	/* History Section */
 	.history-title {
 		font-size: 1.5rem;
 		border-bottom: 2px solid #eee;
@@ -155,11 +154,9 @@
 		color: #444;
 	}
 
-	/* Multi-Image Grid Logic */
 	.log-grid {
 		display: grid;
 		gap: 0.75rem;
-		/* If 1 image: full width. If more: 2 columns. */
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
 	}
 
