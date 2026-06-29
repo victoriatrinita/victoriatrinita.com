@@ -2,6 +2,11 @@ import { VITE_PUBLIC_CLOUDINARY_CLOUD_NAME } from '$env/static/private';
 import { parseCooklogDir } from '$lib/utils/parser';
 import type { PageServerLoad } from './$types';
 
+export const load: PageServerLoad = async () => ({
+	meta: { title: 'Cooklogs' },
+	cooklogs: parseCooklogDir('content/cooklogs', hydrateCooklog)
+});
+
 type CooklogFrontmatter = {
 	image?: string;
 	image_id?: string;
@@ -39,8 +44,3 @@ function hydrateCooklog(data: CooklogFrontmatter, content: string, filename: str
 		content
 	};
 }
-
-export const load: PageServerLoad = async () => ({
-	meta: { title: 'Cooklogs' },
-	cooklogs: parseCooklogDir('content/cooklogs', hydrateCooklog)
-});

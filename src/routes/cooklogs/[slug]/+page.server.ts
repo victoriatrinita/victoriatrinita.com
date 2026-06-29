@@ -44,7 +44,10 @@ export const load: PageServerLoad = async ({ params }) => {
 
 		if (!post) throw error(404, 'Post not found');
 
-		return { post };
+		return {
+			meta: { title: post.title ? String(post.title) : 'Cooklog' },
+			post
+		};
 	} catch (e) {
 		throw error(404, 'Cooklog entry not found');
 	}
