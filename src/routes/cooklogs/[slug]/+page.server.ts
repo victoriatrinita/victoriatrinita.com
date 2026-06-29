@@ -1,15 +1,16 @@
 import { parseFileCooklog } from '$lib/utils/parser';
-import { VITE_PUBLIC_CLOUDINARY_CLOUD_NAME } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
 
 export const load: PageServerLoad = async ({ params }) => {
 	const { slug } = params;
 
+	const cloudName = env.VITE_PUBLIC_CLOUDINARY_CLOUD_NAME ?? '';
 	// We use a larger width for the Detail page hero (1200px)
-	const CLOUDINARY_HERO = `https://res.cloudinary.com/${VITE_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/f_auto,q_auto,w_1200/`;
+	const CLOUDINARY_HERO = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto,w_1200/`;
 	// And a medium width for the log history photos
-	const CLOUDINARY_LOG = `https://res.cloudinary.com/${VITE_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/f_auto,q_auto,w_800/`;
+	const CLOUDINARY_LOG = `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto,w_800/`;
 
 	function hydrate(data: any, content: string, filename: string) {
 		// Validation: Ensure the file slug matches the URL

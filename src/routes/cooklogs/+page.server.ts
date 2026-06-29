@@ -1,4 +1,4 @@
-import { VITE_PUBLIC_CLOUDINARY_CLOUD_NAME } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import { parseCooklogDir } from '$lib/utils/parser';
 import type { PageServerLoad } from './$types';
 
@@ -18,7 +18,8 @@ type CooklogEntry = CooklogFrontmatter & {
 	content: string;
 };
 
-const CLOUDINARY_BASE_URL = `https://res.cloudinary.com/${VITE_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/`;
+const cloudName = env.VITE_PUBLIC_CLOUDINARY_CLOUD_NAME ?? '';
+const CLOUDINARY_BASE_URL = `https://res.cloudinary.com/${cloudName}/image/upload/`;
 
 function toCloudinaryUrl(imageId: string) {
 	return `${CLOUDINARY_BASE_URL}${imageId}.jpg`;
