@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { resolve } from '$app/paths';
 	export let data: PageData;
 </script>
 
@@ -7,8 +8,8 @@
 	<h1 class="page-title">Cooklogs</h1>
 
 	<div class="cooklog-grid">
-		{#each data.cooklogs as post}
-			<a href="/cooklogs/{post.slug}" class="log-card">
+		{#each data.cooklogs as post (post.slug)}
+			<a href={resolve(`/cooklogs/${post.slug}`)} class="log-card">
 				<div class="image-container">
 					{#if post.image}
 						<img src={post.image} alt={post.title} loading="lazy" decoding="async" />
@@ -42,15 +43,12 @@
 		margin-bottom: 2rem;
 	}
 
-	/* Grid Layout */
 	.cooklog-grid {
 		display: grid;
 		gap: 2rem;
-		/* Responsive columns: at least 300px wide, 1 column mobile, up to 3 on desktop */
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	}
 
-	/* Card Styling */
 	.log-card {
 		display: block;
 		text-decoration: none;
@@ -69,11 +67,10 @@
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 	}
 
-	/* The "Ideal Size" Image Logic */
 	.image-container {
 		position: relative;
 		width: 100%;
-		aspect-ratio: 16 / 9; /* Change to 1/1 for square grid */
+		aspect-ratio: 16 / 9;
 		background: #f0f0f0;
 		overflow: hidden;
 	}
@@ -81,7 +78,7 @@
 	.image-container img {
 		width: 100%;
 		height: 100%;
-		object-fit: cover; /* Crops image to fill container without distortion */
+		object-fit: cover;
 		transition: transform 0.5s ease;
 	}
 
@@ -89,7 +86,6 @@
 		transform: scale(1.05);
 	}
 
-	/* Content Styling */
 	.card-content {
 		padding: 1.25rem;
 	}
@@ -111,7 +107,7 @@
 	}
 
 	.log-card:hover .recipe-title {
-		color: #e67e22; /* Changes color on hover */
+		color: #e67e22;
 	}
 
 	.no-image {
