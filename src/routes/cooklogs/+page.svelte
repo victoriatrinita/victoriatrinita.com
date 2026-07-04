@@ -53,10 +53,10 @@
 		display: block;
 		text-decoration: none;
 		color: inherit;
-		background: white;
+		background: var(--white);
 		border-radius: 12px;
 		overflow: hidden;
-		border: 1px solid #eee;
+		border: 1px solid var(--gallery);
 		transition:
 			transform 0.3s ease,
 			box-shadow 0.3s ease;
@@ -71,7 +71,7 @@
 		position: relative;
 		width: 100%;
 		aspect-ratio: 16 / 9;
-		background: #f0f0f0;
+		background: var(--soft-gray);
 		overflow: hidden;
 	}
 
@@ -96,7 +96,7 @@
 		margin-bottom: 0.5rem;
 		font-family: monospace;
 		font-size: 0.8rem;
-		color: #888;
+		color: var(--silver);
 	}
 
 	.recipe-title {
@@ -107,7 +107,7 @@
 	}
 
 	.log-card:hover .recipe-title {
-		color: #e67e22;
+		color: var(--burnt-orange);
 	}
 
 	.no-image {
@@ -115,6 +115,6 @@
 		align-items: center;
 		justify-content: center;
 		height: 100%;
-		color: #aaa;
+		color: var(--silver-chalice);
 	}
 </style>

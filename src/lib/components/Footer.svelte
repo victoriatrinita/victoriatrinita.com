@@ -24,6 +24,6 @@
 		gap: 1rem;
 
 		padding: 1.5rem 0;
-		border-top: 1px solid #999;
+		border-top: 1px solid var(--gray);
 	}
 </style>

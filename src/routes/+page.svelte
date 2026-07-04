@@ -72,7 +72,7 @@
 	h2::after {
 		content: '';
 		flex: 1;
-		border-bottom: 1px dashed #000;
+		border-bottom: 1px dashed var(--black);
 		margin-left: 1rem;
 	}
 

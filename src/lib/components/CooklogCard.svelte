@@ -16,7 +16,7 @@
 <style>
 	p {
 		font-family: var(--font-mono);
-		color: #858585;
+		color: var(--oslo-gray);
 		font-size: clamp(0.5rem, 2vw, 0.75rem);
 	}
 	small {
