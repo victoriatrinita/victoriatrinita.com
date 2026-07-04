@@ -4,7 +4,7 @@
 </script>
 
 <Article>
-	<TapedPolaroid src="assets/profile/ori.jpg" alt="Self portrait" />
+	<TapedPolaroid src="assets/about/ori.jpg" alt="Self portrait" />
 
 	<section>
 		<h2 id="about">About Self</h2>
