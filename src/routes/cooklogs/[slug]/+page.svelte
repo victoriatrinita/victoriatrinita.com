@@ -68,13 +68,13 @@
 			system-ui,
 			-apple-system,
 			sans-serif;
-		color: #333;
+		color: var(--mine-shaft);
 	}
 
 	.back-link {
 		display: inline-block;
 		text-decoration: none;
-		color: #888;
+		color: var(--silver);
 		font-size: 0.9rem;
 		margin-bottom: 1rem;
 	}
@@ -96,7 +96,7 @@
 	}
 
 	.tag {
-		color: #e67e22;
+		color: var(--burnt-orange);
 		font-size: 0.9rem;
 		font-weight: 500;
 	}
@@ -105,7 +105,7 @@
 		margin-bottom: 2.5rem;
 		border-radius: 12px;
 		overflow: hidden;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
 	}
 
 	.main-visual img {
@@ -123,14 +123,14 @@
 
 	.history-title {
 		font-size: 1.5rem;
-		border-bottom: 2px solid #eee;
+		border-bottom: 2px solid var(--gallery);
 		padding-bottom: 0.5rem;
 		margin-bottom: 2rem;
 	}
 
 	.log-card {
-		background: #fdfdfd;
-		border: 1px solid #eee;
+		background: var(--alabaster);
+		border: 1px solid var(--gallery);
 		border-radius: 8px;
 		padding: 1.5rem;
 		margin-bottom: 2rem;
@@ -141,17 +141,17 @@
 		justify-content: space-between;
 		margin-bottom: 1rem;
 		font-weight: 600;
-		color: #666;
+		color: var(--dusty-gray);
 	}
 
 	.stars {
-		color: #f1c40f;
+		color: var(--gold);
 	}
 
 	.log-notes {
 		white-space: pre-wrap;
 		margin-bottom: 1.5rem;
-		color: #444;
+		color: var(--mako);
 	}
 
 	.log-grid {
