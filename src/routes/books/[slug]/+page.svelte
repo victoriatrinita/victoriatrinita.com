@@ -11,6 +11,9 @@
 <Article showProgress={true}>
 	<header>
 		<h1>{data.book.title}</h1>
+		{#if data.book.subtitle}
+			<p class="subtitle">{data.book.subtitle}</p>
+		{/if}
 		<p class="author">by {data.book.author}</p>
 		<div class="metadata">
 			<span class="status">{data.book.status}</span>
@@ -39,6 +42,13 @@
 		font-size: clamp(1.75rem, 4vw, 2.5rem);
 		margin: 0 0 0.5em 0;
 		color: var(--martinique);
+	}
+
+	.subtitle {
+		font-size: clamp(1rem, 2vw, 1.125rem);
+		color: var(--grey);
+		margin: 0 0 0.5em 0;
+		line-height: 1.5;
 	}
 
 	.author {

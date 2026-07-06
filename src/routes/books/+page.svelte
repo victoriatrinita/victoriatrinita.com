@@ -17,9 +17,11 @@
 {:else}
 	<main>
 		<h2>Books</h2>
-		{#each data.books as book}
-			<BookCard {book} />
-		{/each}
+		<div class="books-list">
+			{#each data.books as book}
+				<BookCard {book} />
+			{/each}
+		</div>
 	</main>
 {/if}
 
@@ -37,11 +39,18 @@
 		line-height: 1.5;
 		margin: auto;
 		min-width: 50%;
-		gap: 1em;
 		display: grid;
+		gap: 1em;
 		padding: clamp(2em, 3vw, 4em) 1em;
-		margin: auto;
-		max-width: 80ch;
+		max-width: 70ch;
+		width: 100%;
+	}
+
+	.books-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 24ch), 1fr));
+		gap: clamp(1rem, 2vw, 1.5rem);
+		container-type: inline-size;
 	}
 
 	h1 {
@@ -56,5 +65,11 @@
 		font-weight: 700;
 		width: fit-content;
 		position: relative;
+	}
+
+	@container (max-width: 32ch) {
+		.books-list {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

@@ -55,6 +55,8 @@ export interface Haiku {
 export interface Book {
 	slug?: string;
 	title: string;
+	subtitle?: string;
+	category?: string;
 	author: string;
 	date: {
 		started: string;

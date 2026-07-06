@@ -1,5 +1,6 @@
 ---
 title: Everybody's Normal Till You Get to Know Them
+category: Christian Living
 author: John Ortberg
 date:started: 2025-12-17
 date:finished:

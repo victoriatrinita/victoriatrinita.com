@@ -1,5 +1,6 @@
 ---
 title: Designing Data-Intensive Applications
+category: Software Engineering
 author: Martin Kleppmann
 date:started: 2026-02-07
 date:finished:

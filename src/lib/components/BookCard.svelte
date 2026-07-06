@@ -9,7 +9,13 @@
 <a href="books/{book.slug}">
 	<section>
 		<h3>{book.title}</h3>
+		{#if book.subtitle}
+			<p class="subtitle">{book.subtitle}</p>
+		{/if}
 		<small class="author">by {book.author}</small>
+		{#if book.category}
+			<small class="category">{book.category}</small>
+		{/if}
 		<footer>
 			<small class="status">{book.status}</small>
 			{#if book.date.started}
@@ -50,6 +56,24 @@
 		font-weight: 600;
 		font-size: clamp(1.125rem, 2vw, 1.25rem);
 		margin: 0;
+	}
+
+	.subtitle {
+		margin: 0;
+		color: var(--grey);
+		font-size: clamp(0.75rem, 1.7vw, 0.875rem);
+		line-height: 1.4;
+	}
+
+	.category {
+		color: var(--grey);
+		font-weight: 600;
+		text-transform: lowercase;
+	}
+
+	.category::before {
+		content: '#';
+		margin-right: 0.15em;
 	}
 
 	.author {

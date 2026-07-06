@@ -15,6 +15,11 @@ const extractMeta = (metadata: string) => {
 		if (!curr.includes(': ')) return acc;
 		const [key, val]: [string, string] = splitAt(curr.indexOf(': '), curr);
 
+		if (key === 'subtitle' || key === 'category') {
+			acc[key] = val.trim();
+			return acc;
+		}
+
 		if (key.includes(':')) {
 			const [attr, category] = splitAt(key.indexOf(':'), key);
 			if (!acc[attr]) acc[attr] = {};
