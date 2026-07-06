@@ -69,11 +69,11 @@
 		color: var(--grey);
 		font-weight: 600;
 		text-transform: lowercase;
-	}
 
-	.category::before {
-		content: '#';
-		margin-right: 0.15em;
+		&::before {
+			content: '#';
+			margin-right: 0.15em;
+		}
 	}
 
 	.author {
