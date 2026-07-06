@@ -15,6 +15,11 @@ const extractMeta = (metadata: string) => {
 		if (!curr.includes(': ')) return acc;
 		const [key, val]: [string, string] = splitAt(curr.indexOf(': '), curr);
 
+		if (key === 'subtitle' || key === 'category') {
+			acc[key] = val.trim();
+			return acc;
+		}
+
 		if (key.includes(':')) {
 			const [attr, category] = splitAt(key.indexOf(':'), key);
 			if (!acc[attr]) acc[attr] = {};
@@ -114,6 +119,23 @@ export function parseDir(dirname: string, hydrate: Function) {
 	return posts.sort(
 		(a, b) => new Date(b.date.published).getTime() - new Date(a.date.published).getTime()
 	);
+}
+
+export function parseDirBooks(dirname: string, hydrate: Function) {
+	const entries = readdirSync(dirname);
+	const books = entries
+		.map((filename) => join(dirname, filename))
+		.filter((filepath) => statSync(filepath).isFile())
+		.map((filepath) => parseFile(filepath, hydrate))
+		.filter(Boolean);
+
+	books.sort((a, b) => {
+		const dateA = a.date.started ? new Date(a.date.started).getTime() : 0;
+		const dateB = b.date.started ? new Date(b.date.started).getTime() : 0;
+		return dateB - dateA;
+	});
+
+	return books;
 }
 
 export function parseDirHaikus(dirname: string, hydrate: Function) {
