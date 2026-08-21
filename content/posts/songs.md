@@ -17,3 +17,4 @@ date:updated: 2026-01-22
 - What If - Jonathan Ogden
 - That Is Why - Scott Brenner & Levites
 - Sufficient For Me - Jonathan Ogden
+- Ecclesiastes 1:2,4-9 - The Living Word Collective
