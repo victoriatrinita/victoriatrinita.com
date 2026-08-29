@@ -1,6 +1,6 @@
 ---
 title: Bisa dinikmati Allah
-tags: sermon,
+tags: [sermon]
 language: indonesian
 description: Pdt. Dr. Erastus Sabdono | SS II - 12 Mei 2024 | 10.50 WIB
 date:published: 2024-05-19
