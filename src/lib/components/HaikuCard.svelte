@@ -4,22 +4,27 @@
 	}
 
 	let { haiku }: Props = $props();
+
+	const [year, month] = haiku.date.split('-');
+	const haikuId = `${haiku.date}`;
 </script>
 
-<li>
-	<time>{haiku.date}</time>
-	<div>
-		{#each haiku.en as line}
-			<p>{line}</p>
-		{/each}
-	</div>
-	<div>
-		<p>[JAPANESE TRANSLATION]</p>
-		{#each haiku.ja as line}
-			<p>{line}</p>
-		{/each}
-	</div>
-</li>
+<a href={`/haiku/${year}/${month}#${haikuId}`}>
+	<li id={haikuId}>
+		<time>{haiku.date}</time>
+		<div>
+			{#each haiku.en as line}
+				<p>{line}</p>
+			{/each}
+		</div>
+		<div>
+			<p>[JAPANESE TRANSLATION]</p>
+			{#each haiku.ja as line}
+				<p>{line}</p>
+			{/each}
+		</div>
+	</li>
+</a>
 
 <style>
 	/* small {
