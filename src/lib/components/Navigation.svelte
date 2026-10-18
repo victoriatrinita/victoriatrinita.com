@@ -13,6 +13,7 @@
 		books: 'books',
 		cooklogs: 'cooklogs',
 		verses: 'verses',
+		experience: 'experience',
 		cv: 'cv'
 	};
 </script>
