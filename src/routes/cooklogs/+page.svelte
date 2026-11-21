@@ -4,7 +4,7 @@
 	export let data: PageData;
 </script>
 
-<div class="container">
+<main>
 	<h1 class="page-title">Cooklogs</h1>
 
 	<div class="cooklog-grid">
@@ -28,25 +28,31 @@
 			</a>
 		{/each}
 	</div>
-</div>
+</main>
 
 <style>
-	.container {
-		max-width: 1100px;
-		margin: 0 auto;
-		padding: 2rem 1.5rem;
+	main {
+		word-wrap: break-word;
+		line-height: 1.5;
+		margin: auto;
+		display: grid;
+		gap: 1em;
+		padding: clamp(2em, 3vw, 4em) 1em;
+		max-width: var(--page-width);
 	}
 
 	.page-title {
-		font-size: 2rem;
+		justify-self: center;
+		margin: 1em 0 0.5em;
+		font-size: clamp(1.5rem, 4vw, 2rem);
 		font-weight: 700;
-		margin-bottom: 2rem;
+		text-align: center;
 	}
 
 	.cooklog-grid {
 		display: grid;
 		gap: 2rem;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
 	}
 
 	.log-card {

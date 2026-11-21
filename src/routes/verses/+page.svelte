@@ -8,20 +8,19 @@
 	let { data }: Props = $props();
 </script>
 
-{#if !data.verses.length}
-	<section>
-		<h1>No verses found</h1>
-		<p>There's nothing to see here at the moment,</p>
-		<p>stay tuned for updates coming soon!</p>
-	</section>
-{:else}
-	<main>
-		<h2>Verses</h2>
+<main>
+	<h1>Verses</h1>
+	{#if !data.verses.length}
+		<section>
+			<p>There's nothing to see here at the moment,</p>
+			<p>stay tuned for updates coming soon!</p>
+		</section>
+	{:else}
 		{#each data.verses as verse}
 			<VerseCard {verse} />
 		{/each}
-	</main>
-{/if}
+	{/if}
+</main>
 
 <style>
 	section {
@@ -40,33 +39,18 @@
 		gap: 1em;
 		display: grid;
 		padding: clamp(2em, 3vw, 4em) 1em;
-		margin: auto;
 		max-width: 80ch;
 	}
 
 	h1 {
-		font-weight: 500;
-		margin-bottom: 0.3em;
-	}
-
-	h2 {
+		justify-self: center;
 		margin-top: 1em;
 		margin-bottom: 0.5em;
 		font-size: clamp(1.5rem, 4vw, 2rem);
 		font-weight: 700;
 		width: fit-content;
 		position: relative;
-	}
-
-	h2::after {
-		position: absolute;
-		content: '';
-		height: 0.5em;
-		bottom: 2px;
-		z-index: -1;
-		left: 0;
-		right: 0;
-		background: var(--blue-chalk);
+		text-align: center;
 	}
 
 	p {

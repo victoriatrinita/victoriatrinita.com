@@ -8,20 +8,19 @@
 	let { data }: Props = $props();
 </script>
 
-{#if !data.posts.length}
-	<section>
-		<h1>No posts found</h1>
-		<p>There's nothing to see here at the moment,</p>
-		<p>stay tuned for updates coming soon!</p>
-	</section>
-{:else}
-	<main>
-		<h2>Posts</h2>
+<main>
+	<h1>Posts</h1>
+	{#if !data.posts.length}
+		<section>
+			<p>There's nothing to see here at the moment,</p>
+			<p>stay tuned for updates coming soon!</p>
+		</section>
+	{:else}
 		{#each data.posts as post}
 			<PostCard {post} />
 		{/each}
-	</main>
-{/if}
+	{/if}
+</main>
 
 <style>
 	section {
@@ -44,29 +43,21 @@
 		max-width: 80ch;
 	}
 
-	h1 {
+	section h2 {
 		font-weight: 500;
 		margin-bottom: 0.3em;
+		text-align: center;
 	}
 
-	h2 {
+	h1 {
+		justify-self: center;
 		margin-top: 1em;
 		margin-bottom: 0.5em;
 		font-size: clamp(1.5rem, 4vw, 2rem);
 		font-weight: 700;
 		width: fit-content;
 		position: relative;
-	}
-
-	h2::after {
-		position: absolute;
-		content: '';
-		height: 0.5em;
-		bottom: 2px;
-		z-index: -1;
-		left: 0;
-		right: 0;
-		background: var(--blue-chalk);
+		text-align: center;
 	}
 
 	p {

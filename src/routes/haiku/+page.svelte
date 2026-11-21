@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
+
 	interface Props {
 		data: import('./$types').PageData;
 	}
@@ -7,20 +9,23 @@
 </script>
 
 <main>
-	<h2>Haiku</h2>
+	<h1>Haiku</h1>
 	<p>
 		This is my daily reflection written in haiku form. I prioritise the message I want to say, with
 		the 5-7-5 structure only as a baseline that I don't force when the meaning is clearer without
 		it. The Japanese translation also aims to convey the original English meaning and nuance in the
 		closest way possible, not to strictly follow 5-7-5.
 	</p>
-	{#each data.dates as date}
-		<li>
-			<a href={`/haiku/${date.year}/${date.month}`}>
-				{date.year}/{date.month}
-			</a>
-		</li>
-	{/each}
+
+	<ul>
+		{#each data.dates as date (`${date.year}-${date.month}`)}
+			<li>
+				<a href={resolve(`/haiku/${date.year}/${date.month}`)}>
+					{date.year}/{date.month}
+				</a>
+			</li>
+		{/each}
+	</ul>
 </main>
 
 <style>
@@ -36,23 +41,16 @@
 		max-width: 80ch;
 	}
 
-	h2 {
+	h1 {
 		margin-top: 1em;
 		margin-bottom: 0.5em;
 		font-size: clamp(1.5rem, 4vw, 2rem);
 		font-weight: 700;
-		width: fit-content;
-		position: relative;
+		text-align: center;
 	}
 
-	h2::after {
-		position: absolute;
-		content: '';
-		height: 0.5em;
-		bottom: 2px;
-		z-index: -1;
-		left: 0;
-		right: 0;
-		background: var(--blue-chalk);
+	ul {
+		margin: 0;
+		padding-left: 1.25rem;
 	}
 </style>

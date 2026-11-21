@@ -8,7 +8,7 @@
 <div class="recipe-container">
 	<header class="recipe-header">
 		<a href={resolve('/cooklogs')} class="back-link">← Back to Logs</a>
-		<h1 class="title">{post.title}</h1>
+		<h1>{post.title}</h1>
 
 		{#if post.tags}
 			<div class="tag-list">
@@ -61,7 +61,7 @@
 
 <style>
 	.recipe-container {
-		max-width: 800px;
+		max-width: var(--page-width);
 		margin: 0 auto;
 		padding: 2rem 1rem;
 		font-family:
@@ -83,7 +83,7 @@
 		margin-bottom: 2rem;
 	}
 
-	.title {
+	h1 {
 		font-size: 2.5rem;
 		margin: 0 0 0.75rem 0;
 		line-height: 1.2;

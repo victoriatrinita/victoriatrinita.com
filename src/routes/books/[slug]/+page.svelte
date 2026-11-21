@@ -42,6 +42,7 @@
 		font-size: clamp(1.75rem, 4vw, 2.5rem);
 		margin: 0 0 0.5em 0;
 		color: var(--martinique);
+		text-align: center;
 	}
 
 	.subtitle {

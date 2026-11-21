@@ -50,6 +50,9 @@
 
 <style>
 	h1 {
+		margin: 1em 0 0.5em;
+		font-size: clamp(1.5rem, 4vw, 2rem);
 		font-weight: 700;
+		text-align: center;
 	}
 </style>
