@@ -1,32 +1,45 @@
 :root {
+	color-scheme: light dark;
+	--page-bg: light-dark(#fff, #181a1e);
+	--text: light-dark(oklab(0 0 0 / 0.8), #e7e8eb);
+	--surface: light-dark(#fff, #202328);
 	--page-width: 80ch;
 
 	/* Chir.ag’s Name that Color utility http://chir.ag/projects/name-that-color/ */
 	--white: oklch(1 0 0);
-	--wild-sand: oklch(0.96 0 0);
-	--alto: oklch(0.84 0.01 0);
-	--oslo-gray: oklch(0.58 0.01 248);
-	--white-lilac: oklch(0.93 0.03 274);
-	--moody-blue: oklch(0.48 0.11 263);
-	--chetwode-blue: oklch(0.64 0.12 264);
-	--lavender-gray: oklch(0.78 0.05 286);
-	--blue-chalk: oklch(0.91 0.08 302);
-	--martinique: oklch(0.24 0.05 285);
-	--tundora: oklch(0.27 0 0);
-	--mine-shaft: oklch(0.2 0 0);
-	--beauty-bush: oklch(0.82 0.06 18);
+	--wild-sand: light-dark(oklch(0.96 0 0), #282b31);
+	--alto: light-dark(oklch(0.84 0.01 0), #494d55);
+	--oslo-gray: light-dark(oklch(0.58 0.01 248), #afb5bf);
+	--white-lilac: light-dark(oklch(0.93 0.03 274), #303442);
+	--moody-blue: light-dark(oklch(0.48 0.11 263), #a3baff);
+	--chetwode-blue: light-dark(oklch(0.64 0.12 264), #91aaff);
+	--lavender-gray: light-dark(oklch(0.78 0.05 286), #676e80);
+	--blue-chalk: light-dark(oklch(0.91 0.08 302), #413951);
+	--martinique: light-dark(oklch(0.24 0.05 285), #dce2ef);
+	--tundora: light-dark(oklch(0.27 0 0), #dedfe2);
+	--mine-shaft: light-dark(oklch(0.2 0 0), #ececee);
+	--beauty-bush: light-dark(oklch(0.82 0.06 18), #55434a);
 	--pavlova: oklch(0.75 0.08 72);
 	--burnt-orange: oklch(0.64 0.12 60);
-	--silver-chalice: oklch(0.66 0 0);
-	--silver: oklch(0.53 0 0);
-	--gallery: oklch(0.93 0 0);
-	--alabaster: oklch(0.99 0 0);
-	--dusty-gray: oklch(0.4 0.01 0);
-	--mako: oklch(0.27 0 0);
-	--black: oklch(0 0 0);
+	--silver-chalice: light-dark(oklch(0.66 0 0), #b6b6ba);
+	--silver: light-dark(oklch(0.53 0 0), #acadb3);
+	--gallery: light-dark(oklch(0.93 0 0), #393c42);
+	--alabaster: light-dark(oklch(0.99 0 0), #222429);
+	--dusty-gray: light-dark(oklch(0.4 0.01 0), #b6b8c0);
+	--mako: light-dark(oklch(0.27 0 0), #dddfe4);
+	--black: light-dark(oklch(0 0 0), #e6e7ea);
 	--gold: oklch(0.78 0.13 90);
-	--gray: oklch(0.6 0 0);
-	--soft-gray: oklch(0.94 0 0);
+	--gray: light-dark(oklch(0.6 0 0), #858891);
+	--soft-gray: light-dark(oklch(0.94 0 0), #2c3036);
+
+	/* Theme roles used by the navigation, page text, and cards. */
+	--brand: light-dark(oklch(0.5058 0.2886 264.84), var(--moody-blue));
+	--intro-text: light-dark(oklch(0.373 0.034 259.733), var(--text));
+	--on-accent: light-dark(white, #18223a);
+	--book-paper: light-dark(#faf6eb, var(--surface));
+	--book-paper-edge: light-dark(#ded7c9, var(--alto));
+	--book-paper-text: light-dark(#51493f, var(--text));
+	--paper-tint: light-dark(transparent, color-mix(in srgb, var(--surface) 95%, transparent));
 }
 
 html {
@@ -47,6 +60,7 @@ html {
 }
 
 body {
+	background-color: var(--page-bg);
 	min-height: 100vh;
 	margin: 0;
 	scroll-behavior: smooth;
@@ -87,7 +101,7 @@ p,
 ul[class] {
 	margin: 0;
 	font-weight: normal;
-	color: oklab(0 0 0 / 0.8);
+	color: var(--text);
 }
 code,
 kbd,
@@ -103,7 +117,7 @@ p {
 
 a,
 a:visited {
-	color: oklab(0 0 0 / 0.8);
+	color: var(--text);
 	text-decoration: none;
 	background-color: transparent;
 }
@@ -119,9 +133,8 @@ h2 {
 pre {
 	font-size: 16px;
 	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
+	background-color: var(--soft-gray);
 	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
 	padding: 0.5em;
 	overflow-x: auto;
 	color: var(--tundora);

@@ -42,7 +42,7 @@
 		display: block;
 		height: 100%;
 		overflow: hidden;
-		background: var(--white);
+		background: var(--surface);
 		border: 1px solid var(--alto);
 		border-radius: 0.75rem;
 	}
@@ -75,7 +75,7 @@
 		padding: 0.25rem 0.65rem;
 		border-radius: 0.25rem 0.25rem 0 0;
 		background: var(--moody-blue);
-		color: var(--white);
+		color: var(--on-accent);
 		font: 0.75rem/1.5 var(--font-mono);
 	}
 

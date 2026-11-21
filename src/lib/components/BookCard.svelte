@@ -26,8 +26,8 @@
 		display: grid;
 		grid-template-rows: 1fr auto;
 		border-radius: 3px 8px 8px 3px;
-		background: #faf6eb;
-		box-shadow: 0 2px 5px #30271b24, inset 0 0 0 1px #ded7c9;
+		background: var(--book-paper);
+		box-shadow: 0 2px 5px #30271b24, inset 0 0 0 1px var(--book-paper-edge);
 		overflow-wrap: anywhere;
 	}
 	a:nth-child(3n + 2) {
@@ -66,7 +66,7 @@
 		display: grid;
 		gap: 0.15rem;
 		padding: 0.75rem 1.25rem;
-		color: #51493f;
+		color: var(--book-paper-text);
 	}
 	a:hover h3,
 	a:focus-visible h3 {

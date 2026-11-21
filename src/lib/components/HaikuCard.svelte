@@ -31,10 +31,9 @@
 		padding: 1em;
 		display: grid;
 		gap: 1rem;
-		background-image: url('/assets/dotted.svg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		background:
+			linear-gradient(var(--paper-tint), var(--paper-tint)),
+			url('/assets/dotted.svg') center / cover no-repeat var(--surface);
 		font-size: 0.8125rem;
 	}
 

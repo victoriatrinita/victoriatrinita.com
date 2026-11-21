@@ -37,7 +37,9 @@
 		height: 100%;
 		overflow: hidden;
 		border-radius: 3px;
-		background: url('/assets/grid.svg') center / cover no-repeat;
+		background:
+			linear-gradient(var(--paper-tint), var(--paper-tint)),
+			url('/assets/grid.svg') center / cover no-repeat var(--surface);
 		transition:
 			transform 300ms ease-out,
 			box-shadow 300ms ease-out;

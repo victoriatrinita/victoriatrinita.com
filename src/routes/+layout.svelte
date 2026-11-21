@@ -35,4 +35,9 @@
 		width: min(var(--page-width), calc(100% - 2em));
 		margin-inline: auto;
 	}
+	@media (max-width: 840px) {
+		:global(body > #svelte) {
+			grid-template-rows: 1fr auto;
+		}
+	}
 </style>

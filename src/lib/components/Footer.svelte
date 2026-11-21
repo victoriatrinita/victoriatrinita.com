@@ -26,4 +26,10 @@
 		padding: 1.5rem 0;
 		border-top: 1px solid var(--gray);
 	}
+
+	@media (max-width: 840px) {
+		footer {
+			padding-bottom: calc(4rem + env(safe-area-inset-bottom));
+		}
+	}
 </style>

@@ -4,7 +4,14 @@
 		<meta charset="utf-8" />
 		<meta name="description" content="Personal website of Victoria Trinita Pardede" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="theme-color" content="#ffffff" />
+		<meta name="color-scheme" content="light dark" />
+		<script>
+			try {
+				const theme = localStorage.getItem('site-theme');
+				if (theme === 'light' || theme === 'dark')
+					document.documentElement.style.colorScheme = theme;
+			} catch {}
+		</script>
 
 		<link rel="icon" type="image/png" sizes="72x72" href="/assets/favicon/icon-72x72.png" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/icon-180x180.png" />

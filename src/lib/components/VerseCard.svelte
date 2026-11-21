@@ -26,7 +26,7 @@
 		padding: clamp(1rem, 3vw, 1.75rem);
 		border: 1px solid var(--alto);
 		border-radius: 0.5rem;
-		background: var(--white);
+		background: var(--surface);
 	}
 
 	a {
