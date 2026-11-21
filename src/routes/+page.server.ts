@@ -1,4 +1,5 @@
-import { parseDir, parseCooklogDir, parseLatestHaikuDir } from '$lib/utils/parser';
+import { _getCooklogs } from './cooklogs/+page.server';
+import { parseDir, parseLatestHaikuDir } from '$lib/utils/parser';
 import type { Post, Haiku } from '$lib/types';
 
 export async function load() {
@@ -9,7 +10,7 @@ export async function load() {
 
 	const recentPosts = parseDir('content/posts', hydrate);
 	const recentHaikus: Haiku[] = parseLatestHaikuDir('content/haiku').slice(0, 3);
-	const recentCooklogs = parseCooklogDir('content/cooklogs', hydrate).slice(0, 3);
+	const recentCooklogs = _getCooklogs().slice(0, 3);
 
 	return {
 		recentPosts,

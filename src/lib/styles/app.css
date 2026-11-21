@@ -1,13 +1,12 @@
 :root {
+	--page-width: 80ch;
+
 	/* Chir.ag’s Name that Color utility http://chir.ag/projects/name-that-color/ */
 	--white: oklch(1 0 0);
 	--wild-sand: oklch(0.96 0 0);
 	--alto: oklch(0.84 0.01 0);
-	--heather: oklch(0.78 0.03 257);
 	--oslo-gray: oklch(0.58 0.01 248);
-	--botticelli: oklch(0.82 0.03 247);
 	--white-lilac: oklch(0.93 0.03 274);
-	--mulled-wine: oklch(0.37 0.06 296);
 	--moody-blue: oklch(0.48 0.11 263);
 	--chetwode-blue: oklch(0.64 0.12 264);
 	--lavender-gray: oklch(0.78 0.05 286);
@@ -16,9 +15,7 @@
 	--tundora: oklch(0.27 0 0);
 	--mine-shaft: oklch(0.2 0 0);
 	--beauty-bush: oklch(0.82 0.06 18);
-	--buttermilk: oklch(0.95 0.13 98);
 	--pavlova: oklch(0.75 0.08 72);
-	--snowy-mint: oklch(0.86 0.13 138);
 	--burnt-orange: oklch(0.64 0.12 60);
 	--silver-chalice: oklch(0.66 0 0);
 	--silver: oklch(0.53 0 0);
@@ -27,13 +24,9 @@
 	--dusty-gray: oklch(0.4 0.01 0);
 	--mako: oklch(0.27 0 0);
 	--black: oklch(0 0 0);
-	--mine-shaft-dark: oklch(0.17 0 0);
-	--royal-blue: oklch(0.45 0.16 264);
 	--gold: oklch(0.78 0.13 90);
 	--gray: oklch(0.6 0 0);
 	--soft-gray: oklch(0.94 0 0);
-	--light-gray: oklch(0.96 0 0);
-	--off-white: oklch(0.99 0 0);
 }
 
 html {
@@ -41,7 +34,6 @@ html {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
-	/* --font-mono: 'Fira Mono', monospace; */
 	--font-mono: 'Departure Mono', monospace;
 	font-family: 'New York', serif;
 }
@@ -111,7 +103,6 @@ p {
 
 a,
 a:visited {
-	/* color: var(--chetwode-blue); */
 	color: oklab(0 0 0 / 0.8);
 	text-decoration: none;
 	background-color: transparent;

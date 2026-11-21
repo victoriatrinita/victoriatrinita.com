@@ -20,7 +20,9 @@ const extractMeta = (metadata: string) => {
 			return acc;
 		}
 
-		if (key.includes(':')) {
+		if (key === 'tags') {
+			acc.tags = val.split(',').map((tag) => tag.trim()).filter(Boolean);
+		} else if (key.includes(':')) {
 			const [attr, category] = splitAt(key.indexOf(':'), key);
 			if (!acc[attr]) acc[attr] = {};
 			acc[attr][category] = val.trim();
@@ -30,7 +32,7 @@ const extractMeta = (metadata: string) => {
 		} else acc[key] = val.trim();
 
 		return acc;
-	}, {});
+	}, { tags: [] });
 };
 
 const extractMetaVerses = (metadata: string) => {

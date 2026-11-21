@@ -6,99 +6,72 @@
 	let { book }: Props = $props();
 </script>
 
-<a href="books/{book.slug}">
-	<section>
+<a href="/books/{book.slug}">
+	<div class="cover">
+		{#if book.category}<small>{book.category}</small>{/if}
 		<h3>{book.title}</h3>
-		{#if book.subtitle}
-			<p class="subtitle">{book.subtitle}</p>
-		{/if}
-		<small class="author">by {book.author}</small>
-		{#if book.category}
-			<small class="category">{book.category}</small>
-		{/if}
-		<footer>
-			<small class="status">{book.status}</small>
-			{#if book.date.started}
-				<small>Started: {book.date.started}</small>
-			{/if}
-			{#if book.date.finished}
-				<small>Finished: {book.date.finished}</small>
-			{/if}
-		</footer>
-	</section>
+		{#if book.subtitle}<p class="subtitle">{book.subtitle}</p>{/if}
+		<p class="author">by {book.author}</p>
+	</div>
+	<footer>
+		<strong>{book.status}</strong>
+		{#if book.date.started}<span>Started: {book.date.started}</span>{/if}
+		{#if book.date.finished}<span>Finished: {book.date.finished}</span>{/if}
+	</footer>
 </a>
 
 <style>
-	small {
-		font-size: clamp(0.8rem, 2vw, 0.875rem);
-	}
-
-	section {
-		background-color: var(--wild-sand);
-		border-radius: 20px;
-		padding: 1em 1.5em;
-		cursor: pointer;
-		color: var(--martinique);
-		transition: all 300ms ease-out;
-		border: solid var(--alto) 1px;
+	a {
+		--cloth: #334d45;
 		display: grid;
-		gap: 0.25em;
+		grid-template-rows: 1fr auto;
+		border-radius: 3px 8px 8px 3px;
+		background: #faf6eb;
+		box-shadow: 0 2px 5px #30271b24, inset 0 0 0 1px #ded7c9;
+		overflow-wrap: anywhere;
 	}
-
-	section:hover {
-		box-shadow: 0px 3.4359px 18px rgba(0, 0, 0, 0.2);
-		transform: translateY(-0.2em);
-		background-color: var(--white-lilac);
-		border: solid var(--lavender-gray) 1px;
+	a:nth-child(3n + 2) {
+		--cloth: #67444f;
 	}
-
+	a:nth-child(3n) {
+		--cloth: #384c65;
+	}
+	.cover {
+		padding: clamp(1.25rem, 3vw, 1.75rem);
+		border-radius: 3px 8px 0 0;
+		background: linear-gradient(90deg, #0002, transparent 5px, #fff2 8px, transparent 11px), var(--cloth);
+		color: #fff8e9;
+	}
+	small,
+	footer {
+		font: 0.75rem/1.5 var(--font-mono);
+	}
 	h3 {
-		font-weight: 600;
-		font-size: clamp(1.125rem, 2vw, 1.25rem);
-		margin: 0;
+		margin: 0.75rem 0 0.5rem;
+		color: inherit;
+		font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+		line-height: 1.15;
+		text-wrap: balance;
 	}
-
-	.subtitle {
-		margin: 0;
-		color: var(--grey);
-		font-size: clamp(0.75rem, 1.7vw, 0.875rem);
-		line-height: 1.4;
-	}
-
-	.category {
-		color: var(--grey);
-		font-weight: 600;
-		text-transform: lowercase;
-
-		&::before {
-			content: '#';
-			margin-right: 0.15em;
-		}
-	}
-
+	.subtitle,
 	.author {
-		color: var(--grey);
+		color: inherit;
+		font-size: 0.9375rem;
+	}
+	.author {
+		margin-top: 1rem;
 		font-style: italic;
 	}
-
-	.status {
-		font-weight: 600;
-		padding: 0.25em 0.75em;
-		border-radius: 12px;
-		width: fit-content;
-		background-color: #fef3c7;
-		color: #92400e;
-		border: 1px solid #fcd34d;
-	}
-
 	footer {
-		display: flex;
-		gap: 1em;
-		align-items: center;
-		margin-top: 0.5em;
+		display: grid;
+		gap: 0.15rem;
+		padding: 0.75rem 1.25rem;
+		color: #51493f;
 	}
-
-	a {
-		text-decoration: none;
+	a:hover h3,
+	a:focus-visible h3 {
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.15em;
 	}
 </style>

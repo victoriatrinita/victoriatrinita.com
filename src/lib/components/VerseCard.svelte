@@ -4,42 +4,46 @@
 	}
 
 	let { verse }: Props = $props();
+	const languages = ['id', 'en', 'ja'] as const;
 </script>
 
-<section>
-	<a href={verse.id.link}>
-		{verse.id.verse} ({verse.id.translation})
-	</a>
-	<p>{verse.id.content}</p>
-	<hr />
-	<a href={verse.en.link}>
-		{verse.en.verse} ({verse.en.translation})
-	</a>
-	<p>{verse.en.content}</p>
-	<hr />
-	<a href={verse.ja.link}>
-		{verse.ja.verse} ({verse.ja.translation})
-	</a>
-	<p>{verse.ja.content}</p>
-</section>
+<article>
+	{#each languages as language}
+		{@const passage = verse[language]}
+		<div lang={language}>
+			<a href={passage.link}>
+				{passage.verse} <small>{passage.translation}</small>
+			</a>
+			<p>{passage.content}</p>
+		</div>
+	{/each}
+</article>
 
 <style>
-	section {
-		background-color: var(--wild-sand);
-		border-radius: 20px;
-		padding: 1em 1.5em;
-		cursor: pointer;
-		color: var(--martinique);
-		transition: all 300ms ease-out;
-		border: solid var(--alto) 1px;
+	article {
 		display: grid;
-		gap: 0.25em;
+		gap: 1.25rem;
+		padding: clamp(1rem, 3vw, 1.75rem);
+		border: 1px solid var(--alto);
+		border-radius: 0.5rem;
+		background: var(--white);
 	}
 
-	section:hover {
-		box-shadow: 0px 3.4359px 18px rgba(0, 0, 0, 0.2);
-		transform: translateY(-0.2em);
-		background-color: var(--white-lilac);
-		border: solid var(--lavender-gray) 1px;
+	a {
+		color: var(--moody-blue);
+		font-weight: 600;
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
+	}
+
+	small {
+		margin-inline-start: 0.35em;
+		color: var(--dusty-gray);
+		font: 0.75rem/1.5 var(--font-mono);
+	}
+
+	p {
+		margin-top: 0.35rem;
+		line-height: 1.65;
 	}
 </style>

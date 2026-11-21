@@ -5,13 +5,12 @@
 
 	let { haiku }: Props = $props();
 
-	const [year, month] = haiku.date.split('-');
-	const haikuId = `${haiku.date}`;
+	const [year, month] = $derived(haiku.date.split('-'));
 </script>
 
-<a href={`/haiku/${year}/${month}#${haikuId}`}>
-	<li id={haikuId}>
-		<time>{haiku.date}</time>
+<li id={haiku.date}>
+	<a href={`/haiku/${year}/${month}#${haiku.date}`}>
+		<time datetime={haiku.date}>{haiku.date}</time>
 		<div>
 			{#each haiku.en as line}
 				<p>{line}</p>
@@ -23,16 +22,13 @@
 				<p>{line}</p>
 			{/each}
 		</div>
-	</li>
-</a>
+	</a>
+</li>
 
 <style>
-	/* small {
-		font-size: clamp(0.8rem, 2vw, 0.875rem);
-	} */
-
-	li {
-		padding: 1em 1em;
+	a {
+		height: 100%;
+		padding: 1em;
 		display: grid;
 		gap: 1rem;
 		background-image: url('/assets/dotted.svg');
@@ -41,6 +37,36 @@
 		background-position: center;
 		font-size: 0.8125rem;
 	}
+
+	a:hover,
+	a:focus-visible {
+		box-shadow: 0 5px 12px color-mix(in srgb, var(--silver) 23%, transparent);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		a {
+			transition:
+				transform 160ms ease-out,
+				box-shadow 160ms ease-out;
+		}
+
+		a:hover,
+		a:focus-visible {
+			transform: translateY(-3px);
+		}
+	}
+
+	time {
+		justify-self: start;
+		font: 0.8125rem/1.5 var(--font-mono);
+		color: var(--dusty-gray);
+	}
+
+	a:focus-visible {
+		outline: 2px solid var(--dusty-gray);
+		outline-offset: 2px;
+	}
+
 	div {
 		display: grid;
 		gap: 0.5rem;

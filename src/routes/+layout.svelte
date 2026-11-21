@@ -1,6 +1,4 @@
 <script lang="ts">
-	import '@fontsource-variable/inter';
-	import '@fontsource/fira-mono';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import '$lib/styles/app.css';
@@ -18,14 +16,23 @@
 
 <Navigation />
 
-{@render children?.()}
+<div>
+	{@render children?.()}
+</div>
 
 <Footer />
 
 <style>
 	:global(body > #svelte) {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-rows: auto 1fr auto;
 		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
+		min-height: 100dvh;
+	}
+
+	div {
+		width: min(var(--page-width), calc(100% - 2em));
+		margin-inline: auto;
 	}
 </style>

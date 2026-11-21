@@ -2,13 +2,13 @@
 	import type { PageData } from './$types';
 	import { resolve } from '$app/paths';
 	export let data: PageData;
-	const { post } = data;
+	$: post = data.post;
 </script>
 
 <div class="recipe-container">
 	<header class="recipe-header">
-		<a href={resolve('/cooklogs')} class="back-link">← Back to Logs</a>
-		<h1 class="title">{post.title}</h1>
+		<a href={resolve('/cooklogs')} class="back-link">← Cooklogs</a>
+		<h1>{post.title}</h1>
 
 		{#if post.tags}
 			<div class="tag-list">
@@ -20,157 +20,148 @@
 	</header>
 
 	<main class="recipe-body">
-		{#if post.image}
-			<div class="main-visual">
+		<div class="main-visual">
+			{#if post.image}
 				<img src={post.image} alt={post.title} />
-			</div>
-		{/if}
+			{:else}
+				<p class="placeholder">No photo yet</p>
+			{/if}
+		</div>
 
 		<section class="description">
 			{@html post.content}
 		</section>
 
-		<section class="log-history">
-			<h2 class="history-title">Cooking History</h2>
+		{#if post.cook_logs?.length}
+			<section class="log-history">
+				<h2 class="history-title">Cooking History</h2>
 
-			{#each post.cook_logs as log (log)}
-				<article class="log-card">
-					<div class="log-meta">
-						<time>{log.date}</time>
-						<span class="stars">
-							{'★'.repeat(log.rating)}{'☆'.repeat(5 - log.rating)}
-						</span>
-					</div>
-
-					<p class="log-notes">{log.notes}</p>
-
-					{#if log.images && log.images.length > 0}
-						<div class="log-grid" style="--img-count: {log.images.length}">
-							{#each log.images as img (img)}
-								<div class="grid-item">
-									<img src={img} alt="Cook detail" loading="lazy" />
-								</div>
-							{/each}
+				{#each post.cook_logs as log (log)}
+					<article class="entry">
+						<div class="log-meta">
+							<time>{log.date}</time>
+							<span class="stars">
+								{'★'.repeat(log.rating)}{'☆'.repeat(5 - log.rating)}
+							</span>
 						</div>
-					{/if}
-				</article>
-			{/each}
-		</section>
+
+						<p class="log-notes">{log.notes}</p>
+
+						{#each log.images as img}
+							{#if img !== post.image && img.replace(',w_800/', ',w_1200/').replace(/\.jpg$/, '') !== post.image}
+								<img class="entry-photo" src={img} alt="Cook detail" loading="lazy" />
+							{/if}
+						{/each}
+					</article>
+				{/each}
+			</section>
+		{/if}
 	</main>
 </div>
 
 <style>
 	.recipe-container {
-		max-width: 800px;
+		max-width: var(--page-width);
 		margin: 0 auto;
-		padding: 2rem 1rem;
-		font-family:
-			system-ui,
-			-apple-system,
-			sans-serif;
+		padding: clamp(2em, 3vw, 4em) 1em;
+		line-height: 1.5;
 		color: var(--mine-shaft);
 	}
 
 	.back-link {
-		display: inline-block;
-		text-decoration: none;
-		color: var(--silver);
-		font-size: 0.9rem;
-		margin-bottom: 1rem;
+		color: inherit;
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
+		font-size: 0.875rem;
 	}
 
 	.recipe-header {
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 	}
 
-	.title {
-		font-size: 2.5rem;
-		margin: 0 0 0.75rem 0;
-		line-height: 1.2;
+	h1 {
+		font-size: clamp(1.5rem, 4vw, 2rem);
+		font-weight: 700;
+		margin: 1em 0 0.5em;
+		text-align: center;
 	}
 
 	.tag-list {
 		display: flex;
-		gap: 0.5rem;
+		gap: 0.25rem 0.75rem;
 		flex-wrap: wrap;
-	}
-
-	.tag {
-		color: var(--burnt-orange);
-		font-size: 0.9rem;
-		font-weight: 500;
+		justify-content: center;
+		color: var(--dusty-gray);
+		font-size: 0.875rem;
 	}
 
 	.main-visual {
-		margin-bottom: 2.5rem;
-		border-radius: 12px;
+		position: relative;
+		display: grid;
+		place-items: center;
+		width: min(100%, 20rem);
+		aspect-ratio: 3 / 2;
+		margin-inline: auto;
 		overflow: hidden;
-		box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+		border: 1px solid var(--alto);
+		border-radius: 0.5rem;
+		background: var(--soft-gray);
 	}
 
 	.main-visual img {
+		position: absolute;
+		inset: 0;
 		width: 100%;
-		display: block;
-		max-height: 500px;
+		height: 100%;
 		object-fit: cover;
 	}
 
-	.description {
-		font-size: 1.15rem;
-		line-height: 1.7;
-		margin-bottom: 4rem;
+	.placeholder {
+		color: var(--dusty-gray);
+		font: 0.8125rem/1.5 var(--font-mono);
+	}
+
+	.description,
+	.log-history {
+		margin-top: 2rem;
 	}
 
 	.history-title {
-		font-size: 1.5rem;
-		border-bottom: 2px solid var(--gallery);
-		padding-bottom: 0.5rem;
-		margin-bottom: 2rem;
+		font-size: 1.25rem;
+		font-weight: 600;
 	}
 
-	.log-card {
-		background: var(--alabaster);
-		border: 1px solid var(--gallery);
-		border-radius: 8px;
-		padding: 1.5rem;
-		margin-bottom: 2rem;
+	.entry {
+		margin-top: 1.25rem;
+	}
+
+	.entry + .entry {
+		border-top: 1px solid var(--alto);
+		padding-top: 1.25rem;
 	}
 
 	.log-meta {
 		display: flex;
-		justify-content: space-between;
-		margin-bottom: 1rem;
-		font-weight: 600;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		font: 0.8125rem/1.5 var(--font-mono);
 		color: var(--dusty-gray);
 	}
 
 	.stars {
-		color: var(--gold);
+		color: var(--moody-blue);
 	}
 
 	.log-notes {
 		white-space: pre-wrap;
-		margin-bottom: 1.5rem;
-		color: var(--mako);
+		margin-top: 0.5rem;
 	}
 
-	.log-grid {
-		display: grid;
-		gap: 0.75rem;
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-	}
-
-	.grid-item img {
-		width: 100%;
+	.entry-photo {
+		width: min(100%, 10rem);
 		aspect-ratio: 4 / 3;
 		object-fit: cover;
+		margin-top: 0.75rem;
 		border-radius: 6px;
-		display: block;
-	}
-
-	@media (max-width: 600px) {
-		.title {
-			font-size: 1.8rem;
-		}
 	}
 </style>
