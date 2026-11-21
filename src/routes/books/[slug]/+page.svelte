@@ -39,22 +39,19 @@
 
 	h1 {
 		font-weight: 700;
-		font-size: clamp(1.75rem, 4vw, 2.5rem);
-		margin: 0 0 0.5em 0;
-		color: var(--martinique);
+		font-size: clamp(1.5rem, 4vw, 2rem);
+		margin: 1em 0 0.5em;
 		text-align: center;
 	}
 
 	.subtitle {
-		font-size: clamp(1rem, 2vw, 1.125rem);
-		color: var(--grey);
+		font-size: 1rem;
 		margin: 0 0 0.5em 0;
 		line-height: 1.5;
 	}
 
 	.author {
-		font-size: clamp(1.125rem, 2vw, 1.25rem);
-		color: var(--grey);
+		font-size: 1rem;
 		font-style: italic;
 		margin: 0 0 1em 0;
 	}
@@ -64,7 +61,7 @@
 		gap: 1.5em;
 		flex-wrap: wrap;
 		align-items: center;
-		font-size: clamp(0.875rem, 2vw, 1rem);
+		font-size: 0.875rem;
 	}
 
 	.status {
@@ -74,10 +71,5 @@
 		background-color: #fef3c7;
 		color: #92400e;
 		border: 1px solid #fcd34d;
-		font-size: clamp(0.875rem, 2vw, 0.95rem);
-	}
-
-	.metadata span {
-		color: var(--grey);
 	}
 </style>

@@ -73,17 +73,6 @@
 		position: relative;
 	}
 
-	article :global(h2::after) {
-		position: absolute;
-		content: '';
-		height: 0.5em;
-		bottom: 2px;
-		z-index: -1;
-		left: 0;
-		right: 0;
-		background: var(--blue-chalk);
-	}
-
 	article :global(h2) {
 		margin-top: 1em;
 		margin-bottom: 0.5em;

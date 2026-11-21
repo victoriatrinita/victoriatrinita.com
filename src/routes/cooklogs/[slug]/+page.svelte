@@ -63,11 +63,8 @@
 	.recipe-container {
 		max-width: var(--page-width);
 		margin: 0 auto;
-		padding: 2rem 1rem;
-		font-family:
-			system-ui,
-			-apple-system,
-			sans-serif;
+		padding: clamp(2em, 3vw, 4em) 1em;
+		line-height: 1.5;
 		color: var(--mine-shaft);
 	}
 
@@ -84,9 +81,10 @@
 	}
 
 	h1 {
-		font-size: 2.5rem;
-		margin: 0 0 0.75rem 0;
-		line-height: 1.2;
+		font-size: clamp(1.5rem, 4vw, 2rem);
+		font-weight: 700;
+		margin: 1em 0 0.5em;
+		text-align: center;
 	}
 
 	.tag-list {
@@ -116,13 +114,13 @@
 	}
 
 	.description {
-		font-size: 1.15rem;
-		line-height: 1.7;
+		font-size: 1rem;
 		margin-bottom: 4rem;
 	}
 
 	.history-title {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
+		font-weight: 600;
 		border-bottom: 2px solid var(--gallery);
 		padding-bottom: 0.5rem;
 		margin-bottom: 2rem;
@@ -166,11 +164,5 @@
 		object-fit: cover;
 		border-radius: 6px;
 		display: block;
-	}
-
-	@media (max-width: 600px) {
-		.title {
-			font-size: 1.8rem;
-		}
 	}
 </style>
