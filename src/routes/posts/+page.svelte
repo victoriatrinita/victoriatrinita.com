@@ -11,56 +11,44 @@
 <main>
 	<h1>Posts</h1>
 	{#if !data.posts.length}
-		<section>
+		<div class="empty">
 			<p>There's nothing to see here at the moment,</p>
 			<p>stay tuned for updates coming soon!</p>
-		</section>
+		</div>
 	{:else}
-		{#each data.posts as post}
-			<PostCard {post} />
-		{/each}
+		<div class="posts">
+			{#each data.posts as post}
+				<PostCard {post} />
+			{/each}
+		</div>
 	{/if}
 </main>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin: auto auto 2.5em;
-	}
-
 	main {
-		word-wrap: break-word;
-		line-height: 1.5;
-		margin: auto;
-		min-width: 50%;
-		gap: 1em;
 		display: grid;
+		grid-template-rows: auto 1fr;
+		gap: 1em;
+		min-height: 100%;
+		max-width: var(--page-width);
+		margin-inline: auto;
 		padding: clamp(2em, 3vw, 4em) 1em;
-		margin: auto;
-		max-width: 80ch;
-	}
-
-	section h2 {
-		font-weight: 500;
-		margin-bottom: 0.3em;
-		text-align: center;
+		line-height: 1.5;
+		overflow-wrap: anywhere;
 	}
 
 	h1 {
-		justify-self: center;
-		margin-top: 1em;
-		margin-bottom: 0.5em;
+		margin: 1em 0 0.5em;
 		font-size: clamp(1.5rem, 4vw, 2rem);
 		font-weight: 700;
-		width: fit-content;
-		position: relative;
 		text-align: center;
 	}
 
-	p {
-		color: var(--oslo-gray);
+	.posts {
+		align-self: start;
+	}
+	.empty {
+		place-self: center;
+		text-align: center;
 	}
 </style>

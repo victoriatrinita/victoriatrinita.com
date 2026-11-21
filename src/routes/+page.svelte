@@ -2,7 +2,7 @@
 	import Link from '$lib/components/Link.svelte';
 	import PostList from '$lib/components/PostList.svelte';
 	import HaikuCard from '$lib/components/HaikuCard.svelte';
-	import CooklogCard from '$lib/components/CooklogCard.svelte';
+	import HomeCooklogCard from '$lib/components/HomeCooklogCard.svelte';
 	import VerseOfTheDay from '$lib/components/VerseOfTheDay.svelte';
 
 	let innerWidth = $state(0);
@@ -42,9 +42,9 @@
 
 	<section>
 		<h2>COOKLOGS</h2>
-		<ul>
+		<ul class="cooklogs">
 			{#each data.recentCooklogs as cooklog}
-				<CooklogCard {cooklog} />
+				<HomeCooklogCard {cooklog} />
 			{/each}
 		</ul>
 		{@render link('cooklogs')}
@@ -77,7 +77,7 @@
 	}
 
 	section:nth-of-type(3) ul,
-	section:nth-of-type(4) ul {
+	.cooklogs {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 1em;
@@ -86,6 +86,10 @@
 		margin: 0;
 		padding: 0;
 		align-items: stretch;
+	}
+
+	.cooklogs {
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
 	}
 
 	.wrapper {

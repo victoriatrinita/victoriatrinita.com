@@ -1,19 +1,21 @@
 <script lang="ts">
 	import TapedPolaroid from '$lib/components/TapedPolaroid.svelte';
-	import Article from '$lib/pages/Article.svelte';
 </script>
 
-<Article>
-	<TapedPolaroid src="assets/about/ori.jpg" alt="Self portrait" />
-
+<main>
+	<header>
+		<h1>About</h1>
+		<TapedPolaroid src="/assets/about/ori.jpg" alt="Self portrait" />
+	</header>
 	<section>
 		<h2 id="about">About Self</h2>
-
 		<p>
 			Hello, I am Victoria Trinita Pardede, a final year Information Engineering student at
 			Universitas Gadjah Mada. I enjoy exploring the world of web development.
 		</p>
+	</section>
 
+	<section>
 		<h2 id="backstory">This Website's Backstory</h2>
 
 		<p>
@@ -69,4 +71,40 @@
 
 		<p>Wrapping up, I hope this place stays as a permanent "encyclopedia" for my future self :)</p>
 	</section>
-</Article>
+</main>
+
+<style>
+	main {
+		max-width: var(--page-width);
+		margin-inline: auto;
+		padding: clamp(2em, 3vw, 4em) 1em;
+	}
+
+	header {
+		display: grid;
+		justify-items: center;
+	}
+
+	h1 {
+		margin: 1em 0 0.5em;
+		line-height: 1.5;
+		text-align: center;
+		font-size: clamp(1.5rem, 4vw, 2rem);
+		font-weight: 700;
+	}
+
+	section {
+		max-width: 62ch;
+		margin: clamp(2rem, 5vw, 3.5rem) auto 0;
+	}
+
+	h2 {
+		font-size: clamp(1.25rem, 3vw, 1.5rem);
+		font-weight: 600;
+	}
+
+	p {
+		margin-top: 0.85em;
+		line-height: 1.7;
+	}
+</style>

@@ -4,8 +4,12 @@ import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => ({
 	meta: { title: 'Cooklogs' },
-	cooklogs: parseCooklogDir('content/cooklogs', hydrateCooklog)
+	cooklogs: _getCooklogs()
 });
+
+export function _getCooklogs() {
+	return parseCooklogDir('content/cooklogs', hydrateCooklog);
+}
 
 type CooklogFrontmatter = {
 	image?: string;

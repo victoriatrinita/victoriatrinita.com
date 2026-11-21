@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
+
 	interface Props {
 		post: import('$lib/types').Post;
 	}
@@ -6,51 +8,72 @@
 	let { post }: Props = $props();
 </script>
 
-<a href="posts/{post.slug}">
-	<section>
-		<h3>{post.title}</h3>
-		<small>{post.description}</small>
-		<footer>
-			<small>{post.date.published}</small>
-		</footer>
-		<div>
-			{#each post.tags as tag}
-				<small>{tag}</small>
-			{/each}
-		</div>
-	</section>
-</a>
+<article>
+	<time datetime={post.date.published}>{post.date.published}</time>
+	<div>
+		<h2><a href={resolve(`/posts/${post.slug}`)}>{post.title}</a></h2>
+		{#if post.description}<p>{post.description}</p>{/if}
+		{#if post.tags.length}
+			<ul aria-label="Tags">
+				{#each post.tags as tag}
+					<li>{tag}</li>
+				{/each}
+			</ul>
+		{/if}
+	</div>
+</article>
 
 <style>
-	small {
-		font-size: clamp(0.8rem, 2vw, 0.875rem);
-	}
-
-	section {
-		background-color: var(--wild-sand);
-		border-radius: 20px;
-		padding: 1em 1.5em;
-		cursor: pointer;
-		color: var(--martinique);
-		transition: all 300ms ease-out;
-		border: solid var(--alto) 1px;
+	article {
+		position: relative;
 		display: grid;
-		gap: 0.25em;
+		align-items: baseline;
+		grid-template-columns: auto minmax(0, 1fr);
+		gap: 0.35rem clamp(1rem, 4vw, 2rem);
+		padding-block: 1.25rem;
 	}
 
-	section:hover {
-		box-shadow: 0px 3.4359px 18px rgba(0, 0, 0, 0.2);
-		transform: translateY(-0.2em);
-		background-color: var(--white-lilac);
-		border: solid var(--lavender-gray) 1px;
+	time,
+	ul {
+		font: 0.8125rem/1.5 var(--font-mono);
+		color: var(--dusty-gray);
 	}
 
-	h3 {
+	h2 {
+		font-size: clamp(1.125rem, 2vw, 1.375rem);
+		line-height: 1.3;
 		font-weight: 600;
-		font-size: clamp(1.125rem, 2vw, 1.25rem);
 	}
 
-	div {
+	a::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
+
+	a:hover,
+	a:focus-visible {
+		color: var(--moody-blue);
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
+	}
+
+	p,
+	ul {
+		margin-top: 0.4rem;
+	}
+
+	ul {
 		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 0.75rem;
+		padding: 0;
+		list-style: none;
+	}
+
+	@media (max-width: 36rem) {
+		article {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>
