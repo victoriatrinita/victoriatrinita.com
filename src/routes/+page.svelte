@@ -119,6 +119,6 @@
 		font-size: clamp(0.875rem, 3vw, 1rem);
 		line-height: 1.8rem;
 		font-family: 'New York', monospace;
-		color: oklch(0.373 0.034 259.733);
+		color: var(--intro-text);
 	}
 </style>

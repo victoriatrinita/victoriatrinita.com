@@ -1,10 +1,37 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { page } from '$app/state';
-	import { MenuIcon, XIcon } from 'svelte-feather-icons';
-	import { slide } from 'svelte/transition';
-	let innerWidth = $state(0);
+	import { MenuIcon, MoonIcon, SunIcon, XIcon } from 'svelte-feather-icons';
+	import { afterNavigate } from '$app/navigation';
 
 	let opened = $state(false);
+	afterNavigate(() => (opened = false));
+
+	let theme = $state<'light' | 'dark'>('light');
+	const nextTheme = $derived(theme === 'dark' ? 'light' : 'dark');
+	const ThemeIcon = $derived(nextTheme === 'dark' ? MoonIcon : SunIcon);
+	const themeLabel = $derived(`Switch to ${nextTheme} mode`);
+
+	onMount(() => {
+		const system = window.matchMedia('(prefers-color-scheme: dark)');
+		function syncTheme() {
+			const saved = document.documentElement.style.colorScheme;
+			theme = saved === 'dark' || saved === 'light' ? saved : system.matches ? 'dark' : 'light';
+		}
+		syncTheme();
+		system.addEventListener('change', syncTheme);
+		return () => system.removeEventListener('change', syncTheme);
+	});
+
+	function toggleTheme() {
+		theme = nextTheme;
+		document.documentElement.style.colorScheme = theme;
+		try {
+			localStorage.setItem('site-theme', theme);
+		} catch {
+			// The selected theme still applies when storage is unavailable.
+		}
+	}
 
 	const menu = {
 		about: 'about',
@@ -18,40 +45,41 @@
 	};
 </script>
 
-<svelte:window bind:innerWidth />
 <nav>
 	<div class="logo">
 		<a href="/"> VTP. </a>
 	</div>
 
-	{#if innerWidth < 600}
-		<button onclick={() => (opened = !opened)}>
-			{#if opened}
-				<XIcon size="24" />
-			{:else}
-				<MenuIcon size="24" />
-			{/if}
-		</button>
-	{/if}
-
-	{#if innerWidth > 600 || opened}
-		<menu transition:slide={{ duration: opened ? 100 : 0 }}>
-			{#each Object.entries(menu) as [title, link]}
-				<a
-					class:active={page.url.pathname === `/${link}`}
-					data-sveltekit-preload-data
-					href="/{link}">{title.toUpperCase()}</a
-				>
-			{/each}
-		</menu>
-	{/if}
+	<div id="site-links" class="links" class:opened>
+		{#each Object.entries(menu) as [title, link]}
+			<a class:active={page.url.pathname === `/${link}`} data-sveltekit-preload-data href="/{link}"
+				>{title.toUpperCase()}</a
+			>
+		{/each}
+	</div>
+	<button class="theme" onclick={toggleTheme} aria-label={themeLabel} title={themeLabel}>
+		<ThemeIcon size="20" />
+	</button>
+	<button
+		class="menu-toggle"
+		aria-controls="site-links"
+		aria-label="Menu"
+		aria-expanded={opened}
+		onclick={() => (opened = !opened)}
+	>
+		{#if opened}
+			<XIcon size="24" />
+		{:else}
+			<MenuIcon size="24" />
+		{/if}
+	</button>
 </nav>
 
 <style>
 	nav {
 		padding: 0.5em 1em;
 		height: 3.5em;
-		background-color: var(--white);
+		background-color: var(--page-bg);
 		display: flex;
 		justify-content: space-between;
 		top: 0;
@@ -59,12 +87,21 @@
 		font-family: 'Departure Mono', monospace;
 	}
 
-	nav > button {
+	button {
 		cursor: pointer;
 		display: flex;
 		background: none;
 		border: none;
 		padding: 0;
+	}
+
+	.theme {
+		align-self: center;
+		width: 2.75rem;
+		height: 2.75rem;
+		align-items: center;
+		justify-content: center;
+		color: var(--text);
 	}
 
 	.logo {
@@ -76,11 +113,15 @@
 			font-weight: 600;
 			width: fit-content;
 			position: relative;
-			color: oklch(0.5058 0.2886 264.84);
+			color: var(--brand);
 		}
 	}
 
-	menu {
+	.menu-toggle {
+		display: none;
+	}
+
+	.links {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -120,31 +161,52 @@
 		}
 	}
 
-	@media only screen and (max-width: 600px) {
+	@media (max-width: 840px) {
 		nav {
 			position: fixed;
-			top: unset;
-			bottom: 0;
-			height: unset;
-			width: 100%;
+			inset: auto 0 0;
+			height: auto;
 			align-items: center;
+			gap: 0.25rem;
+			padding: 0.25rem 1rem calc(0.25rem + env(safe-area-inset-bottom));
 			z-index: 3;
-			box-shadow: 0px -4px 8px rgba(152, 152, 152, 0.12);
+			box-shadow: 0 -2px 10px rgb(0 0 0 / 10%);
 		}
 
-		menu {
-			display: flex;
-			flex-direction: column;
-			padding: 1em;
-			justify-content: center;
-			width: 100%;
+		.logo {
+			margin-right: auto;
+		}
+
+		.menu-toggle {
+			display: grid;
+			place-items: center;
+			width: 2.75rem;
+			height: 2.75rem;
+			color: var(--text);
+		}
+
+		.links {
+			display: none;
 			position: absolute;
-			top: 1px;
-			left: 0;
-			gap: 1em;
-			box-shadow: 0px -4px 8px rgba(152, 152, 152, 0.12);
-			transform: translateY(-100%);
-			background: var(--white);
+			inset: auto 0 100%;
+			padding: 0.5rem 1rem;
+			max-height: calc(100dvh - 4rem - env(safe-area-inset-bottom));
+			overflow-y: auto;
+			background: var(--page-bg);
+			box-shadow: 0 -4px 12px rgb(0 0 0 / 8%);
+		}
+
+		.links.opened {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.links a {
+			min-height: 2.75rem;
+			padding-inline: 0.5rem;
+		}
+		.links a:not(:last-child)::after {
+			content: none;
 		}
 	}
 </style>
